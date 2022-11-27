@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_aboutsunhappy"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="SunHappy" />
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Trang chủ" />
+
+    <item
+        android:id="@+id/navigation_category"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Danh mục" />
+    <item
+        android:id="@+id/navigation_user"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Tài khoản" />
+</menu>
