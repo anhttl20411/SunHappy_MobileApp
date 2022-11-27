@@ -13,19 +13,13 @@
         android:theme="@style/Theme.SUNHAPPY"
         tools:targetApi="31">
         <activity
-            android:name=".ViewDetailCartActivity"
+            android:name=".functions.setting.SettingAccountActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
-            android:name=".detail_cart"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+
         <activity
             android:name=".functions.viewproduct.ViewDetailProductActivity"
             android:exported="false">
@@ -34,11 +28,10 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".functions.viewcart.ViewDetailCartActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
@@ -47,5 +40,4 @@
                 android:value="" />
         </activity>
     </application>
-
 </manifest>
