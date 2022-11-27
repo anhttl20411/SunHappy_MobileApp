@@ -4,9 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/sunhappy_padding"
     tools:context=".functions.payments.PaymentActivity"
     android:orientation="vertical">
+
    <LinearLayout
+       android:layout_margin="20px"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:orientation="horizontal">
@@ -19,7 +22,7 @@
       </ImageView>
       <LinearLayout
           android:layout_margin="25px"
-          android:layout_width="900px"
+          android:layout_width="800px"
           android:layout_height="wrap_content"
           android:orientation="vertical">
          <TextView
@@ -61,21 +64,23 @@
        android:layout_margin="20px"
        android:layout_width="match_parent"
        android:layout_height="wrap_content">
-<LinearLayout
+
+      <LinearLayout
     android:background="#ECE7E7"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal">
    <ImageView
        android:layout_margin="20px"
-      android:background="@drawable/customborder"
-      android:src="@drawable/img_product_polo1"
-       android:layout_width="300px"
+       android:layout_weight="2"
+       android:src="@drawable/img_product_polo1"
+       android:layout_width="wrap_content"
        android:layout_height="300px">
 
    </ImageView>
    <LinearLayout
-       android:layout_margin="10px"
+       android:layout_weight="1"
+       android:layout_margin="20px"
 
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
@@ -115,21 +120,246 @@
 </LinearLayout>
 
       <LinearLayout
-          android:orientation="vertical"
 
+          android:layout_marginTop="20px"
+          android:background="#ECE7E7"
           android:layout_width="match_parent"
           android:layout_height="wrap_content">
+
          <TextView
+
+android:layout_weight="1"
              style="@style/product_name_style"
-             android:text="Lưu ý cho shop"
              android:layout_width="wrap_content"
-             android:layout_height="wrap_content">
+             android:layout_height="wrap_content"
+             android:text="Lưu ý cho shop"
+             app:layout_constraintStart_toStartOf="parent">
+
+         </TextView>
+
+         <TextView
+             android:layout_weight="1"
+             android:id="@+id/textView"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:gravity="right"
+             android:hint="Bạn lưu ý gì cho tụi mình nè"
+             app:layout_constraintEnd_toEndOf="parent">
 
          </TextView>
 
       </LinearLayout>
 
+      <LinearLayout
+          android:padding="10px"
+
+          android:background="#ECE7E7"
+          android:layout_marginTop="20px"
+          android:orientation="horizontal"
+          android:layout_width="match_parent"
+          android:layout_height="450px">
+         <ImageView
+             android:src="@drawable/ic_category_gray"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content">
+
+         </ImageView>
+         <LinearLayout
+             android:orientation="vertical"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+            <TextView
+
+                android:gravity="center"
+                style="@style/product_name_style"
+
+                android:text="Chọn Voucher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+               <TextView
+                   android:layout_margin="20px"
+                   style="@style/voucher"
+                   android:text="NHANDEPTRAI"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+               </TextView>
+               <TextView
+                   android:layout_margin="20px"
+                   style="@style/voucher"
+                   android:text="AOPOLO"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+               </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+               <TextView
+                   android:layout_margin="20px"
+                   style="@style/voucher"
+                   android:text="AONAMMOI"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+               </TextView>
+               <TextView
+                   android:layout_margin="20px"
+                   style="@style/voucher"
+                   android:text="AONAMMOI"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+               </TextView>
+            </LinearLayout>
+         </LinearLayout>
+
+
+
+      </LinearLayout>
+      <LinearLayout
+          android:gravity="center"
+          android:background="#ECE7E7"
+          android:layout_marginTop="20px"
+          android:orientation="horizontal"
+          android:layout_width="match_parent"
+          android:layout_height="100px">
+         <ImageView
+            android:src="@drawable/ic_dollar"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content">
+
+         </ImageView>
+         <TextView
+             style="@style/product_name_style"
+             android:gravity="center"
+
+             android:text="Chọn phương thức thanh toán"
+             android:layout_width="850px"
+             android:layout_height="wrap_content">
+
+         </TextView>
+         <ImageView
+
+             android:src="@drawable/ic_baseline_navigate_next_24"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content">
+
+         </ImageView>
+
+      </LinearLayout>
+      <LinearLayout
+          android:padding="10px"
+
+          android:background="#ECE7E7"
+          android:layout_marginTop="20px"
+          android:orientation="horizontal"
+          android:layout_width="match_parent"
+          android:layout_height="450px">
+         <ImageView
+             android:src="@drawable/ic_category_gray"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content">
+
+         </ImageView>
+         <LinearLayout
+             android:orientation="vertical"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+            <TextView
+
+                android:gravity="center"
+                style="@style/product_name_style"
+
+                android:text="Chi tiết thanh toán"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+               <TextView
+                   android:layout_weight="1"
+                   android:gravity="left"
+                   android:text="Tổng tiền hàng"
+                   android:layout_width="wrap_content"
+                   android:layout_height="80px">
+               </TextView>
+               <TextView
+
+                   style="@style/product_price_style"
+                   android:layout_weight="1"
+                   android:gravity="end"
+                   android:text="100.000Đ"
+                   android:layout_width="wrap_content"
+                   android:layout_height="80px">
+               </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+               <TextView
+                   android:gravity="left"
+                   android:layout_weight="1"
+                   android:text="Tổng tiền phí vận chuyển"
+                   android:layout_width="wrap_content"
+                   android:layout_height="80px">
+               </TextView>
+               <TextView
+android:layout_weight="1"                style="@style/product_price_style"
+                 android:gravity="end"
+                   android:text="150.000Đ"
+                   android:layout_width="wrap_content"
+                   android:layout_height="80px">
+               </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+               <TextView
+                   style="@style/product_name_style"
+                   android:gravity="left"
+                   android:layout_weight="1"
+                   android:text="Tổng thanh toán"
+                   android:layout_width="wrap_content"
+                   android:layout_height="80px">
+               </TextView>
+               <TextView
+                   style="@style/product_price_style"
+                   android:layout_weight="1"
+                   android:gravity="end"
+                   android:text="200.000Đ"
+                   android:layout_width="wrap_content"
+                   android:layout_height="80px">
+               </TextView>
+            </LinearLayout>
+         </LinearLayout>
+
+
+
+      </LinearLayout>
+
+
+
    </LinearLayout>
+
+   <Button
+       style="@style/normal_button_style"
+       android:layout_margin="40px"
+       android:hint="Đặt Hàng"
+       android:gravity="center"
+       android:layout_gravity="center"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content">
+
+   </Button>
 
 
 
