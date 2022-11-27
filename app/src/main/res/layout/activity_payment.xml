@@ -145,7 +145,6 @@ android:layout_weight="1"
              android:gravity="right"
              android:hint="Bạn lưu ý gì cho tụi mình nè"
              app:layout_constraintEnd_toEndOf="parent">
-
          </TextView>
 
       </LinearLayout>
