@@ -73,7 +73,7 @@
             android:layout_height="30dp"
             android:backgroundTint="@color/white"
             android:layout_gravity="center"
-            android:src="@drawable/ic_launcher_background" />
+            android:src="@drawable/ic_favorite_border"/>
     </LinearLayout>
 
     <TextView
