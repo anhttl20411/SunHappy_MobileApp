@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints"
+        android:background="#E1DDDD"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp">
+        <ImageView
+            android:id="@+id/img_ProductImageDelivering"
+            android:layout_margin="20dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/img_product_polo1"
+            android:scaleType="fitCenter"
+            tools:ignore="MissingConstraints">
+        </ImageView>
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Áo polo nam cổ bẻ"
+                style="@style/product_name_style"
+                >
+            </TextView>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/product_description_style"
+                    android:text="Phân loại:">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/txt_ProductClassifyDelivering"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/product_description_style"
+                    android:text=" NAVI">
+
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/product_description_style"
+                    android:text=",">
+
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/product_description_style"
+                    android:text=" Size">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/txt_ProductSizeDelivering"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/product_description_style"
+                    android:text=" XL (65 - 75kg)"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintRight_toRightOf="parent"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="x">
+                </TextView>
+                <TextView
+                    android:id="@+id/txt_ProductAmountDelivering"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1">
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thành tiền:">
+                </TextView>
+                <TextView
+                    style="@style/product_price_style"
+                    android:id="@+id/txt_ProductPriceDelivering"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="150000"
+                    android:layout_marginLeft="20dp"
+                    >
+                </TextView>
+            </LinearLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đã nhận"
+                style="@style/small_button_style"
+                android:layout_gravity="end"
+                android:layout_marginRight="20dp">
+
+            </Button>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
