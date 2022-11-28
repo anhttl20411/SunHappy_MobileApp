@@ -1,4 +1,4 @@
-package com.example.sunhappy.ui.aboutsunhappy.home;
+package com.example.sunhappy.ui.home;
 
 import androidx.lifecycle.ViewModel;
 
