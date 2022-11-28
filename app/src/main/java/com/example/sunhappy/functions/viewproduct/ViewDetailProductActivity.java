@@ -3,9 +3,11 @@ package com.example.sunhappy.functions.viewproduct;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -57,6 +59,28 @@ public class ViewDetailProductActivity extends AppCompatActivity {
                     Toast.makeText(ViewDetailProductActivity.this, "Đã xóa khỏi danh sách yêu thích", Toast.LENGTH_SHORT).show();
                     binding.btnAddFavorite.setTag("no_favorite");
                 }
+            }
+        });
+
+        binding.btnAddToCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Dialog dialog = new Dialog(ViewDetailProductActivity.this);
+                dialog.setContentView(R.layout.dialog_choose_size_color);
+
+                //tạo sự kiện cho dialog hiện ra
+                Button btnAddToCartConfirm;
+
+                btnAddToCartConfirm = dialog.findViewById(R.id.btn_AddToCartConfirm);
+                btnAddToCartConfirm.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Toast.makeText(ViewDetailProductActivity.this, "Đã thêm vào giỏ hàng", Toast.LENGTH_SHORT).show();
+                        dialog.dismiss();
+                    }
+                });
+
+                dialog.show();
             }
         });
     }
