@@ -14,7 +14,7 @@
         android:gravity="center_vertical"
         android:layout_marginTop="10dp">
         <ImageView
-            android:id="@+id/img_ProductImageDelivering"
+            android:id="@+id/img_ProductImageCancelled"
             android:layout_margin="10dp"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -30,12 +30,11 @@
             android:paddingTop="10dp"
             android:paddingBottom="10dp">
             <TextView
-                android:id="@+id/txt_ProductNameDelivering"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Áo polo nam cổ bẻ"
                 style="@style/product_name_style"
-                >
+                android:id="@+id/txt_ProductNameCancelled">
             </TextView>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -49,7 +48,7 @@
 
                 </TextView>
                 <TextView
-                    android:id="@+id/txt_ProductClassifyDelivering"
+                    android:id="@+id/txt_ProductClassifyCacelled"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/product_description_style"
@@ -73,7 +72,7 @@
 
                 </TextView>
                 <TextView
-                    android:id="@+id/txt_ProductSizeDelivering"
+                    android:id="@+id/txt_ProductSizeCancelled"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/product_description_style"
@@ -95,7 +94,7 @@
                     android:text="x">
                 </TextView>
                 <TextView
-                    android:id="@+id/txt_ProductAmountDelivering"
+                    android:id="@+id/txt_ProductAmountCancelled"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="1"
@@ -123,9 +122,9 @@
                 </TextView>
             </LinearLayout>
             <Button
-                android:id="@+id/btn_Received"
+                android:id="@+id/btn_Repurchase"
                 android:layout_width="wrap_content"
-                android:text="Đã nhận"
+                android:text="Mua lại"
                 style="@style/small_button_style"
                 android:layout_gravity="end"
                 android:layout_marginRight="10dp">

@@ -28,11 +28,12 @@
         </ImageView>
         <LinearLayout
             android:id="@+id/linearLayout"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center_vertical">
             <TextView
+                android:id="@+id/txt_ProductNamePreparing"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Áo polo nam cổ bẻ"
@@ -55,7 +56,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/product_description_style"
-                    android:text=" NAVI">
+                    android:text="NAVI"
+                    android:layout_marginLeft="5dp">
 
                 </TextView>
                 <TextView
@@ -69,7 +71,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/product_description_style"
-                    android:text=" Size">
+                    android:text="Size:"
+                    android:layout_marginLeft="10dp">
 
                 </TextView>
                 <TextView
@@ -77,15 +80,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/product_description_style"
-                    android:text=" XL (65 - 75kg)"/>
+                    android:text="XL (65 - 75kg)"
+                    android:layout_marginLeft="5dp"/>
 
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+                android:layout_gravity="end"
+                android:layout_marginRight="10dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -99,10 +103,10 @@
                 </TextView>
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingEnd="20dp"
+
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout">
                 <TextView
@@ -111,12 +115,13 @@
                     android:text="Thành tiền:">
                 </TextView>
                 <TextView
-                    android:paddingLeft="20dp"
+                    android:gravity="end"
                     style="@style/product_price_style"
                     android:id="@+id/txt_ProductPricePreparing"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="150000">
+                    android:text="150000"
+                    android:layout_marginRight="10dp">
                 </TextView>
             </LinearLayout>
 
