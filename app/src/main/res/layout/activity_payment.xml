@@ -352,7 +352,7 @@ android:layout_weight="1"                style="@style/product_price_style"
    <Button
        style="@style/normal_button_style"
        android:layout_margin="40px"
-       android:hint="Đặt Hàng"
+       android:text="ĐẶT HÀNG"
        android:gravity="center"
        android:layout_gravity="center"
        android:layout_width="wrap_content"
