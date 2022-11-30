@@ -2,20 +2,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/navigation_aboutsunhappy"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@drawable/logo_square_white"
         android:title="SunHappy" />
 
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@drawable/ic_home_yellow"
         android:title="Trang chủ" />
 
     <item
         android:id="@+id/navigation_category"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@drawable/ic_category_yellow"
         android:title="Danh mục" />
     <item
         android:id="@+id/navigation_user"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@drawable/ic_user_yellow"
         android:title="Tài khoản" />
 </menu>

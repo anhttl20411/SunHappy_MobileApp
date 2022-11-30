@@ -11,7 +11,7 @@
         tools:layout="@layout/fragment_about_sunhappy" />
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.sunhappy.ui.aboutsunhappy.home.HomeFragment"
+        android:name="com.example.sunhappy.ui.home.HomeFragment"
         android:label="Trang chủ"
         tools:layout="@layout/fragment_home" />
 
