@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/sunhappy_padding"
+    android:background="#F8F4DD">
+
+    <TextView
+        android:id="@+id/txt_notificationTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chào anh em!"
+        style="@style/header"/>
+    <TextView
+        android:id="@+id/txt_notificationContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cảm ơn bạn đac tin tưởng lựa chọn SunHappy! Chúc anh em sẽ hốt được nhiều đồ siêu rẻ, siêu chất, siêu chất lượng nhé!"
+        style="@style/normal_text"/>
+    <TextView
+        android:id="@+id/txt_notificationTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="01-01-2022"
+        style="@style/small_text"
+        android:layout_gravity="end"/>
+
+</LinearLayout>
