@@ -29,6 +29,8 @@ public class NotificationActivity extends AppCompatActivity {
 
     private void loadData() { // tiếp bước 4
         notifications = new ArrayList<>();
+        notifications.add(new Notification("Hi", "Hi there", "010202"));
+        notifications.add(new Notification("Hello", "Hê sờ lô","284738"));
         adapter = new NotificationAdapter(NotificationActivity.this, R.layout.item_notification_list, notifications);
         binding.lvNotification.setAdapter(adapter);
     }
