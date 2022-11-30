@@ -13,38 +13,8 @@
         android:theme="@style/Theme.SUNHAPPY"
         tools:targetApi="31">
         <activity
-            android:name=".functions.setting.SettingActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".functions.payments.PaymentActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".functions.viewnotification.NotificationActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".functions.viewproduct.ViewDetailProductActivity"
             android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".functions.setting.SettingAccountActivity"
-            android:exported="false">
-
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
