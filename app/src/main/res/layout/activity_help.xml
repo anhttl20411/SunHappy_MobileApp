@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".functions.loginandregister.help"
+    android:background="#FFFFFF"
+    android:padding="@dimen/sunhappy_padding">
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="195dp"
+        android:layout_height="102dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_logo"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="59dp" />
+
+    <TextView
+        android:id="@+id/txt_huongdan1"
+        android:layout_width="wrap_content"
+        android:layout_height="187dp"
+        android:layout_below="@id/logo"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/help"
+        android:textColor="@color/black"
+        android:textSize="14dp" />
+
+    <Button
+        android:id="@+id/btn_ResentOtp"
+        style="@style/normal_button_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_huongdan1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#94CF5F5F"
+        android:text="GỬI LẠI MÃ OTP" />
+
+</RelativeLayout>
