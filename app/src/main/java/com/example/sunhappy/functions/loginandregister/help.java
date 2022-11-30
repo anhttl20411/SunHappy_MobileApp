@@ -25,8 +25,8 @@ ActivityHelpBinding binding;
         binding.btnResentOtp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent6 = new Intent(help.this, otp.class);
-                startActivity(intent6);
+                Intent intent = new Intent(help.this, otp.class);
+                startActivity(intent);
             }
         });
 }}
