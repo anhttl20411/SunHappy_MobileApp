@@ -64,11 +64,12 @@ public class NotificationAdapter extends BaseAdapter {
         }else{
             holder = (ViewHolder) view.getTag();
         }
-        Notification p = notifications.get(i);
+        Notification noti = notifications.get(i);
         holder.txtNotificationTitle.setText("Hi");
         holder.txtNotificationContent.setText("Hê sờ lô");
         holder.txtNotificationTime.setText("01-21");
         return view;
+
     }
     public static class ViewHolder{
         TextView txtNotificationTitle, txtNotificationContent, txtNotificationTime;

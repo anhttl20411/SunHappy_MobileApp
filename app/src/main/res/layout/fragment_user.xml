@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.user.UserFragment"
-    android:padding="@dimen/sunhappy_padding">
+    tools:context=".ui.user.UserFragment">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -76,7 +75,7 @@
                 android:src="@drawable/ic_preparing" />
 
             <TextView
-                style="@style/normal_text"
+                style="@style/small_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -96,7 +95,7 @@
                 android:src="@drawable/ic_shipping" />
 
             <TextView
-                style="@style/normal_text"
+                style="@style/small_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -116,7 +115,7 @@
                 android:src="@drawable/ic_delivery" />
 
             <TextView
-                style="@style/normal_text"
+                style="@style/small_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -136,7 +135,7 @@
                 android:src="@drawable/ic_cancel" />
 
             <TextView
-                style="@style/normal_text"
+                style="@style/small_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
