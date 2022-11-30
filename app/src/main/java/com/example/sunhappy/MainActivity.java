@@ -7,6 +7,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,7 @@ import android.widget.Toast;
 
 import com.example.sunhappy.databinding.ActivityMainBinding;
 import com.example.sunhappy.databinding.ActivityViewDetailProductBinding;
+import com.example.sunhappy.functions.viewnotification.NotificationActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -56,23 +58,32 @@ public class MainActivity extends AppCompatActivity {
         View customView = li.inflate(R.layout.menu_notification_cart, null);
         actionBar.setCustomView(customView);
         actionBar.setDisplayShowCustomEnabled(true);
-        ImageButton addContent = (ImageButton)    customView.findViewById(R.id.mn_Notification);
-        addContent.setOnClickListener(new View.OnClickListener() {
+        ImageButton btnNotification = (ImageButton)    customView.findViewById(R.id.mn_Notification);
+        btnNotification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // mở thông báo
                 Toast.makeText(MainActivity.this, "Code mở màn hình thông báo!", Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(MainActivity.this, NotificationActivity.class);
+                startActivity(intent);
+
             }
         });
 
-        ImageButton search = (ImageButton) customView.findViewById(R.id.mn_Cart);
-        search.setOnClickListener(new View.OnClickListener() {
+        ImageButton btnCart = (ImageButton) customView.findViewById(R.id.mn_Cart);
+        btnCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // mở giỏ hàng
                 Toast.makeText(MainActivity.this, "Code mở màn hình giỏ hàng!", Toast.LENGTH_SHORT).show();
             }
         });
+
+
+
+
+
 
     }
 }
