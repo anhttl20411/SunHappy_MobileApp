@@ -15,7 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.example.sunhappy.R;
-import com.example.sunhappy.databinding.ActivityNewAdressBinding;
+
 import com.example.sunhappy.databinding.ActivitySettingAccountBinding;
 
 public class SettingAccountActivity extends AppCompatActivity {
