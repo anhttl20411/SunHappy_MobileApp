@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".functions.payments.UpdateAddressClick">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:paddingVertical="10dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="Liên hệ "
+        android:textStyle="bold"
+        android:textSize="16sp"
+        />
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/vien">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_weight="10"
+            >
+
+            <EditText
+                android:id="@+id/edt_Address_Name"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:hint="Vui lòng nhập tên"
+                android:layout_weight="6"
+                android:paddingVertical="10dp"
+                style="@style/normal_text"
+
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:gravity="end"
+                android:layout_weight="1"
+                android:paddingVertical="10dp"
+                android:src="@drawable/ic_next"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+
+            <EditText
+                android:id="@+id/edt_Address_SDT"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:hint="Vui lòng nhập SDT"
+                android:layout_weight="6"
+                android:paddingVertical="10dp"
+                style="@style/normal_text"
+                />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:gravity="end"
+                android:layout_weight="1"
+                android:paddingVertical="10dp"
+                android:src="@drawable/ic_next"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/vien">
+        <TextView
+            style="@style/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Địa chỉ"></TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+
+            <EditText
+                android:id="@+id/edt_Address_Tinh"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:hint="Tỉnh"
+
+                android:layout_weight="6"
+                android:paddingVertical="10dp"
+                style="@style/normal_text"
+                />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:gravity="end"
+                android:layout_weight="1"
+                android:paddingVertical="10dp"
+                android:src="@drawable/ic_next"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+
+
+            <EditText
+                android:id="@+id/edt_Address_Huyen"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:hint="Huyện"
+                android:layout_weight="6"
+                android:paddingVertical="10dp"
+                style="@style/normal_text"
+                />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:gravity="end"
+                android:layout_weight="1"
+                android:paddingVertical="10dp"
+                android:src="@drawable/ic_next"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+
+            <EditText
+                android:id="@+id/edt_Address_Xa"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:hint="Xã"
+                android:layout_weight="6"
+                android:paddingVertical="10dp"
+                style="@style/normal_text"
+                />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:gravity="end"
+                android:layout_weight="1"
+                android:paddingVertical="10dp"
+                android:src="@drawable/ic_next"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+
+            <EditText
+                android:id="@+id/edt_Address_Duong"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:hint="Đường"
+                android:layout_weight="6"
+                android:paddingVertical="10dp"
+                style="@style/normal_text"
+                />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:gravity="end"
+                android:layout_weight="1"
+                android:paddingVertical="10dp"
+                android:src="@drawable/ic_next"/>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        style="@style/header"
+        android:layout_width="match_parent"
+        android:paddingVertical="10dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="Loại địa chỉ"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        >
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:text="Nhà riêng"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </RadioButton>
+            <RadioButton
+                android:text="Công ty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </RadioButton>
+        </RadioGroup>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:text="Đặt làm mặc định"
+            android:layout_weight="9"
+            android:layout_marginLeft="20dp"
+            android:paddingVertical="10dp"
+            style="@style/normal_text"
+
+            />
+        <CheckBox
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:gravity="end"
+            android:layout_weight="1"
+            android:paddingVertical="10dp"
+
+            android:button="@drawable/radio"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/btn_AddressSave"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:text="Cập nhật"
+            style="@style/normal_button_style"
+            />
+    </LinearLayout>
+
+</LinearLayout>
