@@ -36,8 +36,8 @@ public class register extends AppCompatActivity {
         setContentView(binding.getRoot());
         addEvents();
         //ẩn hiện mk
-        email=findViewById(R.id.edt_Email);
-        password=findViewById(R.id.edt_Password);
+        email = findViewById(R.id.edt_Email);
+        password = findViewById(R.id.edt_Password);
         password.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
