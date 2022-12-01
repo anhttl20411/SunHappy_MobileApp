@@ -13,7 +13,7 @@
         android:theme="@style/Theme.SUNHAPPY"
         tools:targetApi="31">
         <activity
-            android:name=".functions.setting.SettingActivity"
+            android:name=".functions.viewnotification.NotificationActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -27,7 +27,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".functions.setting.SettingActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -43,70 +43,27 @@
         <activity
             android:name=".functions.setting.SettingAccountActivity"
             android:exported="false">
-
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".functions.viewnotification.NotificationActivity"
+            android:name=".functions.payments.NewAdressActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".functions.loginandregister.login"
-            android:exported="true">
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".functions.loginandregister.help"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".functions.loginandregister.newpassword"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".functions.loginandregister.otp"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".functions.loginandregister.forgotpass"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".functions.loginandregister.register"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".functions.loginandregister.FlashscreenActivity"
-            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
