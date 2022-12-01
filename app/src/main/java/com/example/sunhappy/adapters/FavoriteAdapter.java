@@ -43,25 +43,25 @@ public class FavoriteAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        FavoriteAdapter.ViewHolder holder;
-        if(convertView==null){
-            //linkview
-            holder = new FavoriteAdapter.ViewHolder();
-            LayoutInflater inflater = (LayoutInflater) fragment.getLayoutInflater();
-            convertView = inflater.inflate(item_layout, null);
-            holder.imvhinh = convertView.findViewById(R.id.imv_hinh);
-            holder.txtName = convertView.findViewById(R.id.txt_tensp);
-            holder.txtgia = convertView.findViewById(R.id.txt_giasp);
-
-            convertView.setTag(holder);
-
-        } else {
-            holder = (ViewHolder)convertView.getTag();
-        }
-        ProductFavorite b = favorites.get(position);
-        holder.imvhinh.setImageResource(b.getProductThumb());
-        holder.txtName.setText(b.getProductName());
-        holder.txtgia.setText(String.valueOf(b.getProductPrice()));
+//        FavoriteAdapter.ViewHolder holder;
+//        if(convertView==null){
+//            //linkview
+//            holder = new FavoriteAdapter.ViewHolder();
+//            LayoutInflater inflater = (LayoutInflater) fragment.getLayoutInflater();
+//            convertView = inflater.inflate(item_layout, null);
+//            holder.imvhinh = convertView.findViewById(R.id.imv_hinh);
+//            holder.txtName = convertView.findViewById(R.id.txt_tensp);
+//            holder.txtgia = convertView.findViewById(R.id.txt_giasp);
+//
+//            convertView.setTag(holder);
+//
+//        } else {
+//            holder = (ViewHolder)convertView.getTag();
+//        }
+//        ProductFavorite b = favorites.get(position);
+//        holder.imvhinh.setImageResource(b.getProductThumb());
+//        holder.txtName.setText(b.getProductName());
+//        holder.txtgia.setText(String.valueOf(b.getProductPrice()));
 
 
         return null;
