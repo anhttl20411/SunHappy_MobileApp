@@ -8,32 +8,44 @@
     android:padding="@dimen/sunhappy_padding">
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:orientation="horizontal"
-        android:weightSum="10">
+        app:layout_constraintTop_toTopOf="parent">
+
         <SearchView
             android:id="@+id/searchView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/style_search_bar"
-            android:queryHint="Tìm kiếm sản phẩm"
             android:layout_margin="5dp"
             android:layout_weight="9"
+            android:background="@drawable/style_search_bar"
+            android:queryHint="Tìm kiếm sản phẩm"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/ic_filter"
             android:layout_gravity="center"
-            android:backgroundTint="@android:color/transparent"></ImageButton>
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/transparent"
+            android:src="@drawable/ic_filter"></ImageButton>
     </LinearLayout>
+
+    <GridView
+        android:id="@+id/gv_Product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
