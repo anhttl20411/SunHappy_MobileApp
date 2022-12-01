@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.text.Html;
 
 import com.example.sunhappy.R;
-import com.example.sunhappy.databinding.ActivityNewAdressBinding;
+
 import com.example.sunhappy.databinding.ActivitySettingAccountBinding;
 
 public class SettingAccountActivity extends AppCompatActivity {
