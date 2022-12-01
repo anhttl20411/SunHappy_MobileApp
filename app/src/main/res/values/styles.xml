@@ -7,7 +7,7 @@
         <item name="backgroundTint">#ffd24c</item>
         <item name="android:background">@drawable/style_normal_button</item>
     </style>
-<<<<<<< HEAD
+
     <style name="voucher">
         <item name="android:textColor">#000000</item>
         <item name="android:background">@drawable/voucher</item>
@@ -15,8 +15,6 @@
         <item name="fontFamily">@font/montserrat</item>
         <item name="android:textSize">12sp</item>
     </style>
-=======
->>>>>>> 3ab1f699aa4dcd9b6ac9d1acefb8649a43ed17b1
     <style name="product_name_style">
         <item name="android:textColor">@color/product_name_color</item>
         <item name="android:fontFamily">@font/montserrat_semibold</item>
@@ -43,11 +41,6 @@
     <style name="small_text">
         <item name="android:fontFamily">@font/montserrat</item>
         <item name="android:textSize">12sp</item>
-    </style>
-    <style name="voucher">
-        <item name="android:textColor">#000000</item>
-        <item name="android:background">@drawable/voucher</item>
-        <item name="backgroundTint">#F8F03C</item>
     </style>
 
 
