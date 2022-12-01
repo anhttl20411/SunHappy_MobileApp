@@ -65,9 +65,9 @@ public class NotificationAdapter extends BaseAdapter {
             holder = (ViewHolder) view.getTag();
         }
         Notification noti = notifications.get(i);
-        holder.txtNotificationTitle.setText("Hi");
-        holder.txtNotificationContent.setText("Hê sờ lô");
-        holder.txtNotificationTime.setText("01-21");
+        holder.txtNotificationTitle.setText(noti.getNotificationTitle());
+        holder.txtNotificationContent.setText(noti.getNotificationContent());
+        holder.txtNotificationTime.setText(noti.getNotificationTime());
         return view;
 
     }
