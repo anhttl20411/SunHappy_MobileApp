@@ -2,20 +2,25 @@ package com.example.sunhappy.functions.payments;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.sunhappy.R;
 import com.example.sunhappy.adapters.AddressAdapter;
+import com.example.sunhappy.databinding.ActivitySettingAccountBinding;
+import com.example.sunhappy.databinding.ActivityUpdateAddressBinding;
 import com.example.sunhappy.models.Address;
 
 import java.util.ArrayList;
 
 public class UpdateAddress extends AppCompatActivity {
 
-
+ActivityUpdateAddressBinding binding;
     ArrayList<Address> list;
-    ListView listView;
+
     AddressAdapter addressAdapter;
 
     String Ten[] = {"Thịnh","Vương"};
@@ -29,7 +34,9 @@ public class UpdateAddress extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_update_address);
+
+        binding = ActivityUpdateAddressBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         list = new ArrayList<>();
 
@@ -41,7 +48,52 @@ public class UpdateAddress extends AppCompatActivity {
 //
         }
         addressAdapter = new AddressAdapter(UpdateAddress.this, R.layout.list_address_item,list);
-        listView.setAdapter(addressAdapter);
+
+       binding.lvAddress.setAdapter(addressAdapter);
+
+       binding.btnAddNewAddress.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               Intent intent = new Intent(UpdateAddress.this,AddNewAddressActivity.class);
+               startActivity(intent);
+
+           }
+       });
+
+
+
+       binding.btnAddressReup.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+
+               try {
+                   Intent intent = getIntent();
+                   Bundle bundle = intent.getBundleExtra("pack");
+                   String ten = bundle.getString("ten");
+                   Integer sdt = bundle.getInt("sdt");
+                   String tinh = bundle.getString("tinh");
+                   String huyen = bundle.getString("huyen");
+                   String xa = bundle.getString("xa");
+                   String duong = bundle.getString("duong");
+
+                   list.add(new Address(ten,sdt,tinh,huyen,xa,duong));
+
+                   addressAdapter.notifyDataSetChanged();
+               Toast.makeText(UpdateAddress.this,"Bạn đã thêm địa chỉ mới thành công",Toast.LENGTH_SHORT).show();
+                   getIntent().removeExtra("pack");
+
+               } catch (ArithmeticException e) {
+                   Toast.makeText(UpdateAddress.this,"Bạn đã thêm địa chỉ thất bại",Toast.LENGTH_SHORT).show();System.out.println(e);
+               }
+
+
+           }
+       });
+
+
+
+
+
 
 
 
