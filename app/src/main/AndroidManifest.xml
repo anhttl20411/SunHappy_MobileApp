@@ -13,6 +13,19 @@
         android:theme="@style/Theme.SUNHAPPY"
         tools:targetApi="31">
         <activity
+            android:name=".functions.payments.UpdateAddress"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".functions.setting.SettingActivity"
             android:exported="false">
             <meta-data
@@ -22,6 +35,7 @@
         <activity
             android:name=".functions.payments.PaymentActivity"
             android:exported="false">
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -43,8 +57,6 @@
         <activity
             android:name=".functions.setting.SettingAccountActivity"
             android:exported="false">
-
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -58,12 +70,8 @@
         </activity>
         <activity
             android:name=".functions.loginandregister.login"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="false">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
             <meta-data
                 android:name="android.app.lib_name"
