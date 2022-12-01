@@ -14,14 +14,20 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.example.sunhappy.adapters.FavoriteAdapter;
 import com.example.sunhappy.databinding.ActivityMainBinding;
 import com.example.sunhappy.databinding.ActivityViewDetailProductBinding;
 import com.example.sunhappy.functions.viewnotification.NotificationActivity;
+import com.example.sunhappy.models.ProductFavorite;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
+    FavoriteAdapter adapter;
+    ArrayList<ProductFavorite> favoritelist;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+//        loadDatauserfragment();
 
 //        ActionBar actionBar = getSupportActionBar();
 //        actionBar.setDisplayShowHomeEnabled(true);
@@ -79,11 +87,16 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Code mở màn hình giỏ hàng!", Toast.LENGTH_SHORT).show();
             }
         });
-
-
-
-
-
-
     }
+    //---------------------------fragment user--------------------------------
+//    private void loadDatauserfragment() {
+//        favoritelist = new ArrayList<>();
+//        favoritelist.add(new ProductFavorite(R.drawable.imv_white_polo, "Polo White Span", 190000.0));
+//        favoritelist.add(new ProductFavorite(R.drawable.imv_white_polo, "Polo White Span", 190000.0));
+//        favoritelist.add(new ProductFavorite(R.drawable.imv_white_polo, "Polo White Span", 190000.0));
+//
+//        adapter =  new FavoriteAdapter(MainActivity.this, R.layout.item_list_favorite, favoritelist);
+//        //binding.gv.setAdapter(adapter);
+//
+//    }
 }
