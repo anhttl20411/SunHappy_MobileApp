@@ -173,24 +173,13 @@
         app:layout_constraintStart_toEndOf="@+id/img_favorite"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
-<!--<GridView-->
-<!--    android:id="@+id/gv_danhsachyeuthich"-->
-<!--    android:layout_width="wrap_content"-->
-<!--    android:layout_height="wrap_content"-->
-<!--    android:numColumns="3"-->
-<!--    app:layout_constraintTop_toBottomOf="@id/textView2"-->
-<!--    app:layout_constraintLeft_toLeftOf="parent"-->
-<!--    app:layout_constraintRight_toRightOf="parent"-->
-<!--    android:orientation="horizontal"-->
-
-<!--    android:layout_marginTop="10dp"-->
-<!--    />-->
     <androidx.constraintlayout.widget.Guideline
         android:orientation="horizontal"
         android:id="@+id/gl1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintGuide_percent="0.35"/>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview1"
         android:layout_width="wrap_content"
@@ -211,15 +200,15 @@
                 android:layout_weight="1"
                 android:src="@drawable/img_product_redpolo"
                 />
-            <TextView
-                android:id="@+id/txt_tensp"
-                style="@style/normal_text"
-                android:layout_width="130dp"
-                android:layout_height="25dp"
-                android:text="Áo polo TSIMPLE"
-                android:background="#80000000"
-                android:textAlignment="center"
-                android:textColor="@color/white" />
+                <TextView
+                    android:id="@+id/txt_tensp"
+                    style="@style/normal_text"
+                    android:layout_width="130dp"
+                    android:layout_height="25dp"
+                    android:text="Áo polo TSIMPLE"
+                    android:background="#80000000"
+                    android:textAlignment="center"
+                    android:textColor="@color/white" />
             <TextView
                 android:id="@+id/txt_giasp"
                 style="@style/normal_text"
@@ -559,5 +548,6 @@
                 android:textColor="#FF9800" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

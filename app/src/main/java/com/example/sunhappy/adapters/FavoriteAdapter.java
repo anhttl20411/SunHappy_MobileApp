@@ -6,13 +6,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.sunhappy.R;
 import com.example.sunhappy.models.ProductFavorite;
 import com.example.sunhappy.ui.user.UserFragment;
 
+import java.net.PortUnreachableException;
 import java.util.List;
 
 public class FavoriteAdapter extends BaseAdapter {
@@ -43,32 +47,35 @@ public class FavoriteAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-//        FavoriteAdapter.ViewHolder holder;
-//        if(convertView==null){
-//            //linkview
-//            holder = new FavoriteAdapter.ViewHolder();
-//            LayoutInflater inflater = (LayoutInflater) fragment.getLayoutInflater();
-//            convertView = inflater.inflate(item_layout, null);
-//            holder.imvhinh = convertView.findViewById(R.id.imv_hinh);
-//            holder.txtName = convertView.findViewById(R.id.txt_tensp);
-//            holder.txtgia = convertView.findViewById(R.id.txt_giasp);
-//
-//            convertView.setTag(holder);
-//
-//        } else {
-//            holder = (ViewHolder)convertView.getTag();
-//        }
-//        ProductFavorite b = favorites.get(position);
-//        holder.imvhinh.setImageResource(b.getProductThumb());
-//        holder.txtName.setText(b.getProductName());
-//        holder.txtgia.setText(String.valueOf(b.getProductPrice()));
+        FavoriteAdapter.ViewHolder holder;
+        if(convertView==null){
+            //linkview
+            holder = new FavoriteAdapter.ViewHolder();
+           // LayoutInflater inflater = (LayoutInflater) fragment.getLayoutInflater();
+            LayoutInflater inflater = LayoutInflater.from(fragment.getContext());
+            convertView = inflater.inflate(item_layout, null);
+            holder.imvhinh = convertView.findViewById(R.id.imv_hinh);
+            holder.txtName = convertView.findViewById(R.id.txt_tensp);
+            holder.txtgia = convertView.findViewById(R.id.txt_giasp);
+
+            convertView.setTag(holder);
+
+        } else {
+            holder = (ViewHolder)convertView.getTag();
+        }
+        ProductFavorite b = favorites.get(position);
+
+        holder.imvhinh.setImageResource(b.getProductThumb());
+        holder.txtName.setText(b.getProductName());
+        holder.txtgia.setText(String.valueOf(b.getProductPrice()));
 
 
-        return null;
+        return convertView;
     }
-
     public static class ViewHolder{
         ImageView imvhinh;
-        TextView txtName,txtgia;
+        TextView txtName;
+        TextView txtgia;
     }
+
 }

@@ -69,6 +69,7 @@
                 android:src="@drawable/ic_next"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/ln3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -97,7 +98,7 @@
         android:paddingVertical="10dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat"
-        android:text="Tài khoản"
+        android:text="Cài đặt"
         android:background="#ECE7E7"
         android:textStyle="bold"
         android:textSize="26sp"

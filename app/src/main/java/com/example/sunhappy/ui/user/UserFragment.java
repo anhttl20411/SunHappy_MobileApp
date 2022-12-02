@@ -28,22 +28,29 @@ public class UserFragment extends Fragment {
     FragmentUserBinding binding;
     FavoriteAdapter adapter;
     ArrayList<ProductFavorite> favoritelist;
+    View view;
 
     private UserViewModel mViewModel;
 
-//    public static UserFragment newInstance() {
-//        return new UserFragment();
-//    }
+    public static UserFragment newInstance() {
+        return new UserFragment();
+    }
 
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
+    binding = FragmentUserBinding.inflate(getLayoutInflater());
 
-//    @Override
-//    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-//        super.onActivityCreated(savedInstanceState);
-//        mViewModel = new ViewModelProvider(this).get(UserViewModel.class);
-//        // TODO: Use the ViewModel
-//    }
+    return view;
+       // return inflater.inflate(R.layout.fragment_user, container, false);
+    }
 
-
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        mViewModel = new ViewModelProvider(this).get(UserViewModel.class);
+        // TODO: Use the ViewModel
+    }
 
     private void loadDatauserfragment() {
         favoritelist = new ArrayList<>();
