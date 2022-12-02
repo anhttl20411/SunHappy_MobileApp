@@ -173,17 +173,391 @@
         app:layout_constraintStart_toEndOf="@+id/img_favorite"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
-<GridView
-    android:id="@+id/gv_danhsachyeuthich"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:numColumns="3"
-    app:layout_constraintTop_toBottomOf="@id/textView2"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    android:orientation="horizontal"
+<!--<GridView-->
+<!--    android:id="@+id/gv_danhsachyeuthich"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:numColumns="3"-->
+<!--    app:layout_constraintTop_toBottomOf="@id/textView2"-->
+<!--    app:layout_constraintLeft_toLeftOf="parent"-->
+<!--    app:layout_constraintRight_toRightOf="parent"-->
+<!--    android:orientation="horizontal"-->
 
-    android:layout_marginTop="10dp"
-    />
+<!--    android:layout_marginTop="10dp"-->
+<!--    />-->
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="horizontal"
+        android:id="@+id/gl1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.35"/>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/gl1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/cardview2"
+        app:cardCornerRadius="15dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/imv_hinh"
+                android:layout_width="130dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:src="@drawable/img_product_redpolo"
+                />
+            <TextView
+                android:id="@+id/txt_tensp"
+                style="@style/normal_text"
+                android:layout_width="130dp"
+                android:layout_height="25dp"
+                android:text="Áo polo TSIMPLE"
+                android:background="#80000000"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+            <TextView
+                android:id="@+id/txt_giasp"
+                style="@style/normal_text"
+                android:layout_width="130dp"
+                android:layout_height="25dp"
+                android:text="150.000Đ"
+                android:textAlignment="center"
+                android:background="#80000000"
+                android:textColor="#FF9800" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/cardview1"
+        app:layout_constraintTop_toTopOf="@id/gl1"
+        app:layout_constraintRight_toLeftOf="@id/cardview3"
+        app:cardCornerRadius="15dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/imv_hinh1"
+                android:layout_width="130dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:src="@drawable/imv_product_polo2"
+                />
+            <TextView
+                android:id="@+id/txt_tensp1"
+                style="@style/normal_text"
+                android:layout_width="130dp"
+                android:layout_height="25dp"
+                android:text="Áo polo TSIMPLE"
+                android:background="#80000000"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+            <TextView
+                android:id="@+id/txt_giasp1"
+                style="@style/normal_text"
+                android:layout_width="130dp"
+                android:layout_height="25dp"
+                android:text="150.000Đ"
+                android:textAlignment="center"
+                android:background="#80000000"
+                android:textColor="#FF9800" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/cardview2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/gl1"
+        app:cardCornerRadius="15dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/imv_hinh2"
+                android:layout_width="130dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:src="@drawable/img_product_polo1"
+                />
+            <TextView
+                android:id="@+id/txt_tensp2"
+                style="@style/normal_text"
+                android:layout_width="130dp"
+                android:layout_height="25dp"
+                android:text="Áo polo TSIMPLE"
+                android:background="#80000000"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+            <TextView
+                android:id="@+id/txt_giasp2"
+                style="@style/normal_text"
+                android:layout_width="130dp"
+                android:layout_height="25dp"
+                android:text="150.000Đ"
+                android:textAlignment="center"
+                android:background="#80000000"
+                android:textColor="#FF9800" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cardview1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/cardview2"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="15dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imv_hinh3"
+                android:layout_width="130dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:src="@drawable/img_product_blackpolo1" />
+
+            <TextView
+                android:id="@+id/txt_tensp3"
+                style="@style/normal_text"
+                android:layout_width="130dp"
+                android:layout_height="25dp"
+                android:text="Áo polo TSIMPLE"
+                android:background="#80000000"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+            <TextView
+                android:id="@+id/txt_giasp3"
+                style="@style/normal_text"
+                android:layout_width="130dp"
+                android:layout_height="25dp"
+                android:text="150.000Đ"
+                android:textAlignment="center"
+                android:background="#80000000"
+                android:textColor="#FF9800" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/cardview4"
+        app:layout_constraintTop_toBottomOf="@id/cardview2"
+        app:layout_constraintRight_toLeftOf="@id/cardview6"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="15dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/imv_hinh4"
+                android:layout_width="130dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:src="@drawable/img_product_blackwhitepolo1"
+                />
+            <TextView
+                android:id="@+id/txt_tensp4"
+                style="@style/normal_text"
+                android:layout_width="130dp"
+                android:layout_height="25dp"
+                android:text="Áo polo TSIMPLE"
+                android:background="#80000000"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+            <TextView
+                android:id="@+id/txt_giasp4"
+                style="@style/normal_text"
+                android:layout_width="130dp"
+                android:layout_height="25dp"
+                android:text="150.000Đ"
+                android:textAlignment="center"
+                android:background="#80000000"
+                android:textColor="#FF9800" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/cardview5"
+        app:layout_constraintTop_toBottomOf="@id/cardview3"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="15dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/imv_hinh5"
+                android:layout_width="130dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:src="@drawable/img_product_yellowpolo1"
+                />
+            <TextView
+                android:id="@+id/txt_tensp5"
+                style="@style/normal_text"
+                android:layout_width="130dp"
+                android:layout_height="25dp"
+                android:text="Áo polo TSIMPLE"
+                android:background="#80000000"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+            <TextView
+                android:id="@+id/txt_giasp5"
+                style="@style/normal_text"
+                android:layout_width="130dp"
+                android:layout_height="25dp"
+                android:text="150.000Đ"
+                android:textAlignment="center"
+                android:background="#80000000"
+                android:textColor="#FF9800" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cardview4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/cardview8"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="15dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/imv_hinh6"
+                android:layout_width="130dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:src="@drawable/imv_white_polo"
+                />
+            <TextView
+                android:id="@+id/txt_tensp6"
+                style="@style/normal_text"
+                android:layout_width="130dp"
+                android:layout_height="25dp"
+                android:text="Áo polo TSIMPLE"
+                android:background="#80000000"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+            <TextView
+                android:id="@+id/txt_giasp6"
+                style="@style/normal_text"
+                android:layout_width="130dp"
+                android:layout_height="25dp"
+                android:text="150.000Đ"
+                android:textAlignment="center"
+                android:background="#80000000"
+                android:textColor="#FF9800" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/cardview7"
+        app:layout_constraintTop_toBottomOf="@id/cardview5"
+        app:layout_constraintRight_toLeftOf="@id/cardview9"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="15dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/imv_hinh7"
+                android:layout_width="130dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:src="@drawable/imv_white_polo"
+                />
+            <TextView
+                android:id="@+id/txt_tensp7"
+                style="@style/normal_text"
+                android:layout_width="130dp"
+                android:layout_height="25dp"
+                android:text="Áo polo TSIMPLE"
+                android:background="#80000000"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+            <TextView
+                android:id="@+id/txt_giasp7"
+                style="@style/normal_text"
+                android:layout_width="130dp"
+                android:layout_height="25dp"
+                android:text="150.000Đ"
+                android:textAlignment="center"
+                android:background="#80000000"
+                android:textColor="#FF9800" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/cardview8"
+        app:layout_constraintTop_toBottomOf="@id/cardview6"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="15dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/imv_hinh8"
+                android:layout_width="130dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:src="@drawable/imv_white_polo"
+                />
+            <TextView
+                android:id="@+id/txt_tensp8"
+                style="@style/normal_text"
+                android:layout_width="130dp"
+                android:layout_height="25dp"
+                android:text="Áo polo TSIMPLE"
+                android:background="#80000000"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+            <TextView
+                android:id="@+id/txt_giasp8"
+                style="@style/normal_text"
+                android:layout_width="130dp"
+                android:layout_height="25dp"
+                android:text="150.000Đ"
+                android:textAlignment="center"
+                android:background="#80000000"
+                android:textColor="#FF9800" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
