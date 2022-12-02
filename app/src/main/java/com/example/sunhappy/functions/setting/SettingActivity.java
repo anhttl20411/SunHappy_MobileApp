@@ -14,6 +14,7 @@ import com.example.sunhappy.databinding.ActivityLoginBinding;
 import com.example.sunhappy.databinding.ActivitySettingAccountBinding;
 import com.example.sunhappy.databinding.ActivitySettingBinding;
 import com.example.sunhappy.functions.loginandregister.FlashscreenActivity;
+import com.example.sunhappy.functions.payments.UpdateAddress;
 
 public class SettingActivity extends AppCompatActivity {
 
@@ -63,8 +64,8 @@ public class SettingActivity extends AppCompatActivity {
         binding.btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent intent = new Intent(SettingActivity.this,//login không gọi được// .class);
-                //startActivity(intent);
+//                Intent intent = new Intent(SettingActivity.this,.class);
+//                startActivity(intent);
             }
         });
 
@@ -75,6 +76,14 @@ public class SettingActivity extends AppCompatActivity {
                 startActivity(intent1);
             }
         });
+        binding.ln3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(SettingActivity.this, UpdateAddress.class);
+                startActivity(intent1);
+            }
+        });
+
     }
 
 //    @Override
