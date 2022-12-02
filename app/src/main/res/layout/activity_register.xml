@@ -149,7 +149,6 @@
                 android:text="Đăng nhập ngay!"
                 android:textColor="#EA4335"
                 android:textSize="14dp" />
-            =
         </LinearLayout>
 
     </RelativeLayout>
