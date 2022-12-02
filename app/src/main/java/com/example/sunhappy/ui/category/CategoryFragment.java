@@ -16,13 +16,24 @@ import android.view.ViewGroup;
 
 import com.example.sunhappy.R;
 import com.example.sunhappy.adapters.CategoryAdapter;
+import com.example.sunhappy.adapters.NotificationAdapter;
+import com.example.sunhappy.adapters.PoloAdapter;
+import com.example.sunhappy.databinding.ActivityNotificationBinding;
+import com.example.sunhappy.databinding.FragmentPoloBinding;
+import com.example.sunhappy.models.Notification;
+import com.example.sunhappy.models.Polo;
 import com.google.android.material.tabs.TabLayout;
+
+import java.util.ArrayList;
 
 public class CategoryFragment extends Fragment {
 
     TabLayout tabLayout;
     ViewPager viewPager;
     View view;
+    FragmentPoloBinding binding;
+    PoloAdapter adapter;
+    ArrayList<Polo> poloArrayList;
 
 
 
@@ -42,7 +53,14 @@ public class CategoryFragment extends Fragment {
         CategoryAdapter categoryAdapter = new CategoryAdapter(getChildFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         tabLayout.setupWithViewPager(viewPager);
         viewPager.setAdapter(categoryAdapter);
+        loadData();
         return view;
+    }
+
+    private void loadData() {
+        poloArrayList = new ArrayList<>();
+        poloArrayList.add(new Polo(R.drawable.img_product_polo1, "Áo polo nè", 10000));
+        binding.gvPolo.setAdapter(adapter);
     }
 
 //    @Override

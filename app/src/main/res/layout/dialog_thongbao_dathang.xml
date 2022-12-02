@@ -3,13 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/white"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="20dp">
 
     <TextView
         style="@style/text_top"
         android:gravity="center"
         android:text="Cảm ơn bạn đã đặt hàng tại SunHappy"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -18,26 +18,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Button
+            android:id="@+id/btn_BackToHome"
             android:layout_weight="1"
-      android:background="@color/white"
-            android:textColor="@color/purple_500"
+            android:background="@color/white"
+            android:textColor="#DDA600"
             android:text="Trang chủ"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn_backtohome">
+            android:layout_height="wrap_content">
 
         </Button>
 
         <Button
             android:layout_weight="1"
             android:background="@color/white"
-            android:textColor="@color/purple_500"
+            android:textColor="#DDA600"
             android:text="Xem đơn đã đặt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btn_backtocart"
-            >
-
+            android:id="@+id/btn_ViewDoneOrder">
         </Button>
     </LinearLayout>
 

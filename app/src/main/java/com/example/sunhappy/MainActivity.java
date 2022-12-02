@@ -27,6 +27,7 @@ import android.widget.Toast;
 
 import com.example.sunhappy.databinding.ActivityMainBinding;
 import com.example.sunhappy.databinding.ActivityViewDetailProductBinding;
+import com.example.sunhappy.functions.viewcart.ProductCartActivity;
 import com.example.sunhappy.functions.viewnotification.NotificationActivity;
 import com.example.sunhappy.ui.user.UserFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -89,6 +90,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 // mở giỏ hàng
                 Toast.makeText(MainActivity.this, "Code mở màn hình giỏ hàng!", Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(MainActivity.this, ProductCartActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -96,20 +100,4 @@ public class MainActivity extends AppCompatActivity {
 //        UserFragment userFragment = new UserFragment();
 //        FragmentManager fragmentManager = getSupportFragmentManager();
 
-
-        addEvents();
-
-
-
-    }
-
-    private void addEvents() {
-
-    }
-//
-//    @Override
-//    public void onItemPressed(String content) {
-//        // Implement phương thức trừu tượng của OnFirstFragmentListener
-//        if ()
-//    }
-}
+}}

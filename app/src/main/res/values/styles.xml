@@ -38,6 +38,27 @@
         <item name="android:fontFamily">@font/montserrat</item>
         <item name="android:textSize">13sp</item>
     </style>
-    <style name="voucher"></style>
+    <style name="small_text">
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+    <style name="voucher">
+        <item name="android:textColor">#000000</item>
+        <item name="android:background">@drawable/voucher</item>
+        <item name="backgroundTint">#F8F03C</item>
+    </style>
+    <style name="text_top">
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+    <style name="exit_button_style">
+        <item name="android:textColor">#601e00</item>
+        <item name="android:fontFamily">@font/montserrat_semibold</item>
+        <item name="android:textSize">8sp</item>
+        <item name="backgroundTint">#ffd24c</item>
+        <item name="android:background">@drawable/style_small_button</item>
+        <item name="android:layout_height">30dp</item>
+    </style>
+
 
 </resources>

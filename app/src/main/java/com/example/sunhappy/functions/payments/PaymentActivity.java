@@ -11,10 +11,14 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 
+import com.example.sunhappy.MainActivity;
 import com.example.sunhappy.R;
 import com.example.sunhappy.databinding.ActivityPaymentBinding;
 import com.example.sunhappy.databinding.ActivityUpdateAddressBinding;
+import com.example.sunhappy.functions.manageorder.ViewDetailOderActivity;
+import com.example.sunhappy.functions.manageorder.ViewOderPreparingActivity;
 
 public class PaymentActivity extends AppCompatActivity {
 
@@ -73,6 +77,29 @@ public class PaymentActivity extends AppCompatActivity {
 
         dialog.setCancelable(true);
 
+        //khai báo
+        Button btnBackToHome, btnViewDoneOrder;
+        //ánh xạ
+        btnBackToHome = dialog.findViewById(R.id.btn_BackToHome);
+        btnViewDoneOrder = dialog.findViewById(R.id.btn_ViewDoneOrder);
+        //chèn sự kiện
+        btnBackToHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(PaymentActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnViewDoneOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(PaymentActivity.this, ViewOderPreparingActivity.class); // sửa lại thành đã giao
+                startActivity(intent);
+            }
+        });
+
         dialog.show();
+
     }
 }

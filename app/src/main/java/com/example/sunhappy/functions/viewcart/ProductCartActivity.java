@@ -3,11 +3,14 @@ package com.example.sunhappy.functions.viewcart;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.sunhappy.R;
 import com.example.sunhappy.adapters.ProductCartAdapter;
 import com.example.sunhappy.databinding.ActivityProductCartBinding;
+import com.example.sunhappy.functions.payments.PaymentActivity;
 import com.example.sunhappy.models.ProductCart;
 
 import java.util.ArrayList;
@@ -25,6 +28,7 @@ public class ProductCartActivity extends AppCompatActivity {
         binding = ActivityProductCartBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         loadData();
+        addEvents();
     }
 
     public void openDialogChooseColor(ProductCart p) {
@@ -40,6 +44,15 @@ public class ProductCartActivity extends AppCompatActivity {
 
         adapter = new ProductCartAdapter(ProductCartActivity.this, R.layout.activity_product_cart_list,productCartArrayList);
         binding.lvProduct.setAdapter(adapter);
+    }
+    private void addEvents(){
+        binding.btnBuy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ProductCartActivity.this, PaymentActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }

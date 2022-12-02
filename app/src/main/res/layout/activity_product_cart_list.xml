@@ -109,7 +109,7 @@
                     android:id="@+id/imv_Add"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:background="@drawable/ic_add"
+                    android:background="@drawable/ic_numb_add"
                     android:gravity="center"/>
             </LinearLayout>
         </LinearLayout>
