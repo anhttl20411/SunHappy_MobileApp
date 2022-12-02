@@ -1,5 +1,8 @@
 package com.example.sunhappy.ui.user;
 
+import static android.content.Context.SEARCH_SERVICE;
+import static android.content.Context.WINDOW_SERVICE;
+
 import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
@@ -14,8 +17,17 @@ import android.view.ViewGroup;
 
 import com.example.sunhappy.MainActivity;
 import com.example.sunhappy.R;
+import com.example.sunhappy.adapters.FavoriteAdapter;
+import com.example.sunhappy.databinding.FragmentUserBinding;
+import com.example.sunhappy.models.ProductFavorite;
+
+import java.util.ArrayList;
 
 public class UserFragment extends Fragment {
+
+    FragmentUserBinding binding;
+    FavoriteAdapter adapter;
+    ArrayList<ProductFavorite> favoritelist;
 
     private UserViewModel mViewModel;
 
@@ -32,5 +44,16 @@ public class UserFragment extends Fragment {
 //    }
 
 
+
+    private void loadDatauserfragment() {
+        favoritelist = new ArrayList<>();
+        favoritelist.add(new ProductFavorite(R.drawable.imv_white_polo, "Polo White Span", 190000.0));
+        favoritelist.add(new ProductFavorite(R.drawable.imv_white_polo, "Polo White Span", 190000.0));
+        favoritelist.add(new ProductFavorite(R.drawable.imv_white_polo, "Polo White Span", 190000.0));
+
+        adapter =  new FavoriteAdapter(this,R.layout.item_list_favorite,favoritelist);
+        binding.gvDanhsachyeuthich.setAdapter(adapter);
+
+    }
 
 }
