@@ -37,8 +37,8 @@
                 android:text="Chọn tất cả"
                 android:paddingLeft="@dimen/sunhappy_padding"
                 style="@style/product_name_style"/>
-            <TextView
-                android:id="@+id/txt_Buy"
+            <Button
+                android:id="@+id/btn_Buy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="MUA HÀNG"
