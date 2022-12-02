@@ -15,6 +15,12 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:src="@drawable/logo_horizontal_color"/>
+    <Button
+        android:id="@+id/btn_Test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="thử"></Button>
 
 
 

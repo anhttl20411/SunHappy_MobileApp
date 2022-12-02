@@ -1,6 +1,8 @@
 package com.example.sunhappy.adapters;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,38 +10,37 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.sunhappy.MainActivity;
 import com.example.sunhappy.R;
-import com.example.sunhappy.functions.viewnotification.NotificationActivity;
-import com.example.sunhappy.models.Notification;
+import com.example.sunhappy.models.ProductAll;
 
 import java.util.List;
 
-public class NotificationAdapter extends BaseAdapter {
-    NotificationActivity activity;
+public class ProductAllAdapter extends BaseAdapter {
+    MainActivity activity;
     int item_layout;
-    List<Notification> notifications;
+    List<ProductAll> productAlls;
 
     //constructor
 
-    public NotificationAdapter(NotificationActivity activity, int item_layout, List<Notification> notifications) {
+    public ProductAllAdapter(MainActivity activity, int item_layout, List<ProductAll> productAlls) {
         this.activity = activity;
         this.item_layout = item_layout;
-        this.notifications = notifications;
+        this.productAlls = productAlls;
     }
-
 
     //implement methods
 
     @Override
     public int getCount() {
         //return 0;
-        return notifications.size();
+        return productAlls.size();
     }
 
     @Override
     public Object getItem(int i) {
         //return null;
-        return notifications.get(i);
+        return productAlls.get(i);
     }
 
     @Override
@@ -55,22 +56,26 @@ public class NotificationAdapter extends BaseAdapter {
             holder = new ViewHolder();
             LayoutInflater inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(item_layout, null);
-            holder.txtNotificationTitle = view.findViewById(R.id.txt_notificationTitle);
-            holder.txtNotificationContent = view.findViewById(R.id.txt_notificationContent);
-            holder.txtNotificationTime = view.findViewById(R.id.txt_notificationTime);
+
+            holder.imvProductImage = view.findViewById(R.id.imv_ProductImage);
+            holder.txtProductName = view.findViewById(R.id.txt_ProductName);
+            holder.txtProductPrice = view.findViewById(R.id.txt_ProductPrice);
 
             view.setTag(holder);
         }else{
-            holder = (ViewHolder) view.getTag();
+            holder = (ProductAllAdapter.ViewHolder) view.getTag();
         }
-        Notification noti = notifications.get(i);
-        holder.txtNotificationTitle.setText(noti.getNotificationTitle());
-        holder.txtNotificationContent.setText(noti.getNotificationContent());
-        holder.txtNotificationTime.setText(noti.getNotificationTime());
+        ProductAll p = productAlls.get(i);
+        //holder.imvProductImage.setImageResource(p.getProductImage());
+        holder.txtProductPrice.setText(p.getProductName());
+        //holder.txtProductPrice.setText(toString(productAll.getProductPrice()));
+
         return view;
+
 
     }
     public static class ViewHolder{
-        TextView txtNotificationTitle, txtNotificationContent, txtNotificationTime;
+        ImageView imvProductImage;
+        TextView txtProductName, txtProductPrice;
     }
 }

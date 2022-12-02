@@ -1,5 +1,6 @@
 package com.example.sunhappy.adapters;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,37 +10,34 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.sunhappy.R;
-import com.example.sunhappy.functions.viewnotification.NotificationActivity;
-import com.example.sunhappy.models.Notification;
+import com.example.sunhappy.models.Polo;
 
 import java.util.List;
 
-public class NotificationAdapter extends BaseAdapter {
-    NotificationActivity activity;
+public class PoloAdapter extends BaseAdapter {
+    Activity activity;
     int item_layout;
-    List<Notification> notifications;
+    List<Polo> polos;
 
     //constructor
 
-    public NotificationAdapter(NotificationActivity activity, int item_layout, List<Notification> notifications) {
+    public PoloAdapter(Activity activity, int item_layout, List<Polo> polos) {
         this.activity = activity;
         this.item_layout = item_layout;
-        this.notifications = notifications;
+        this.polos = polos;
     }
-
 
     //implement methods
 
+
     @Override
     public int getCount() {
-        //return 0;
-        return notifications.size();
+        return polos.size();
     }
 
     @Override
     public Object getItem(int i) {
-        //return null;
-        return notifications.get(i);
+        return polos.get(i);
     }
 
     @Override
@@ -55,22 +53,25 @@ public class NotificationAdapter extends BaseAdapter {
             holder = new ViewHolder();
             LayoutInflater inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(item_layout, null);
-            holder.txtNotificationTitle = view.findViewById(R.id.txt_notificationTitle);
-            holder.txtNotificationContent = view.findViewById(R.id.txt_notificationContent);
-            holder.txtNotificationTime = view.findViewById(R.id.txt_notificationTime);
+            holder.imvProductImage = view.findViewById(R.id.imv_ProductImage);
+            holder.txtProductName = view.findViewById(R.id.txt_ProductName);
+            holder.txtProductPrice = view.findViewById(R.id.txt_ProductPrice);
 
             view.setTag(holder);
         }else{
             holder = (ViewHolder) view.getTag();
         }
-        Notification noti = notifications.get(i);
-        holder.txtNotificationTitle.setText(noti.getNotificationTitle());
-        holder.txtNotificationContent.setText(noti.getNotificationContent());
-        holder.txtNotificationTime.setText(noti.getNotificationTime());
+        Polo polo = polos.get(i);
+        holder.imvProductImage.setImageResource(polo.getPoloImage());
+        holder.txtProductName.setText(polo.getPoloName());
+        holder.txtProductPrice.setText(String.valueOf(polo.getPoloPrice()));
         return view;
-
     }
     public static class ViewHolder{
-        TextView txtNotificationTitle, txtNotificationContent, txtNotificationTime;
+        ImageView imvProductImage;
+        TextView txtProductName, txtProductPrice;
     }
+
+
+
 }

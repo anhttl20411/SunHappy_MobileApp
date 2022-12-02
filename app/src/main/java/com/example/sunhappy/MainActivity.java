@@ -1,33 +1,39 @@
 package com.example.sunhappy;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.internal.view.SupportMenuItem;
+import androidx.core.view.ActionProvider;
+import androidx.fragment.app.FragmentManager;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
+import android.view.SubMenu;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.example.sunhappy.adapters.FavoriteAdapter;
 import com.example.sunhappy.databinding.ActivityMainBinding;
 import com.example.sunhappy.databinding.ActivityViewDetailProductBinding;
 import com.example.sunhappy.functions.viewnotification.NotificationActivity;
-import com.example.sunhappy.models.ProductFavorite;
+import com.example.sunhappy.ui.user.UserFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
-    FavoriteAdapter adapter;
-    ArrayList<ProductFavorite> favoritelist;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,8 +41,6 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-//        loadDatauserfragment();
 
 //        ActionBar actionBar = getSupportActionBar();
 //        actionBar.setDisplayShowHomeEnabled(true);
@@ -87,16 +91,25 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Code mở màn hình giỏ hàng!", Toast.LENGTH_SHORT).show();
             }
         });
+
+        //custom action bả cho fragment user
+//        UserFragment userFragment = new UserFragment();
+//        FragmentManager fragmentManager = getSupportFragmentManager();
+
+
+        addEvents();
+
+
+
     }
-    //---------------------------fragment user--------------------------------
-//    private void loadDatauserfragment() {
-//        favoritelist = new ArrayList<>();
-//        favoritelist.add(new ProductFavorite(R.drawable.imv_white_polo, "Polo White Span", 190000.0));
-//        favoritelist.add(new ProductFavorite(R.drawable.imv_white_polo, "Polo White Span", 190000.0));
-//        favoritelist.add(new ProductFavorite(R.drawable.imv_white_polo, "Polo White Span", 190000.0));
+
+    private void addEvents() {
+
+    }
 //
-//        adapter =  new FavoriteAdapter(MainActivity.this, R.layout.item_list_favorite, favoritelist);
-//        //binding.gv.setAdapter(adapter);
-//
+//    @Override
+//    public void onItemPressed(String content) {
+//        // Implement phương thức trừu tượng của OnFirstFragmentListener
+//        if ()
 //    }
 }
