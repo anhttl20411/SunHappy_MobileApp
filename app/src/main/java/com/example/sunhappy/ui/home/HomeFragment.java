@@ -20,7 +20,6 @@ public class HomeFragment extends Fragment {
 
     //Button btnTest;
 
-
     FragmentAboutSunhappyBinding binding;
 
     //private HomeViewModel mViewModel;

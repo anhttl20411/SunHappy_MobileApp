@@ -1,15 +1,26 @@
 package com.example.sunhappy;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.internal.view.SupportMenuItem;
+import androidx.core.view.ActionProvider;
+import androidx.fragment.app.FragmentManager;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
+import android.view.SubMenu;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -17,6 +28,7 @@ import android.widget.Toast;
 import com.example.sunhappy.databinding.ActivityMainBinding;
 import com.example.sunhappy.databinding.ActivityViewDetailProductBinding;
 import com.example.sunhappy.functions.viewnotification.NotificationActivity;
+import com.example.sunhappy.ui.user.UserFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -80,14 +92,24 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //custom action bả cho fragment user
+//        UserFragment userFragment = new UserFragment();
+//        FragmentManager fragmentManager = getSupportFragmentManager();
 
 
-
-
-
-
+        addEvents();
 
 
 
     }
+
+    private void addEvents() {
+
+    }
+//
+//    @Override
+//    public void onItemPressed(String content) {
+//        // Implement phương thức trừu tượng của OnFirstFragmentListener
+//        if ()
+//    }
 }
