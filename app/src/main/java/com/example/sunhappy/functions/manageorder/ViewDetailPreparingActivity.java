@@ -19,7 +19,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.sunhappy.R;
-import com.example.sunhappy.databinding.ActivityViewDetailOderBinding;
 import com.example.sunhappy.databinding.ActivityViewDetailPreparingBinding;
 
 public class ViewDetailPreparingActivity extends AppCompatActivity {

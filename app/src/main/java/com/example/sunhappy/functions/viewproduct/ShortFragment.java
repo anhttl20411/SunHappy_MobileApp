@@ -1,5 +1,6 @@
 package com.example.sunhappy.functions.viewproduct;
 
+import android.database.Cursor;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,58 +10,51 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.sunhappy.R;
+import com.example.sunhappy.adapters.ShirtAdapter;
+import com.example.sunhappy.adapters.ShortAdapter;
+import com.example.sunhappy.data.DatabaseHelper;
+import com.example.sunhappy.databinding.FragmentShortBinding;
+import com.example.sunhappy.models.Shirt;
+import com.example.sunhappy.models.Short;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link ShortFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.ArrayList;
+
+
 public class ShortFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public ShortFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment ShortFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static ShortFragment newInstance(String param1, String param2) {
-        ShortFragment fragment = new ShortFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
+    FragmentShortBinding binding;
+    ShortAdapter adapter;
+    ArrayList<Short> shortArrayList;
+    View view;
+    DatabaseHelper db;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_short, container, false);
+        //return inflater.inflate(R.layout.fragment_short, container, false);
+
+        binding = FragmentShortBinding.inflate(getLayoutInflater());
+        view = binding.getRoot();
+
+        createDB();
+        loadData();
+        return view;
+    }
+
+    private void loadData() {
+        shortArrayList = new ArrayList<>();
+        Cursor c = db.getData("SELECT * FROM " + DatabaseHelper.TBL_NAME_PRODUCT + " WHERE " + DatabaseHelper.COL_CATEGORY_PRODUCT + " ='Quần short'");
+        while (c.moveToNext()) {
+            shortArrayList.add(new Short(c.getInt(2), c.getString(1), c.getDouble(3)));
+        }
+        c.close();
+        adapter = new ShortAdapter(this, R.layout.item_list_product, shortArrayList);
+        binding.gvShort.setAdapter(adapter);
+    }
+
+    private void createDB() {
+        db = new DatabaseHelper(getActivity());
+        db.createData();
     }
 }

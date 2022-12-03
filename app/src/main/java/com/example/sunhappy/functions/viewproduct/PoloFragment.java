@@ -11,12 +11,9 @@ import android.view.ViewGroup;
 
 import com.example.sunhappy.R;
 import com.example.sunhappy.adapters.PoloAdapter;
-import com.example.sunhappy.adapters.TopProductAdapter;
 import com.example.sunhappy.data.DatabaseHelper;
-import com.example.sunhappy.databinding.FragmentHomeBinding;
 import com.example.sunhappy.databinding.FragmentPoloBinding;
 import com.example.sunhappy.models.Polo;
-import com.example.sunhappy.models.TopProduct;
 
 import java.util.ArrayList;
 

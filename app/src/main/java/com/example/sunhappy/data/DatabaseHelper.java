@@ -80,7 +80,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
             execSql("INSERT INTO " + TBL_NAME_PRODUCT + " VALUES(null, 'Polo skater club gấu trẻ trung', " + R.drawable.img_polo_2 + ", 120000, 'Áo polo')");
             execSql("INSERT INTO " + TBL_NAME_PRODUCT + " VALUES(null, 'Quần lưng chun dài bo cổ chân', " + R.drawable.img_dai_2 + ", 220000, 'Quần dài')");
-            execSql("INSERT INTO " + TBL_NAME_PRODUCT + " VALUES(null, 'Quần short jean rách bụi bặm', " + R.drawable.img_short_2 + ", 190000, 'Quần short')");
+            execSql("INSERT INTO " + TBL_NAME_PRODUCT + " VALUES(null, 'Quần short jean rách bụi bặm', " + R.drawable.img_short_2 + ", 190000, 'Quan short')");
             execSql("INSERT INTO " + TBL_NAME_PRODUCT + " VALUES(null, 'Sơ mi nam tay ngắn form rộng', " + R.drawable.img_somi_2 + ", 110000, 'Áo sơ mi')");
             execSql("INSERT INTO " + TBL_NAME_PRODUCT + " VALUES(null, 'Áo thun nam họa tiết tay ngắn có sọc một bên', " + R.drawable.img_thun_2 + ", 60000, 'Áo thun')");
 
