@@ -28,8 +28,8 @@ public class forgotpass extends AppCompatActivity {
         binding.btnOTP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent3 = new Intent(forgotpass.this, otp.class);
-                startActivity(intent3);
+                Intent intent = new Intent(forgotpass.this, otp.class);
+                startActivity(intent);
             }
         });
         //định dạng số điện thoại là số

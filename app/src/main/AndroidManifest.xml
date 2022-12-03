@@ -6,13 +6,14 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/ic_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.SUNHAPPY"
         tools:targetApi="31">
         <activity
+<<<<<<< HEAD
             android:name=".functions.loginandregister.help"
             android:exported="false" />
         <activity
@@ -34,15 +35,63 @@
         <activity
             android:name=".functions.viewproduct.ViewDetailProductActivity"
             android:exported="false"/>
+=======
+            android:name=".functions.payments.MethodPayment"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".functions.payments.UpdateAddressClick"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".functions.payments.AddNewAddressActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".functions.payments.UpdateAddress"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".functions.setting.SettingActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".functions.payments.PaymentActivity"
+            android:exported="false">
+>>>>>>> c7cda1bb3279473f772f8f1f29648164230b7207
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </application>
         <activity
+<<<<<<< HEAD
             android:name=".functions.loginandregister.login"
             android:exported="false"
             tools:ignore="WrongManifestParent" />
 
+=======
+            android:name=".functions.viewcart.ProductCartActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+>>>>>>> c7cda1bb3279473f772f8f1f29648164230b7207
         <activity
             android:name=".functions.viewproduct.ViewDetailProductActivity"
             android:exported="false"
@@ -53,24 +102,116 @@
         </activity>
         <activity
             android:name=".functions.setting.SettingAccountActivity"
+<<<<<<< HEAD
             android:exported="false"
             tools:ignore="WrongManifestParent">
 
 
+=======
+            android:exported="false">
+>>>>>>> c7cda1bb3279473f772f8f1f29648164230b7207
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+<<<<<<< HEAD
+            android:name=".functions.loginandregister.FlashscreenActivity"
+            android:exported="true"
+            tools:ignore="WrongManifestParent">
+=======
+            android:name=".functions.viewnotification.NotificationActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".functions.loginandregister.login"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".functions.loginandregister.help"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".functions.loginandregister.newpassword"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".functions.loginandregister.otp"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".functions.loginandregister.forgotpass"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".functions.loginandregister.register"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".functions.loginandregister.FlashscreenActivity"
-            android:exported="true"
-            tools:ignore="WrongManifestParent">
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".functions.manageorder.ViewOderCancelledActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".functions.manageorder.ViewDetailPreparingActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".functions.manageorder.ViewOderPreparingActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".functions.manageorder.ViewDetailOderActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+>>>>>>> c7cda1bb3279473f772f8f1f29648164230b7207
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

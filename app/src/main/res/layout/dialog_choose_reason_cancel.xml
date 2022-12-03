@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:orientation="vertical"
+    android:background="@drawable/bg_dialog"
+    android:layout_margin="10dp">
+    <TextView
+        android:id="@+id/txt_reason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chọn lý do hủy đơn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        style="@style/product_name_style"
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="@drawable/corners_dialog"
+        ></TextView>
+    <RadioGroup
+        android:id="@+id/rad_reason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txt_reason"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:padding="10dp">
+        <RadioButton
+            android:id="@+id/rad_reason1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Không đúng mẫu"
+            android:background="#DAD7D7"
+            android:buttonTint="#977100"
+            style="@style/product_description_style"
+            android:layout_marginBottom="3dp"
+            android:paddingLeft="10dp"
+            android:checked="true">
+        </RadioButton>
+        <RadioButton
+            android:id="@+id/rad_reason2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sai địa chỉ"
+            android:background="#DAD7D7"
+            android:buttonTint="#977100"
+            style="@style/product_description_style"
+            android:layout_marginBottom="3dp"
+            android:paddingLeft="10dp">
+        </RadioButton>
+        <RadioButton
+            android:id="@+id/rad_reason3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đặt nhầm"
+            android:buttonTint="#977100"
+            android:background="#DAD7D7"
+            style="@style/product_description_style"
+            android:layout_marginBottom="3dp"
+            android:paddingLeft="10dp">
+        </RadioButton>
+        <RadioButton
+            android:id="@+id/rad_reason4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lý do khác"
+            android:buttonTint="#977100"
+            android:background="#DAD7D7"
+            style="@style/product_description_style"
+            android:paddingLeft="10dp">
+        </RadioButton>
+
+
+    </RadioGroup>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rad_reason"
+        android:layout_marginBottom="10dp">
+        <Button
+            android:id="@+id/btn_ExitReason"
+            style="@style/exit_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:text="Thoát"
+            >
+
+        </Button>
+
+        <Button
+            android:id="@+id/btn_ConfirmCancel"
+            style="@style/normal_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:text="Xác nhận">
+
+        </Button>
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

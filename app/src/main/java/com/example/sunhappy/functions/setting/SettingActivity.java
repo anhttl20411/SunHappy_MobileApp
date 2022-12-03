@@ -10,8 +10,11 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.example.sunhappy.R;
+import com.example.sunhappy.databinding.ActivityLoginBinding;
 import com.example.sunhappy.databinding.ActivitySettingAccountBinding;
 import com.example.sunhappy.databinding.ActivitySettingBinding;
+import com.example.sunhappy.functions.loginandregister.FlashscreenActivity;
+import com.example.sunhappy.functions.payments.UpdateAddress;
 
 public class SettingActivity extends AppCompatActivity {
 
@@ -34,14 +37,53 @@ public class SettingActivity extends AppCompatActivity {
 
     }
 
+    // set events for actionbar
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId())
+        {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+
+            default:break;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
     private void addEvents() {
-//        binding.imvHosocuatoi.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(SettingActivity.this, SettingAccountActivity.class);
+        binding.hosocuatui.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SettingActivity.this, SettingAccountActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        binding.btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Intent intent = new Intent(SettingActivity.this,.class);
 //                startActivity(intent);
-//            }
-//        });
+            }
+        });
+
+        binding.txtThaydoimatkhau.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(SettingActivity.this,ChangePasswordActivity.class);
+                startActivity(intent1);
+            }
+        });
+        binding.ln3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(SettingActivity.this, UpdateAddress.class);
+                startActivity(intent1);
+            }
+        });
+
     }
 
 //    @Override

@@ -11,11 +11,11 @@ import com.example.sunhappy.databinding.ActivityForgotpassBinding;
 import com.example.sunhappy.databinding.ActivityOtpBinding;
 
 public class otp extends AppCompatActivity {
- ActivityOtpBinding binding;
+    ActivityOtpBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_otp);
+        //setContentView(R.layout.activity_otp);
         binding = ActivityOtpBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         addEvents();
@@ -25,8 +25,8 @@ public class otp extends AppCompatActivity {
         binding.txtHelp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent2 = new Intent(otp.this, help.class);
-                startActivity(intent2);
+                Intent intent = new Intent(otp.this, help.class);
+                startActivity(intent);
             }
         });
         //đém được thời gian để gửi lại otp chưa làm
@@ -34,8 +34,8 @@ public class otp extends AppCompatActivity {
         binding.btnConfirmOTP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            Intent intent1 = new Intent(otp.this, newpassword.class);
-             startActivity(intent1);
+                Intent intent = new Intent(otp.this, newpassword.class);
+                startActivity(intent);
             }
         });
     }

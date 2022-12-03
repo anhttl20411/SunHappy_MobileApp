@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="product_name_color">#000000</color>
     <color name="product_price_color">#B84514</color>
+    <color name="yelow">#F8EF3E</color>
 </resources>

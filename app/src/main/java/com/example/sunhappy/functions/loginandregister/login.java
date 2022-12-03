@@ -72,8 +72,8 @@ public class login extends AppCompatActivity {
         binding.txtSignUpNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent4 = new Intent(login.this, register.class);
-                startActivity(intent4);
+                Intent intent = new Intent(login.this, register.class);
+                startActivity(intent);
             }
         });
         //ấn vào quên mật khẩu thì hiện màn hình quên mk
@@ -81,8 +81,8 @@ public class login extends AppCompatActivity {
         binding.txtForgotpass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent5 = new Intent(login.this, forgotpass.class);
-                startActivity(intent5);
+                Intent intent = new Intent(login.this, forgotpass.class);
+                startActivity(intent);
             }
         });
     }

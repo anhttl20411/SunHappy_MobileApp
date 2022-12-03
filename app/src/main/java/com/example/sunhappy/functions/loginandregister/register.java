@@ -36,8 +36,8 @@ public class register extends AppCompatActivity {
         setContentView(binding.getRoot());
         addEvents();
         //ẩn hiện mk
-        email=findViewById(R.id.edt_Email);
-        password=findViewById(R.id.edt_Password);
+        email = findViewById(R.id.edt_Email);
+        password = findViewById(R.id.edt_Password);
         password.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -75,8 +75,8 @@ public class register extends AppCompatActivity {
         binding.txtLoginNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent8 = new Intent(register.this,login.class);
-                startActivity(intent8);
+                Intent intent = new Intent(register.this,login.class);
+                startActivity(intent);
             }
         });
         ///chưa code điều kiện cho email và mật khẩu
