@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageButton
+        android:id="@+id/mn_Notification"
+        android:src="@drawable/ic_notifications"
+        android:background="?attr/actionBarItemBackground"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"/>
+
+    <ImageView
+        android:src="@drawable/logo_horizontal_color"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_width="wrap_content"
+        android:scaleType="centerInside"
+        android:id="@+id/text_appname"
+        android:layout_toRightOf="@+id/mn_Notification"
+        android:layout_toLeftOf="@id/mn_Cart"
+        android:layout_alignParentTop="true"/>
+
+    <ImageButton
+        android:id="@+id/mn_Cart"
+        android:src="@drawable/ic_shopping_bag"
+        android:background="?attr/actionBarItemBackground"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"/>
+</RelativeLayout>
