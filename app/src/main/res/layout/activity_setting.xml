@@ -6,29 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".functions.setting.SettingActivity"
     android:orientation="vertical"
-    >
-<TextView
-    android:layout_width="match_parent"
-    android:paddingVertical="10dp"
-    android:layout_height="wrap_content"
-    android:fontFamily="@font/montserrat"
-    android:text="Tài khoản"
-    android:background="#ECE7E7"
-    android:textStyle="bold"
-    android:textSize="26sp"
-    />
+    android:padding="@dimen/sunhappy_padding">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:paddingVertical="10dp"
+        android:layout_height="wrap_content"
+        android:text="Tài khoản"
+        android:background="#ECE7E7"
+        style="@style/header" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="@drawable/vien">
         <LinearLayout
-            android:id="@+id/hosocuatui"
+            android:id="@+id/hosocuatoi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="10dp"
-            >
+            android:layout_marginTop="10dp">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="40dp"
@@ -36,7 +33,7 @@
                 android:layout_weight="8.5"
                 android:layout_marginLeft="20dp"
                 android:paddingVertical="10dp"
-                />
+                style="@style/normal_text" />
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="40dp"
@@ -50,8 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="10dp"
-            >
+            android:layout_marginTop="10dp">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="40dp"
@@ -59,7 +55,7 @@
                 android:layout_weight="8.5"
                 android:layout_marginLeft="20dp"
                 android:paddingVertical="10dp"
-                />
+                style="@style/normal_text"/>
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="40dp"
@@ -73,8 +69,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="10dp"
-            >
+            android:layout_marginTop="10dp">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="40dp"
@@ -82,7 +77,7 @@
                 android:layout_weight="8.5"
                 android:layout_marginLeft="20dp"
                 android:paddingVertical="10dp"
-                />
+                style="@style/normal_text"/>
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="40dp"
@@ -97,11 +92,9 @@
         android:layout_width="match_parent"
         android:paddingVertical="10dp"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat"
         android:text="Cài đặt"
         android:background="#ECE7E7"
-        android:textStyle="bold"
-        android:textSize="26sp"
+        style="@style/header"
         />
 
     <LinearLayout
@@ -113,8 +106,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="10dp"
-            >
+            android:layout_marginTop="10dp">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="40dp"
@@ -122,7 +114,7 @@
                 android:layout_weight="8.5"
                 android:layout_marginLeft="20dp"
                 android:paddingVertical="10dp"
-                />
+                style="@style/normal_text"/>
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="40dp"
@@ -144,7 +136,7 @@
                 android:layout_weight="8.5"
                 android:layout_marginLeft="20dp"
                 android:paddingVertical="10dp"
-                />
+                style="@style/normal_text"/>
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="40dp"
@@ -173,7 +165,8 @@
                 android:gravity="end"
                 android:layout_weight="1.5"
                 android:paddingVertical="10dp"
-                android:src="@drawable/ic_next"/>
+                android:src="@drawable/ic_next"
+                style="@style/normal_text"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -184,8 +177,7 @@
         android:layout_height="60dp"
         android:text="ĐĂNG XUẤT"
         style="@style/normal_button_style"
-        android:layout_marginLeft="100dp"
-        />
+        android:layout_marginLeft="100dp"/>
 
 
 </LinearLayout>

@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".functions.payments.MethodPayment">
+    tools:context=".functions.payments.MethodPayment"
+    android:padding="@dimen/sunhappy_padding">
 
     <RadioGroup
 
@@ -15,7 +16,8 @@
             android:button="@drawable/radio_payment"
             android:text="Thanh toán khi nhận hàng"
             android:layout_width="match_parent"
-            android:layout_height="100dp">
+            android:layout_height="100dp"
+            style="@style/normal_text">
 
 
         </RadioButton>
@@ -24,14 +26,16 @@
             android:button="@drawable/radiomomo"
              android:text="Thanh toán qua ví momo"
             android:layout_width="match_parent"
-            android:layout_height="100dp">
+            android:layout_height="100dp"
+            style="@style/normal_text">
 
         </RadioButton>
         <RadioButton
             android:button="@drawable/radiobank"
                android:text="Thanh toán qua tài khoản ngân hàng"
             android:layout_width="match_parent"
-            android:layout_height="100dp">
+            android:layout_height="100dp"
+            style="@style/normal_text">
 
         </RadioButton>
     </RadioGroup>
@@ -41,7 +45,8 @@
         android:text="Đồng ý"
         style="@style/normal_button_style"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
 
     </Button>
 

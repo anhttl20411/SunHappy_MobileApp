@@ -25,10 +25,10 @@ import java.util.ArrayList;
 
 public class UserFragment extends Fragment {
 
-    FragmentUserBinding binding;
-    FavoriteAdapter adapter;
-    ArrayList<ProductFavorite> favoritelist;
-    View view;
+    //FragmentUserBinding binding;
+//    FavoriteAdapter adapter;
+//    ArrayList<ProductFavorite> favoritelist;
+//    View view;
 
     private UserViewModel mViewModel;
 
@@ -39,10 +39,10 @@ public class UserFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-    binding = FragmentUserBinding.inflate(getLayoutInflater());
-
-    return view;
-       // return inflater.inflate(R.layout.fragment_user, container, false);
+//    binding = FragmentUserBinding.inflate(getLayoutInflater());
+//
+//    return view;
+       return inflater.inflate(R.layout.fragment_user, container, false);
     }
 
     @Override
@@ -52,15 +52,15 @@ public class UserFragment extends Fragment {
         // TODO: Use the ViewModel
     }
 
-    private void loadDatauserfragment() {
-        favoritelist = new ArrayList<>();
-        favoritelist.add(new ProductFavorite(R.drawable.imv_white_polo, "Polo White Span", 190000.0));
-        favoritelist.add(new ProductFavorite(R.drawable.imv_white_polo, "Polo White Span", 190000.0));
-        favoritelist.add(new ProductFavorite(R.drawable.imv_white_polo, "Polo White Span", 190000.0));
-
-        adapter =  new FavoriteAdapter(this,R.layout.item_list_favorite,favoritelist);
-        binding.gvDanhsachyeuthich.setAdapter(adapter);
-
-    }
+//    private void loadDatauserfragment() {
+//        favoritelist = new ArrayList<>();
+//        favoritelist.add(new ProductFavorite(R.drawable.imv_white_polo, "Polo White Span", 190000.0));
+//        favoritelist.add(new ProductFavorite(R.drawable.imv_white_polo, "Polo White Span", 190000.0));
+//        favoritelist.add(new ProductFavorite(R.drawable.imv_white_polo, "Polo White Span", 190000.0));
+//
+//        adapter =  new FavoriteAdapter(this,R.layout.item_list_favorite,favoritelist);
+//        binding.gvDanhsachyeuthich.setAdapter(adapter);
+//
+//    }
 
 }

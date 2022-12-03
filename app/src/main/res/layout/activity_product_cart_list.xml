@@ -53,7 +53,8 @@
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:padding="3dp"
-            android:text="Phân loại: áo polo nam có viền, Size: XL(60-75kg)" />
+            android:text="Phân loại: áo polo nam có viền, Size: XL(60-75kg)"
+            style="@style/small_text"/>
 
         <ImageView
             android:id="@+id/imv_Expand"
@@ -66,6 +67,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="7 ngày đổi trả miễn phí"
+        style="@style/small_text"
         android:textColor="#FF7A00"
         android:background="@drawable/vien_doitra"
         android:padding="3dp"

@@ -42,6 +42,7 @@
                 <TextView
                     android:id="@+id/txt_CustomerName"
                     android:text="Nhân Nguyễn Thành"
+                    style="@style/normal_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                 </TextView>
@@ -54,6 +55,7 @@
                 <TextView
                     android:id="@+id/txt_CustomerPhone"
                     android:text="0383503044"
+                    style="@style/normal_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp">
@@ -65,8 +67,8 @@
                 android:id="@+id/txt_CustomerAddress"
                 android:text="Số 10, Đường Tân Lập, Tân Lập, Dĩ Ân, Bình Dương"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
+                android:layout_height="wrap_content"
+                style="@style/normal_text">
             </TextView>
 
         </LinearLayout>
@@ -102,8 +104,8 @@
             <TextView
                 android:text="Đơn hàng sẽ được chuẩn bị và chuyển đi trước ngày 15-11-2022"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
+                android:layout_height="wrap_content"
+                style="@style/normal_text">
             </TextView>
 
         </LinearLayout>
@@ -141,8 +143,8 @@
             <TextView
                 android:text="Thanh toán trước khi nhận hàng (COD)"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
+                android:layout_height="wrap_content"
+                style="@style/normal_text">
             </TextView>
 
         </LinearLayout>
@@ -198,7 +200,6 @@
                 android:layout_height="100dp"
                 android:src="@drawable/img_product_polo1"
                 android:scaleType="fitCenter"
-
                 >
             </ImageView>
             <LinearLayout
@@ -285,17 +286,19 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Giá:">
+                        android:text="Giá:"
+                        style="@style/normal_text">
                     </TextView>
+
                     <TextView
-                        android:gravity="end"
                         android:id="@+id/txt_ProductPricePreparing"
-                        android:layout_width="match_parent"
+                        android:layout_width="236dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:gravity="end"
                         android:text="150000"
-                        android:textColor="@color/black"
-                        android:layout_marginRight="10dp">
-                    </TextView>
+                        style="@style/product_name_style"
+                        android:textColor="@color/black"></TextView>
                 </LinearLayout>
         </LinearLayout>
 
@@ -335,15 +338,17 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tổng tiền hàng:">
+                    android:text="Tổng tiền hàng:"
+                    style="@style/normal_text">
                 </TextView>
                 <TextView
                     android:gravity="end"
-
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="150000"
+                    android:text="180000"
                     android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat"
+                    android:textStyle="bold"
                     android:layout_marginRight="10dp">
                 </TextView>
             </LinearLayout>
@@ -354,14 +359,16 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tổng tiền phí vận chuyển:">
+                    android:text="Tổng tiền phí vận chuyển:"
+                    style="@style/normal_text">
                 </TextView>
                 <TextView
                     android:gravity="end"
-
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="30000"
+                    android:text="20000"
+                    android:fontFamily="@font/montserrat"
+                    android:textStyle="bold"
                     android:textColor="@color/black"
                     android:layout_marginRight="10dp">
                 </TextView>
@@ -379,10 +386,9 @@
                 </TextView>
                 <TextView
                     android:gravity="end"
-
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="150000"
+                    android:text="200000"
                     android:layout_marginRight="10dp"
                     style="@style/product_price_style">
                 </TextView>

@@ -7,7 +7,7 @@
     tools:context=".functions.payments.AddNewAddressActivity"
     android:orientation="vertical"
 
-    android:padding="10dp">
+    android:padding="@dimen/sunhappy_padding">
 
     <ScrollView
         android:fillViewport="true"
@@ -23,11 +23,8 @@
         android:layout_width="match_parent"
         android:paddingVertical="10dp"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat"
         android:text="Liên hệ "
-        android:textStyle="bold"
-        android:textSize="16sp"
-        />
+        style="@style/header"/>
     <LinearLayout
 
         android:layout_width="match_parent"
@@ -96,10 +93,10 @@
         android:orientation="vertical"
         android:background="@drawable/vien">
         <TextView
-            style="@style/header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Địa chỉ"></TextView>
+            android:text="Địa chỉ"
+            style="@style/header"></TextView>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -200,15 +197,11 @@
         </LinearLayout>
     </LinearLayout>
     <TextView
-        style="@style/header"
         android:layout_width="match_parent"
         android:paddingVertical="10dp"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat"
         android:text="Loại địa chỉ"
-        android:textStyle="bold"
-        android:textSize="16sp"
-        />
+        style="@style/header" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -221,13 +214,15 @@
             <RadioButton
                 android:text="Nhà riêng"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                style="@style/normal_text">
 
             </RadioButton>
             <RadioButton
                 android:text="Công ty"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                style="@style/normal_text">
 
             </RadioButton>
         </RadioGroup>
@@ -254,8 +249,7 @@
             android:gravity="end"
             android:layout_weight="1"
             android:paddingVertical="10dp"
-
-            android:button="@drawable/radio"/>
+            />
 
     </LinearLayout>
 

@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="5dp">
+    android:layout_margin="10dp">
     <CheckBox
         android:id="@+id/chk_Address"
         android:layout_weight="2"
@@ -21,14 +21,15 @@
             android:id="@+id/txt_AddressLine1"
             android:text="Nhân Thành | 032 822 7254"
             android:layout_width="wrap_content"
+            style="@style/normal_text"
             android:layout_height="wrap_content">
-
         </TextView>
         <TextView
             android:id="@+id/txt_AddressLine2"
             android:text="Số 10, Đường Tân Lập, Phường Tân Lập, Dĩ An, Bình Dương"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            style="@style/normal_text">
 
         </TextView>
 
@@ -38,26 +39,24 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
         <ImageView
-
             android:background="@drawable/ic_baseline_edit_24"
             android:id="@+id/btn_AddressUpdate"
-
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
-            android:layout_width="50dp"
-            android:layout_height="50dp">
+            android:layout_width="24dp"
+            android:layout_height="24dp">
 
         </ImageView>
         <ImageView
             android:background="@drawable/ic_remove"
             android:id="@+id/btn_AddressRemove"
-
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
-            android:layout_width="50dp"
-            android:layout_height="50dp">
+            android:layout_width="24dp"
+            android:layout_height="24dp">
 
         </ImageView>
 
