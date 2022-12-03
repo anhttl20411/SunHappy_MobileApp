@@ -1,5 +1,6 @@
 package com.example.sunhappy.functions.manageorder;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
@@ -7,7 +8,9 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -31,7 +34,19 @@ public class ViewDetailPreparingActivity extends AppCompatActivity {
         //setContentView(R.layout.activity_view_detail_preparing);
         binding= ActivityViewDetailPreparingBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        //tạo nút back
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(Html.fromHtml("<font color='#ffd24c'>Chi tiết đơn hàng</font>"));
+        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.setDisplayUseLogoEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        //--------------
+       // addEvents();
+
         Button btnCancel = findViewById(R.id.btn_CancelOder);
+
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -39,6 +54,7 @@ public class ViewDetailPreparingActivity extends AppCompatActivity {
 
             }
         });
+
         name = findViewById(R.id.txt_SubProductNamePreparing);
         total =findViewById(R.id.txt_SubTotalPreparing);
         amount =findViewById(R.id.txt_SubProductAmountPreparing);
@@ -58,7 +74,30 @@ public class ViewDetailPreparingActivity extends AppCompatActivity {
         amount.setText(""+ amountProduct);
         int imgProduct=intent.getIntExtra("image", 0);
         image.setImageResource(imgProduct);
+
+
+
+        Button btnConfirm = findViewById(R.id.btn_ConfirmCancel);
+        btnConfirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ViewDetailPreparingActivity.this, ViewOderCancelledActivity.class);
+                intent.putExtra("name", nameProduct );
+                intent.putExtra("", nameProduct );
+                intent.putExtra("name", nameProduct );
+                intent.putExtra("name", nameProduct );
+                intent.putExtra("name", nameProduct );
+            }
+        });
     }
+
+
+
+
+//    private void addEvents() {
+//        binding.
+//    }
+
     private void openCancelDialog(int gravity){
         //final
         final Dialog dialog = new Dialog(ViewDetailPreparingActivity.this);
@@ -75,7 +114,6 @@ public class ViewDetailPreparingActivity extends AppCompatActivity {
         windowAttributes.gravity = gravity;
         window.setAttributes(windowAttributes);
         // bấm ra ngoài không tắt dialog
-
         dialog.setCancelable(false);
 
         Button btnExit = dialog.findViewById(R.id.btn_ExitReason);
@@ -89,5 +127,19 @@ public class ViewDetailPreparingActivity extends AppCompatActivity {
         });
         dialog.show();
 
+
+    }
+    //tạo sự kiện cho nút back
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+
+            default:
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
