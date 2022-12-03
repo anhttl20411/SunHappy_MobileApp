@@ -27,6 +27,7 @@ import android.widget.Toast;
 
 import com.example.sunhappy.databinding.ActivityMainBinding;
 import com.example.sunhappy.databinding.ActivityViewDetailProductBinding;
+import com.example.sunhappy.databinding.FragmentAboutSunhappyBinding;
 import com.example.sunhappy.functions.viewcart.ProductCartActivity;
 import com.example.sunhappy.functions.viewnotification.NotificationActivity;
 import com.example.sunhappy.ui.user.UserFragment;
@@ -35,6 +36,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
+    FragmentAboutSunhappyBinding bindinguser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,12 +73,13 @@ public class MainActivity extends AppCompatActivity {
         View customView = li.inflate(R.layout.menu_notification_cart, null);
         actionBar.setCustomView(customView);
         actionBar.setDisplayShowCustomEnabled(true);
-        ImageButton btnNotification = (ImageButton)    customView.findViewById(R.id.mn_Notification);
+
+
+        ImageButton btnNotification = (ImageButton) customView.findViewById(R.id.mn_Notification);
         btnNotification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // mở thông báo
-                Toast.makeText(MainActivity.this, "Code mở màn hình thông báo!", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(MainActivity.this, NotificationActivity.class);
                 startActivity(intent);
@@ -89,12 +92,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // mở giỏ hàng
-                Toast.makeText(MainActivity.this, "Code mở màn hình giỏ hàng!", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(MainActivity.this, ProductCartActivity.class);
                 startActivity(intent);
             }
         });
+
 
         //custom action bả cho fragment user
 //        UserFragment userFragment = new UserFragment();

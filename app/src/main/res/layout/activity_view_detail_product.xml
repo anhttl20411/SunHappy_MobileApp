@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txt_ProductName"
+        android:id="@+id/txt_ProductNameDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -29,7 +29,7 @@
 
 
     <TextView
-        android:id="@+id/txt_ProductPrice"
+        android:id="@+id/txt_ProductPriceDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -38,7 +38,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_ProductName" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_ProductNameDetail" />
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
@@ -48,7 +48,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.157"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_ProductPrice">
+        app:layout_constraintTop_toBottomOf="@+id/txt_ProductPriceDetail">
 
         <Button
             android:id="@+id/btn_AddToCart"

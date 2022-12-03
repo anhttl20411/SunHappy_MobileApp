@@ -2,7 +2,9 @@ package com.example.sunhappy.functions.payments;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.sunhappy.R;
 import com.example.sunhappy.databinding.ActivityMethodPaymentBinding;
@@ -18,5 +20,13 @@ public class MethodPayment extends AppCompatActivity {
         binding = ActivityMethodPaymentBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        //Lan Anh mới thêm
+        binding.btnPaymentAccept.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MethodPayment.this, PaymentActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

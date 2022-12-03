@@ -1,7 +1,5 @@
 package com.example.sunhappy.adapters;
 
-import android.app.Activity;
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,22 +8,25 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.sunhappy.R;
+import com.example.sunhappy.functions.viewproduct.PoloFragment;
 import com.example.sunhappy.models.Polo;
 
 import java.util.List;
 
 public class PoloAdapter extends BaseAdapter {
-    Activity activity;
+    //Activity activity;
+    PoloFragment fragment;
     int item_layout;
     List<Polo> polos;
 
     //constructor
 
-    public PoloAdapter(Activity activity, int item_layout, List<Polo> polos) {
-        this.activity = activity;
+    public PoloAdapter(PoloFragment fragment, int item_layout, List<Polo> polos) {
+        this.fragment = fragment;
         this.item_layout = item_layout;
         this.polos = polos;
     }
+
 
     //implement methods
 
@@ -50,9 +51,9 @@ public class PoloAdapter extends BaseAdapter {
         //return null;
         ViewHolder holder = null;
         if (view == null){ // nếu khi mới tạo chưa hiển thị gì
-            holder = new ViewHolder();
-            LayoutInflater inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            LayoutInflater inflater = LayoutInflater.from(fragment.getContext());
             view = inflater.inflate(item_layout, null);
+            holder = new ViewHolder();
             holder.imvProductImage = view.findViewById(R.id.imv_ProductImage);
             holder.txtProductName = view.findViewById(R.id.txt_ProductName);
             holder.txtProductPrice = view.findViewById(R.id.txt_ProductPrice);

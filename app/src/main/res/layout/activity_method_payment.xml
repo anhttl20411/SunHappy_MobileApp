@@ -15,26 +15,28 @@
         <RadioButton
             android:button="@drawable/radio_payment"
             android:text="Thanh toán khi nhận hàng"
+            android:buttonTint="#FFD6AB2B"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="50dp"
             style="@style/normal_text">
-
 
         </RadioButton>
         <RadioButton
 
             android:button="@drawable/radiomomo"
-             android:text="Thanh toán qua ví momo"
+            android:buttonTint="#FFD6AB2B"
+            android:text="Thanh toán qua ví momo"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="50dp"
             style="@style/normal_text">
 
         </RadioButton>
         <RadioButton
             android:button="@drawable/radiobank"
-               android:text="Thanh toán qua tài khoản ngân hàng"
+            android:buttonTint="#FFD6AB2B"
+            android:text="Thanh toán qua tài khoản ngân hàng"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="50dp"
             style="@style/normal_text">
 
         </RadioButton>

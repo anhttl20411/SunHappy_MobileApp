@@ -36,13 +36,6 @@ public class CategoryFragment extends Fragment {
     ArrayList<Polo> poloArrayList;
 
 
-
-    //private CategoryViewModel mViewModel;
-
-//    public static CategoryFragment newInstance() {
-//        //return new CategoryFragment();
-//    }
-
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
@@ -53,22 +46,10 @@ public class CategoryFragment extends Fragment {
         CategoryAdapter categoryAdapter = new CategoryAdapter(getChildFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         tabLayout.setupWithViewPager(viewPager);
         viewPager.setAdapter(categoryAdapter);
-        loadData();
+//        loadData();
         return view;
     }
 
-    private void loadData() {
-        poloArrayList = new ArrayList<>();
-        poloArrayList.add(new Polo(R.drawable.img_product_polo1, "Áo polo nè", 10000));
-        binding.gvPolo.setAdapter(adapter);
-    }
-
-//    @Override
-//    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-//        super.onActivityCreated(savedInstanceState);
-//        mViewModel = new ViewModelProvider(this).get(CategoryViewModel.class);
-//        // TODO: Use the ViewModel
-//    }
 
 
 
