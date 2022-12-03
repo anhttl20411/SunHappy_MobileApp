@@ -82,10 +82,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             execSql("INSERT INTO " + TBL_NAME_PRODUCT + " VALUES(null, 'Quần lưng chun dài bo cổ chân', " + R.drawable.img_dai_2 + ", 220000, 'Quần dài')");
             execSql("INSERT INTO " + TBL_NAME_PRODUCT + " VALUES(null, 'Quần short jean rách bụi bặm', " + R.drawable.img_short_2 + ", 190000, 'Quan short')");
             execSql("INSERT INTO " + TBL_NAME_PRODUCT + " VALUES(null, 'Sơ mi nam tay ngắn form rộng', " + R.drawable.img_somi_2 + ", 110000, 'Áo sơ mi')");
-            execSql("INSERT INTO " + TBL_NAME_PRODUCT + " VALUES(null, 'Áo thun nam họa tiết tay ngắn có sọc một bên', " + R.drawable.img_thun_2 + ", 60000, 'Áo thun')");
+            execSql("INSERT INTO " + TBL_NAME_PRODUCT + " VALUES(null, 'Áo thun nam họa tiết tay ngắn sọc', " + R.drawable.img_thun_2 + ", 60000, 'Áo thun')");
 
             execSql("INSERT INTO " + TBL_NAME_PRODUCT + " VALUES(null, 'Polo nam hai màu phối trắng', " + R.drawable.img_polo_3 + ", 130000, 'Áo polo')");
-            execSql("INSERT INTO " + TBL_NAME_PRODUCT + " VALUES(null, 'Quần ống rộng bo chân màu đen bụi bặm', " + R.drawable.img_dai_3 + ", 160000, 'Quần dài')");
+            execSql("INSERT INTO " + TBL_NAME_PRODUCT + " VALUES(null, 'Quần ống rộng bo chân màu đen', " + R.drawable.img_dai_3 + ", 160000, 'Quần dài')");
             execSql("INSERT INTO " + TBL_NAME_PRODUCT + " VALUES(null, 'Quần đùi kaki cơ bản vải chất lượng', " + R.drawable.img_short_3 + ", 140000, 'Quần short')");
             execSql("INSERT INTO " + TBL_NAME_PRODUCT + " VALUES(null, 'Sơ mi nam tay lửng form rộng đủ màu', " + R.drawable.img_somi_3 + ", 130000, 'Áo sơ mi')");
             execSql("INSERT INTO " + TBL_NAME_PRODUCT + " VALUES(null, 'Áo thun chất cotton TOM cực trend', " + R.drawable.img_thun_3 + ", 80000, 'Áo thun')");

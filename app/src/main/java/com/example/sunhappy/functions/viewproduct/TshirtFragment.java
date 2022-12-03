@@ -1,5 +1,6 @@
 package com.example.sunhappy.functions.viewproduct;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 
@@ -8,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 
 import com.example.sunhappy.R;
 import com.example.sunhappy.adapters.TshirtAdapter;
@@ -25,6 +27,8 @@ public class TshirtFragment extends Fragment {
     View view;
     DatabaseHelper db;
 
+    Tshirt selectedTshirt = null;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -35,7 +39,29 @@ public class TshirtFragment extends Fragment {
 
         createDB();
         loadData();
+        addEvents();
         return view;
+    }
+
+    private void addEvents() {
+        binding.gvTshirt.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(getActivity(), ViewDetailProductActivity.class);
+                selectedTshirt = tshirtArrayList.get(i);
+                //Attach data
+//                intent.putExtra("image", R.drawable.img_product_polo1);
+//                intent.putExtra("name", "Sản phẩm SunHappy");
+//                intent.putExtra("price", 200000);
+//                startActivity(intent);
+
+
+                intent.putExtra("image", selectedTshirt.getTshirtImage());
+                intent.putExtra("name", selectedTshirt.getTshirtName());
+                intent.putExtra("price", selectedTshirt.getTshirtPrice());
+                startActivity(intent);
+            }
+        });
     }
 
     private void loadData() {

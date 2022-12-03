@@ -1,5 +1,6 @@
 package com.example.sunhappy.functions.viewproduct;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 
@@ -8,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 
 import com.example.sunhappy.R;
 import com.example.sunhappy.adapters.ShirtAdapter;
@@ -27,6 +29,7 @@ public class ShortFragment extends Fragment {
     ArrayList<Short> shortArrayList;
     View view;
     DatabaseHelper db;
+    Short selectedShort = null;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -39,7 +42,29 @@ public class ShortFragment extends Fragment {
 
         createDB();
         loadData();
+        addEvents();
         return view;
+    }
+
+    private void addEvents() {
+        binding.gvShort.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(getActivity(), ViewDetailProductActivity.class);
+                selectedShort = shortArrayList.get(i);
+                //Attach data
+//                intent.putExtra("image", R.drawable.img_product_polo1);
+//                intent.putExtra("name", "Sản phẩm SunHappy");
+//                intent.putExtra("price", 200000);
+//                startActivity(intent);
+
+
+                intent.putExtra("image", selectedShort.getShortImage());
+                intent.putExtra("name", selectedShort.getShortName());
+                intent.putExtra("price", selectedShort.getShortPrice());
+                startActivity(intent);
+            }
+        });
     }
 
     private void loadData() {
