@@ -18,8 +18,6 @@ import android.widget.Button;
 import com.example.sunhappy.MainActivity;
 import com.example.sunhappy.R;
 import com.example.sunhappy.databinding.ActivityPaymentBinding;
-import com.example.sunhappy.databinding.ActivityUpdateAddressBinding;
-import com.example.sunhappy.functions.manageorder.ViewDetailOderActivity;
 import com.example.sunhappy.functions.manageorder.ViewOderPreparingActivity;
 
 public class PaymentActivity extends AppCompatActivity {
