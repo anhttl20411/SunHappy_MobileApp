@@ -5,6 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".functions.viewcart.ProductCartActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
     <ListView
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -43,9 +46,11 @@
                 android:layout_height="wrap_content"
                 android:text="MUA HÀNG"
                 android:textAlignment="center"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="50dp"
                 style="@style/product_name_style"/>
+
         </LinearLayout>
+
     </LinearLayout>
 
 

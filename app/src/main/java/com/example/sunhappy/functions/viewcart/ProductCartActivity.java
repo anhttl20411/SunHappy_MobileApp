@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.sunhappy.R;
 import com.example.sunhappy.adapters.ProductCartAdapter;
@@ -25,14 +26,15 @@ public class ProductCartActivity extends AppCompatActivity {
     ArrayList<ProductCart> productCartArrayList;
     private ProductCart p;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-      //  setContentView(R.layout.activity_product_cart);
+        //  setContentView(R.layout.activity_product_cart);
         binding = ActivityProductCartBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         loadData();
-
+// nhấn nút buy để chuyển sang trang trạng thái mua hàng
         binding.btnBuy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -40,30 +42,28 @@ public class ProductCartActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-//        binding.chkSelectAll.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new
-//
-//            }
-//        });
+        binding.chkSelectAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(ProductCartActivity.this, "Bạn đã chọn tất cả các sản phẩm", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
-
 
     public void openDialogUpdateColor(ProductCart p) {
         Dialog dialog = new Dialog(ProductCartActivity.this);
         dialog.setContentView(R.layout.dialog_update_size_color);
         dialog.show();
-
-       Button btn_UpdateToCartConfirm;
-       btn_UpdateToCartConfirm= dialog.findViewById(R.id.btn_UpdateToCartConfirm);
-       btn_UpdateToCartConfirm.setOnClickListener(new View.OnClickListener() {
+        // nhấn nút xác nhận khi thay đổi
+        Button btn_UpdateToCartConfirm;
+        btn_UpdateToCartConfirm = dialog.findViewById(R.id.btn_UpdateToCartConfirm);
+        btn_UpdateToCartConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(ProductCartActivity.this, "Bạn đã cập nhật màu và size  sản phẩm", Toast.LENGTH_SHORT).show();
                 // chèn sự kiện chọn cái radio cho nó cập nhật qua bên kia
-                Intent intent = new Intent(ProductCartActivity.this, PaymentActivity.class);
+                Intent intent = new Intent(ProductCartActivity.this,ProductCartAdapter.class);
                 startActivity(intent);
-                dialog.dismiss();
             }
         });
         View imvClose = dialog.findViewById(R.id.imv_Close);
@@ -85,12 +85,19 @@ public class ProductCartActivity extends AppCompatActivity {
     }
 
 //    public void openDialogDelete(ProductCart p) {
-//        View imvDelete = findViewById(R.id.imv_Delete);
-//        imvDelete.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
+//        Intent intent = new Intent(ProductCartActivity.this,ProductCartAdapter.class);
+//        startActivity(intent);
 //
-//            }
-//        });
+////        Button  btnCancel;
+////
+////        btnCancel = dialog.findViewById(R.id.btn_cancel);
+////        btnCancel.setOnClickListener(new View.OnClickListener() {
+////            @Override
+////            public void onClick(View view) {
+////                dialog.dismiss();
+////            }
+////        });
+////        dialog.show();
+//
 //    }
 }
