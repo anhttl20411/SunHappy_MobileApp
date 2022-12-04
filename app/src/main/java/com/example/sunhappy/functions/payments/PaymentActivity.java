@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.example.sunhappy.MainActivity;
 import com.example.sunhappy.R;
@@ -30,7 +31,7 @@ public class PaymentActivity extends AppCompatActivity {
         binding = ActivityPaymentBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        //thiết lập action bar: LA thêm
+
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle(Html.fromHtml("<font color='#ffd24c' face='montserrat-bold' >Thanh toán</font>"));
         actionBar.setDisplayShowHomeEnabled(true);
@@ -53,6 +54,12 @@ public class PaymentActivity extends AppCompatActivity {
 
             }
 
+        });
+        binding.linerLuuY.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                OpenDialog1(Gravity.CENTER);
+            }
         });
 
         binding.btnDatHang.setOnClickListener(new View.OnClickListener() {
@@ -102,10 +109,50 @@ public class PaymentActivity extends AppCompatActivity {
         btnViewDoneOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PaymentActivity.this, ViewOderPreparingActivity.class); // sửa lại thành đã giao
+                Intent intent = new Intent(PaymentActivity.this, ViewOderPreparingActivity.class);
                 startActivity(intent);
             }
         });
+
+        dialog.show();
+
+    }
+    private void OpenDialog1(int gravity)
+    {
+//        Khai báo và chèn thuộc tính cho diglog + window chứa nó
+        final Dialog dialog = new Dialog(PaymentActivity.this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.dialog_luuy);
+
+        Window window = dialog.getWindow();
+        if (window == null){
+            return;
+        }
+
+
+        window.setLayout(WindowManager.LayoutParams.MATCH_PARENT,WindowManager.LayoutParams.WRAP_CONTENT);
+        window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        WindowManager.LayoutParams windowAttributes = window.getAttributes();
+        windowAttributes.gravity = gravity;
+        window.setAttributes(windowAttributes);
+
+        dialog.setCancelable(true);
+
+        //khai báo
+       EditText editText = dialog.findViewById(R.id.edt_luuy);
+       Button btn = dialog.findViewById(R.id.btn_luuy);
+        //ánh xạ
+
+        //chèn sự kiện
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               String s = editText.getText().toString();
+               binding.paymentLuuy.setText(s);
+            }
+        });
+
 
         dialog.show();
 

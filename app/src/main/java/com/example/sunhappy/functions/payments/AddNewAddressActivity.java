@@ -22,6 +22,8 @@ public class AddNewAddressActivity extends AppCompatActivity {
         binding.btnAddressSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
                 Intent intent = new Intent(AddNewAddressActivity.this,UpdateAddress.class);
 
                 String Ten = binding.edtAddressName.getText().toString();

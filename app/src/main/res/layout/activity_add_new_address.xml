@@ -69,7 +69,7 @@
                 android:id="@+id/edt_Address_SDT"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
-                android:hint="Vui lòng nhập SDT"
+                android:hint="Vui lòng nhập SDT đúng định dạng"
                 android:layout_weight="6"
                 android:paddingVertical="10dp"
                 style="@style/normal_text"

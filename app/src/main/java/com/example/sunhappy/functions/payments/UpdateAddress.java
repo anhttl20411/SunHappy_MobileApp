@@ -66,7 +66,10 @@ ActivityUpdateAddressBinding binding;
            @Override
            public void onClick(View view) {
 
-               try {
+               if(getIntent().getExtras() == null) {
+                   Toast.makeText(UpdateAddress.this,"Chưa có địa chỉ mới, vui lòng thêm địa chỉ và cập nhật",Toast.LENGTH_SHORT).show();
+
+               } else  {
                    Intent intent = getIntent();
                    Bundle bundle = intent.getBundleExtra("pack");
                    String ten = bundle.getString("ten");
@@ -79,11 +82,10 @@ ActivityUpdateAddressBinding binding;
                    list.add(new Address(ten,sdt,tinh,huyen,xa,duong));
 
                    addressAdapter.notifyDataSetChanged();
-               Toast.makeText(UpdateAddress.this,"Bạn đã thêm địa chỉ mới thành công",Toast.LENGTH_SHORT).show();
+
+                   Toast.makeText(UpdateAddress.this,"Bạn đã thêm địa chỉ mới thành công",Toast.LENGTH_SHORT).show();
                    getIntent().removeExtra("pack");
 
-               } catch (ArithmeticException e) {
-                   Toast.makeText(UpdateAddress.this,"Bạn đã thêm địa chỉ thất bại",Toast.LENGTH_SHORT).show();System.out.println(e);
                }
 
 
