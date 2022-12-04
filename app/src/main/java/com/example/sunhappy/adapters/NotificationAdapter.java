@@ -55,7 +55,6 @@ public class NotificationAdapter extends BaseAdapter {
             holder = new ViewHolder();
             LayoutInflater inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(item_layout, null);
-
             holder.txtNotificationTitle = view.findViewById(R.id.txt_notificationTitle);
             holder.txtNotificationContent = view.findViewById(R.id.txt_notificationContent);
             holder.txtNotificationTime = view.findViewById(R.id.txt_notificationTime);
@@ -65,9 +64,9 @@ public class NotificationAdapter extends BaseAdapter {
             holder = (ViewHolder) view.getTag();
         }
         Notification noti = notifications.get(i);
-        holder.txtNotificationTitle.setText("Hi");
-        holder.txtNotificationContent.setText("Hê sờ lô");
-        holder.txtNotificationTime.setText("01-21");
+        holder.txtNotificationTitle.setText(noti.getNotificationTitle());
+        holder.txtNotificationContent.setText(noti.getNotificationContent());
+        holder.txtNotificationTime.setText(noti.getNotificationTime());
         return view;
 
     }

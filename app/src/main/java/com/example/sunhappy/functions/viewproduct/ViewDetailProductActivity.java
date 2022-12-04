@@ -4,6 +4,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 
 import com.example.sunhappy.R;
 import com.example.sunhappy.databinding.ActivityViewDetailProductBinding;
+import com.example.sunhappy.functions.payments.PaymentActivity;
 
 public class ViewDetailProductActivity extends AppCompatActivity {
 
@@ -35,7 +37,21 @@ public class ViewDetailProductActivity extends AppCompatActivity {
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        showProduct();
         addEvents();
+    }
+
+    private void showProduct() {
+        Intent intent = getIntent();
+        //Receive data
+
+//        int numb = intent.getIntExtra("numb", 8);
+//        float grades = intent.getFloatExtra("grades", 8.9f);
+//       boolean checked = intent.getBooleanExtra("checked", false);
+//        String say = intent.getStringExtra("say");
+        binding.imvProductImageDetail.setImageResource(intent.getIntExtra("image", R.drawable.img_product_polo1));
+        binding.txtProductNameDetail.setText(intent.getStringExtra("name"));
+        binding.txtProductPriceDetail.setText(String.valueOf(intent.getDoubleExtra("price", 20000)));
     }
 
     private void addEvents() {
@@ -81,6 +97,19 @@ public class ViewDetailProductActivity extends AppCompatActivity {
                 });
 
                 dialog.show();
+            }
+        });
+
+        binding.btnBuyNow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ViewDetailProductActivity.this, PaymentActivity.class);
+
+//                intent.putExtra("image", binding.imvProductImageDetail.get());
+//                intent.putExtra("name", selectedTshirt.getTshirtName());
+//                intent.putExtra("price", selectedTshirt.getTshirtPrice());
+                startActivity(intent);
+
             }
         });
     }

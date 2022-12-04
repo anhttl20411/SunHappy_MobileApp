@@ -108,7 +108,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Thành tiền:">
+                    android:text="Thành tiền:"
+                    style="@style/normal_text">
                 </TextView>
                 <TextView
                     style="@style/product_price_style"

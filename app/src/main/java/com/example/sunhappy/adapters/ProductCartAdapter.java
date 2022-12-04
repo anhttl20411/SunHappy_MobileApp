@@ -17,8 +17,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.sunhappy.R;
-import com.example.sunhappy.databinding.DialogUpdateSizeColorBinding;
-import com.example.sunhappy.functions.manageorder.ViewOderPreparingActivity;
 import com.example.sunhappy.functions.viewcart.ProductCartActivity;
 import com.example.sunhappy.models.ProductCart;
 

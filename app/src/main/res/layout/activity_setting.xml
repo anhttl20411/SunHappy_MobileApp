@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".functions.setting.SettingActivity"
     android:orientation="vertical"
+    android:padding="10dp"
     >
 <TextView
     android:layout_width="match_parent"
@@ -15,7 +16,9 @@
     android:text="Tài khoản"
     android:background="#ECE7E7"
     android:textStyle="bold"
-    android:textSize="26sp"
+    android:textSize="16sp"
+    android:padding="10dp"
+    android:textColor="#BF7E1F"
     />
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,6 +26,7 @@
         android:orientation="vertical"
         android:background="@drawable/vien">
         <LinearLayout
+            android:id="@+id/hosocuatui"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -45,6 +49,7 @@
                 android:src="@drawable/ic_next"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/txt_thaydoimatkhau"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -53,7 +58,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="40dp"
-                android:text="Hồ sơ của tôi"
+                android:text="Thay đổi mật khẩu"
                 android:layout_weight="8.5"
                 android:layout_marginLeft="20dp"
                 android:paddingVertical="10dp"
@@ -67,6 +72,7 @@
                 android:src="@drawable/ic_next"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/ln3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -95,10 +101,12 @@
         android:paddingVertical="10dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat"
-        android:text="Tài khoản"
+        android:text="Cài đặt"
         android:background="#ECE7E7"
         android:textStyle="bold"
-        android:textSize="26sp"
+        android:textSize="16sp"
+        android:padding="10dp"
+        android:textColor="#BF7E1F"
         />
 
     <LinearLayout
@@ -173,15 +181,21 @@
                 android:src="@drawable/ic_next"/>
         </LinearLayout>
     </LinearLayout>
-
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/constraintdagxuat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <Button
-        android:layout_marginTop="60dp"
-        android:layout_width="200dp"
-        android:layout_height="60dp"
-        android:text="ĐĂNG XUẤT"
-        style="@style/normal_button_style"
-        android:layout_marginLeft="100dp"
-        />
-
+    android:id="@+id/btn_logout"
+    android:layout_marginTop="100dp"
+    android:layout_width="200dp"
+    android:layout_height="60dp"
+    android:text="ĐĂNG XUẤT"
+    style="@style/normal_button_style"
+        app:layout_constraintRight_toRightOf="@id/constraintdagxuat"
+        app:layout_constraintLeft_toLeftOf="@id/constraintdagxuat"
+        app:layout_constraintTop_toTopOf="@id/constraintdagxuat"
+    />
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>
