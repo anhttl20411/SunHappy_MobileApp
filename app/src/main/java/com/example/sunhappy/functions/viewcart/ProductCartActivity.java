@@ -11,6 +11,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.sunhappy.R;
@@ -75,7 +77,7 @@ public class ProductCartActivity extends AppCompatActivity {
         binding.chkSelectAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(ProductCartActivity.this, "Bạn đã chọn tất cả các sản phẩm", Toast.LENGTH_SHORT).show();
+                adapter.selectAll();
             }
         });
     }
@@ -97,8 +99,18 @@ public class ProductCartActivity extends AppCompatActivity {
                 Toast.makeText(ProductCartActivity.this, "Bạn đã cập nhật màu và size  sản phẩm", Toast.LENGTH_SHORT).show();
                 // chèn sự kiện chọn cái radio cho nó cập nhật qua bên kia
 //                Intent intent = new Intent(ProductCartActivity.this,ProductCartAdapter.class);
-//                startActivity(intent);
+//                startActivity(intent)
+
+                int selectColorId  =   ((RadioGroup)(dialog.findViewById(R.id.color_shirt))).getCheckedRadioButtonId();
+                String shirtColor =  ((TextView)(dialog.findViewById(selectColorId))).getText().toString();
+
+                int selectSizeId  =   ((RadioGroup)(dialog.findViewById(R.id.color_shirt))).getCheckedRadioButtonId();
+                String shirtSize  =  ((TextView)(dialog.findViewById(selectSizeId))).getText().toString();
+
+
                 dialog.dismiss();
+
+                adapter.setShirtPro(p,shirtColor,shirtSize);
             }
         });
         View imvClose = dialog.findViewById(R.id.imv_Close);
@@ -108,6 +120,9 @@ public class ProductCartActivity extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
+
+
+
         dialog.show();
     }
 
@@ -124,7 +139,9 @@ public class ProductCartActivity extends AppCompatActivity {
         productCartArrayList.add(new ProductCart(R.drawable.imv_white_polo, "Áo polo nam", "Aó polo màu đen",180000, 1));
 
         adapter = new ProductCartAdapter(ProductCartActivity.this, R.layout.activity_product_cart_list,productCartArrayList);
+
         binding.lvProduct.setAdapter(adapter);
+
     }
 
 //    public void openDialogDelete(ProductCart p) {
