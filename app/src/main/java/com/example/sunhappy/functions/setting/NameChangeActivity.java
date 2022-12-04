@@ -24,9 +24,8 @@ public class NameChangeActivity extends AppCompatActivity {
         //setContentView(R.layout.activity_name_change);
         binding = ActivityNameChangeBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+        // setting actionbar
         ActionBar actionBar = getSupportActionBar();
-        //actionBar.setTitle("Thiết lập tài khoản");
         actionBar.setTitle(Html.fromHtml("<font color='#ffd24c'>Sửa tên</font>"));
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setDisplayUseLogoEnabled(true);
@@ -34,7 +33,7 @@ public class NameChangeActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         addEvent();
     }
-        // set events for actionbar
+    // set events for back action
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId())
@@ -45,22 +44,19 @@ public class NameChangeActivity extends AppCompatActivity {
 
             default:break;
         }
-
         return super.onOptionsItemSelected(item);
     }
-
+     //set event for Luu button
     private void addEvent() {
         binding.btnLuu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //intent= new Intent(NameChangeActivity.this, SettingAccountActivity.class);
+                intent= new Intent(NameChangeActivity.this, SettingAccountActivity.class);
                 String newname = binding.edtNewname.getText().toString();
                 intent.putExtra("newname",newname);
-                setResult(Activity.RESULT_OK, intent);
+                startActivity(intent);
             }
         }
         );
-
     }
-
 }

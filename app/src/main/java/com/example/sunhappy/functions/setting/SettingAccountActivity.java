@@ -7,7 +7,10 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.TypedArray;
 import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.text.Html;
@@ -29,8 +32,8 @@ public class SettingAccountActivity extends AppCompatActivity {
         binding = ActivitySettingAccountBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        // setting actionbar
         ActionBar actionBar = getSupportActionBar();
-        //actionBar.setTitle("Thiết lập tài khoản");
         actionBar.setTitle(Html.fromHtml("<font color='#ffd24c'>Hồ sơ của bạn</font>"));
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setDisplayUseLogoEnabled(true);
@@ -38,18 +41,9 @@ public class SettingAccountActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         addEvents();
-
-
-        // nhan ket qua tra ve
-        launcher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
-            if(result.getResultCode()==RESULT_OK && result.getData()!= null){
-                String newname  = (String) result.getData().getExtras().get("newname");
-                binding.txtOldname.setText(String.valueOf(newname));
-            }
-        });
     }
 
-    // set events for actionbar
+    // set events back action for actionbar
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId())
@@ -59,11 +53,11 @@ public class SettingAccountActivity extends AppCompatActivity {
                 return true;
             default:break;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
     private void addEvents() {
+        // change avatar
         binding.txtThayavatar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,18 +65,18 @@ public class SettingAccountActivity extends AppCompatActivity {
                 startActivityForResult(intent,REQUEST_CODE );
             }
         });
-
+        // change name account
         binding.ln1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent1 = new Intent(SettingAccountActivity.this, NameChangeActivity.class);
-                //intent1.putExtra("name", binding.txtOldname.getText().toString());
-
                 startActivity(intent1);
-
-                launcher.launch(intent1);
             }
         });
+        //get newname
+        Intent getnewname = getIntent();
+        binding.txtOldname.setText(getnewname.getStringExtra("newname"));
+        //change username
         binding.ln2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -90,12 +84,12 @@ public class SettingAccountActivity extends AppCompatActivity {
                 Intent intent = new Intent(SettingAccountActivity.this, ChangeUsernameActivity.class);
                 //intent.putExtra("oldusername",binding.txtNewusername.getText().toString());
                 startActivity(intent);
-
-                Intent intent1 = getIntent();
-                binding.txtNewusername.setText(intent1.getStringExtra("newusername"));
             }
         });
-
+        //get new username
+        Intent getnewuser = getIntent();
+        binding.txtNewusername.setText(getnewuser.getStringExtra("newusername"));
+        //Change phone
         binding.ln4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -103,11 +97,12 @@ public class SettingAccountActivity extends AppCompatActivity {
                 Intent intent = new Intent(SettingAccountActivity.this, ChangePhoneActivity.class);
                 //intent.putExtra("oldphone",binding.txtPhone.getText().toString());
                 startActivity(intent);
-
-                Intent intent1 = getIntent();
-                binding.txtPhone.setText(intent1.getStringExtra("newphone"));
             }
         });
+        //get new phone
+        Intent getnewphone = getIntent();
+        binding.txtPhone.setText(getnewphone.getStringExtra("newphone"));
+        // Change Email
         binding.ln5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -115,20 +110,23 @@ public class SettingAccountActivity extends AppCompatActivity {
                 Intent intent = new Intent(SettingAccountActivity.this, ChangeEmailActivity.class);
                 //intent.putExtra("oldemail",binding.txtEmail.getText().toString());
                 startActivity(intent);
-
-                Intent intent1 = getIntent();
-                binding.txtEmail.setText(intent1 .getStringExtra("newemail"));
             }
         });
+        //get newemail
+        Intent getnewemail = getIntent();
+        binding.txtEmail.setText(getnewemail.getStringExtra("newemail"));
     }
 
-
+    // received image return by funtion onActivityResult()
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode==REQUEST_CODE && resultCode==RESULT_OK && data!=null){
-            Bitmap bitmap = (Bitmap) data.getExtras().get("data");
-            binding.imvAvatar.setImageBitmap(bitmap);
+            Bitmap hinhanh = (Bitmap) data.getExtras().get("data");
+            // rescaled avatar to fill frame Avatar
+            Drawable newdrawable = new BitmapDrawable(getResources(),
+                    Bitmap.createScaledBitmap(hinhanh,960 , 960, false));
+            binding.imvAvatar.setImageDrawable(newdrawable);
         }
     }
 }

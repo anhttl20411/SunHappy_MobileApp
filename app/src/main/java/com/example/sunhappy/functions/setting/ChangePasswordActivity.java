@@ -50,7 +50,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
+   //set event for confirm change password button
     private void addEvents() {
         binding.btnConfirmchangepass.setOnClickListener(new View.OnClickListener() {
             @Override
