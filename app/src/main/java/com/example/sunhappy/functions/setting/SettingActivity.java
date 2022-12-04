@@ -54,7 +54,7 @@ public class SettingActivity extends AppCompatActivity {
 
     // navigation to SettingAccountActivity
     private void addEvents() {
-        binding.hosocuatui.setOnClickListener(new View.OnClickListener() {
+        binding.hosocuatoi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SettingActivity.this, SettingAccountActivity.class);
