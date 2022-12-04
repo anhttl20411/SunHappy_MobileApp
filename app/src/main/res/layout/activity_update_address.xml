@@ -22,29 +22,40 @@
         style="@style/header">
 
     </TextView>
-    <Button
-        android:layout_gravity="center"
-        style="@style/normal_button_style"
-        android:text="Cập nhật"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_AddressReup">
 
-    </Button>
     <ListView
         android:id="@+id/lv_Address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
     </ListView>
-    <Button
-        android:text="Thêm địa chỉ mới"
-        style="@style/normal_button_style"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_AddNewAddress">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <Button
+                    android:layout_weight="6"
+                    android:text="Thêm địa chỉ mới"
+                    style="@style/normal_button_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_AddNewAddress"
+                    android:layout_margin="20dp">
 
-    </Button>
+                </Button>
+                <Button
+                    style="@style/normal_button_style"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_baseline_autorenew_24"
+                   android:text="Cập nhật"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_AddressReup">
+                </Button>
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

@@ -61,6 +61,10 @@ public class AddressAdapter extends ArrayAdapter<Address> {
         TextView txt2 = convertView.findViewById(R.id.txt_AddressLine2);
         txt1.setText(address.getTen() + " | " + address.getSDT());
         txt2.setText(address.getDuong() +"," + address.getXa()+"," +address.getHuyen() +"," +address.getTinh());
+        CheckBox chk = convertView.findViewById(R.id.chk_Address);
+        chk.isChecked();
+
+
 
 
        imvsua.setOnClickListener(new View.OnClickListener() {
