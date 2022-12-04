@@ -29,6 +29,7 @@ public class SelectedProduct extends AppCompatActivity {
         String selectedName = intent.getStringExtra("selected_name");
         String selectedPrice = String.valueOf(Double.valueOf(intent.getStringExtra("selected_price")));
 
+
         binding.imvProductImageDialog.setImageResource(selectedProduct);
         binding.txtProductName.setText(selectedName);
         binding.txtProductPrice.setText(selectedPrice);

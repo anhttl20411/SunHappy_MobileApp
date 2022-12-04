@@ -61,8 +61,10 @@ public class ProductCartActivity extends AppCompatActivity {
     }
 
 
+
     private void addEvents() {
         // nhấn nút buy để chuyển sang trang trạng thái mua hàng
+
         binding.btnBuy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -77,6 +79,9 @@ public class ProductCartActivity extends AppCompatActivity {
             }
         });
     }
+
+
+// nhấn nút buy để chuyển sang trang trạng thái mua hàng
 
 
     public void openDialogUpdateColor(ProductCart p) {
