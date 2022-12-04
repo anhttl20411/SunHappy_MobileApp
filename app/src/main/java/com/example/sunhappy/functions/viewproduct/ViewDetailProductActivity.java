@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.example.sunhappy.R;
 import com.example.sunhappy.databinding.ActivityViewDetailProductBinding;
+import com.example.sunhappy.functions.payments.PaymentActivity;
 
 public class ViewDetailProductActivity extends AppCompatActivity {
 
@@ -96,6 +97,19 @@ public class ViewDetailProductActivity extends AppCompatActivity {
                 });
 
                 dialog.show();
+            }
+        });
+
+        binding.btnBuyNow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ViewDetailProductActivity.this, PaymentActivity.class);
+
+//                intent.putExtra("image", binding.imvProductImageDetail.get());
+//                intent.putExtra("name", selectedTshirt.getTshirtName());
+//                intent.putExtra("price", selectedTshirt.getTshirtPrice());
+                startActivity(intent);
+
             }
         });
     }
