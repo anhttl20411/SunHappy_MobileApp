@@ -10,6 +10,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -33,11 +34,12 @@ public class PaymentActivity extends AppCompatActivity {
 
 
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle(Html.fromHtml("<font color='#ffd24c' face='montserrat-bold' >Thanh toán</font>"));
+        actionBar.setTitle(Html.fromHtml("<font color='#ffd24c'>Thay đổi email</font>"));
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setDisplayUseLogoEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_yellow);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         binding.linerAddress.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,7 +71,19 @@ public class PaymentActivity extends AppCompatActivity {
             }
         });
     }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId())
+        {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
 
+            default:break;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
     private void OpenDialog(int gravity)
     {
 //        Khai báo và chèn thuộc tính cho diglog + window chứa nó

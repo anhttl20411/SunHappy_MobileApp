@@ -1,9 +1,12 @@
 package com.example.sunhappy.functions.payments;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.example.sunhappy.R;
@@ -18,6 +21,13 @@ public class AddNewAddressActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityAddNewAddressBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(Html.fromHtml("<font color='#ffd24c'>Thay đổi email</font>"));
+        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.setDisplayUseLogoEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_yellow);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         binding.btnAddressSave.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +56,21 @@ public class AddNewAddressActivity extends AppCompatActivity {
                 startActivity(intent);
 
             }
+
+
         });
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId())
+        {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+
+            default:break;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
