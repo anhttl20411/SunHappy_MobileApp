@@ -13,42 +13,35 @@
         android:theme="@style/Theme.SUNHAPPY"
         tools:targetApi="31">
         <activity
-            android:name=".ViewDetailDeliveredActivity"
+            android:name=".functions.manageorder.ViewDetailDeliveredActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ViewDetailCancelledActivity"
+            android:name=".functions.manageorder.ViewDetailCancelledActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ViewDetalDeliveredActivity"
+            android:name=".functions.manageorder.ViewOderDeliveredActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ViewOderDeliveredActivity"
+            android:name=".functions.manageorder.ViewDetailDeliveringActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ViewDetailDeliveringActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".ViewOderDeliveringActivity"
+            android:name=".functions.manageorder.ViewOderDeliveringActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
