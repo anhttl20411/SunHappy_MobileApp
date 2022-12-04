@@ -20,7 +20,7 @@ public class MethodPayment extends AppCompatActivity {
         binding = ActivityMethodPaymentBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        //Lan Anh mới thêm
+
         binding.btnPaymentAccept.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

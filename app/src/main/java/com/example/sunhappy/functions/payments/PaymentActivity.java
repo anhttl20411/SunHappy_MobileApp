@@ -30,7 +30,7 @@ public class PaymentActivity extends AppCompatActivity {
         binding = ActivityPaymentBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        //thiết lập action bar: LA thêm
+
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle(Html.fromHtml("<font color='#ffd24c' face='montserrat-bold' >Thanh toán</font>"));
         actionBar.setDisplayShowHomeEnabled(true);
