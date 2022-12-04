@@ -10,8 +10,10 @@ import android.text.method.PasswordTransformationMethod;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.sunhappy.R;
+import com.example.sunhappy.adapters.TopProductAdapter;
 import com.example.sunhappy.databinding.ActivityNewpasswordBinding;
 import com.example.sunhappy.databinding.ActivityOtpBinding;
 
@@ -101,6 +103,14 @@ public class newpassword extends AppCompatActivity {
         binding.txtResetPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(newpassword.this, login.class);
+                startActivity(intent);
+            }
+        });
+        binding.btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(newpassword.this, "Cập nhật thành công!\n Vui lòng đăng nhập lại!", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(newpassword.this, login.class);
                 startActivity(intent);
             }

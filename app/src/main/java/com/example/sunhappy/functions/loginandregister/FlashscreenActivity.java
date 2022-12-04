@@ -12,7 +12,7 @@ import com.example.sunhappy.databinding.ActivityFlashscreenBinding;
 public class FlashscreenActivity extends AppCompatActivity {
 //chờ 5s
     ActivityFlashscreenBinding binding;
-    private static int SPLASH_TIME_OUT=5000;
+    private static int SPLASH_TIME_OUT=2000;
     //public static String PREFS_NAME="WELCOME" check 1stuse
 
     @Override

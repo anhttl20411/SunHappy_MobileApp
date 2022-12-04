@@ -46,19 +46,24 @@
                 android:id="@+id/imv_voucher"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:src="@drawable/img_voucher1"></ImageView>
+                android:src="@drawable/img_voucher1">
+
+            </ImageView>
             <TextView
                 android:id="@+id/txt_highlight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sản phẩm nổi bật"
+                android:padding="10dp"
                 android:layout_gravity="center"
-                style="@style/header"></TextView>
+                style="@style/header">
+
+            </TextView>
             <GridView
                 android:layout_margin="5dp"
                 android:id="@+id/gv_TopProduct"
                 android:layout_width="match_parent"
-                android:layout_height="3000dp"
+                android:layout_height="4000dp"
                 android:numColumns="2"/>
         </LinearLayout>
     </ScrollView>
