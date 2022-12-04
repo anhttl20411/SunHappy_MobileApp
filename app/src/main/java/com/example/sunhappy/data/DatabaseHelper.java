@@ -18,6 +18,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COL_IMAGE_PRODUCT = "ProductImage";
     public static final String COL_PRICE_PRODUCT = "ProductPrice";
     public static final String COL_CATEGORY_PRODUCT = "ProductCategory";
+    //public static final String COL_FAVORITE_PRODUCT = "ProductFavorite";
     public DatabaseHelper(@Nullable Context context) {
         super(context, DB_NAME_PRODUCT, null, DB_VERSION);
     }
@@ -26,8 +27,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String sql = "CREATE TABLE IF NOT EXISTS " + TBL_NAME_PRODUCT + " ("+ COL_ID_PRODUCT + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COL_NAME_PRODUCT + " VARCHAR(50), " + COL_IMAGE_PRODUCT + " INTEGER, " + COL_PRICE_PRODUCT + " REAL," + COL_CATEGORY_PRODUCT + " VARCHAR(50))";
         sqLiteDatabase.execSQL(sql);
 
-        //String sql2 = "CREATE TABLE IF NOT EXISTS " + TBL_NAME + " ("+ COL_ADDRESS_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COL_NAME + " VARCHAR(50), " + COL_PRICE + " REAL)";
-        //sqLiteDatabase.execSQL(sql2);
     }
 
     @Override
@@ -69,6 +68,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     // COL_IMAGE_PRODUCT + " INTEGER, " +
     // COL_PRICE_PRODUCT + " REAL," +
     // COL_CATEGORY_PRODUCT + " VARCHAR(50))
+    // COL_FAVORITE_PRODUCT + " BOOLEAN)
 
     public void createData(){
         if (numbOfRows() == 0){

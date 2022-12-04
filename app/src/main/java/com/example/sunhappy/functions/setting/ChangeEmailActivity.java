@@ -25,7 +25,7 @@ ActivityChangeEmailBinding binding;
         actionBar.setTitle(Html.fromHtml("<font color='#ffd24c'>Thay đổi email</font>"));
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setDisplayUseLogoEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_yellow);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 //        getData();

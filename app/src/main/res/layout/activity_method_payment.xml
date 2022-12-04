@@ -15,7 +15,7 @@
         <RadioButton
             android:button="@drawable/radio_payment"
             android:text="Thanh toán khi nhận hàng"
-            android:buttonTint="#FFD6AB2B"
+
             android:layout_width="match_parent"
             android:layout_height="50dp"
             style="@style/normal_text">
@@ -24,7 +24,7 @@
         <RadioButton
 
             android:button="@drawable/radiomomo"
-            android:buttonTint="#FFD6AB2B"
+
             android:text="Thanh toán qua ví momo"
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -33,7 +33,7 @@
         </RadioButton>
         <RadioButton
             android:button="@drawable/radiobank"
-            android:buttonTint="#FFD6AB2B"
+
             android:text="Thanh toán qua tài khoản ngân hàng"
             android:layout_width="match_parent"
             android:layout_height="50dp"

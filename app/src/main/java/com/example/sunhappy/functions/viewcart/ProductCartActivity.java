@@ -46,6 +46,7 @@ public class ProductCartActivity extends AppCompatActivity {
         loadData();
         addEvents();
     }
+
     // set events back action for actionbar
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -59,7 +60,11 @@ public class ProductCartActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
+
     private void addEvents() {
+        // nhấn nút buy để chuyển sang trang trạng thái mua hàng
+
         binding.btnBuy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -75,7 +80,9 @@ public class ProductCartActivity extends AppCompatActivity {
         });
     }
 
+
 // nhấn nút buy để chuyển sang trang trạng thái mua hàng
+
 
     public void openDialogUpdateColor(ProductCart p) {
         Dialog dialog = new Dialog(ProductCartActivity.this);
@@ -89,8 +96,9 @@ public class ProductCartActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(ProductCartActivity.this, "Bạn đã cập nhật màu và size  sản phẩm", Toast.LENGTH_SHORT).show();
                 // chèn sự kiện chọn cái radio cho nó cập nhật qua bên kia
-                Intent intent = new Intent(ProductCartActivity.this,ProductCartAdapter.class);
-                startActivity(intent);
+//                Intent intent = new Intent(ProductCartActivity.this,ProductCartAdapter.class);
+//                startActivity(intent);
+                dialog.dismiss();
             }
         });
         View imvClose = dialog.findViewById(R.id.imv_Close);
@@ -102,10 +110,18 @@ public class ProductCartActivity extends AppCompatActivity {
         });
         dialog.show();
     }
+
+    public void increaseNumb(ProductCart p){
+        int numb = p.getProductAmount();
+        numb = numb + 1;
+        p.setProductAmount(numb);
+
+    }
+
     private void loadData(){
         productCartArrayList = new ArrayList<>();
-        productCartArrayList.add(new ProductCart(R.drawable.imv_white_polo, "Áo polo nam", "Aó polo màu đen",180000));
-        productCartArrayList.add(new ProductCart(R.drawable.imv_white_polo, "Áo polo nam", "Aó polo màu đen",180000));
+        productCartArrayList.add(new ProductCart(R.drawable.imv_white_polo, "Áo polo nam", "Aó polo màu đen",180000, 1));
+        productCartArrayList.add(new ProductCart(R.drawable.imv_white_polo, "Áo polo nam", "Aó polo màu đen",180000, 1));
 
         adapter = new ProductCartAdapter(ProductCartActivity.this, R.layout.activity_product_cart_list,productCartArrayList);
         binding.lvProduct.setAdapter(adapter);
