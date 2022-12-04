@@ -34,15 +34,12 @@
         <item name="android:fontFamily">@font/montserrat_bold</item>
         <item name="android:textSize">15sp</item>
     </style>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
     </style>
-=======
-=======
->>>>>>> c7cda1bb3279473f772f8f1f29648164230b7207
+
     <style name="normal_text">
         <item name="android:fontFamily">@font/montserrat</item>
         <item name="android:textSize">13sp</item>
@@ -68,9 +65,4 @@
         <item name="android:background">@drawable/style_normal_button</item>
     </style>
 
-<<<<<<< HEAD
->>>>>>> 0db75d095518796d82ab54ad0e547f0cb2c6fbe9
-=======
-
->>>>>>> c7cda1bb3279473f772f8f1f29648164230b7207
 </resources>

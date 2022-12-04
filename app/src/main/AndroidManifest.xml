@@ -13,29 +13,6 @@
         android:theme="@style/Theme.SUNHAPPY"
         tools:targetApi="31">
         <activity
-<<<<<<< HEAD
-            android:name=".functions.loginandregister.help"
-            android:exported="false" />
-        <activity
-            android:name=".functions.loginandregister.newpassword"
-            android:exported="false" />
-        <activity
-            android:name=".functions.loginandregister.otp"
-            android:exported="false" />
-        <activity
-            android:name=".functions.loginandregister.forgotpass"
-            android:exported="false" />
-        <activity
-            android:name=".functions.loginandregister.register"
-            android:exported="false" />
-        <activity
-            android:name=".functions.viewnotification.NotificationActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".functions.viewproduct.ViewDetailProductActivity"
-            android:exported="false"/>
-=======
             android:name=".functions.payments.MethodPayment"
             android:exported="false">
             <meta-data
@@ -73,53 +50,32 @@
         <activity
             android:name=".functions.payments.PaymentActivity"
             android:exported="false">
->>>>>>> c7cda1bb3279473f772f8f1f29648164230b7207
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-        </application>
+        </activity>
         <activity
-<<<<<<< HEAD
-            android:name=".functions.loginandregister.login"
-            android:exported="false"
-            tools:ignore="WrongManifestParent" />
-
-=======
             android:name=".functions.viewcart.ProductCartActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
->>>>>>> c7cda1bb3279473f772f8f1f29648164230b7207
         <activity
             android:name=".functions.viewproduct.ViewDetailProductActivity"
-            android:exported="false"
-            tools:ignore="DuplicateActivity,WrongManifestParent">
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".functions.setting.SettingAccountActivity"
-<<<<<<< HEAD
-            android:exported="false"
-            tools:ignore="WrongManifestParent">
-
-
-=======
             android:exported="false">
->>>>>>> c7cda1bb3279473f772f8f1f29648164230b7207
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-<<<<<<< HEAD
-            android:name=".functions.loginandregister.FlashscreenActivity"
-            android:exported="true"
-            tools:ignore="WrongManifestParent">
-=======
             android:name=".functions.viewnotification.NotificationActivity"
             android:exported="false">
             <meta-data
@@ -169,7 +125,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".functions.loginandregister.FlashscreenActivity"
+            android:name=".MainActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -205,9 +161,8 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".functions.loginandregister.FlashscreenActivity"
             android:exported="true">
->>>>>>> c7cda1bb3279473f772f8f1f29648164230b7207
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -216,6 +171,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
+    </application>
 
 </manifest>
