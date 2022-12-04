@@ -30,24 +30,12 @@ public class HomeFragment extends Fragment {
     View view;
     DatabaseHelper db;
 
-    //private HomeViewModel mViewModel;
-
-//    public static HomeFragment newInstance() {
-//        return new HomeFragment();
-//    }
-
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         binding = FragmentHomeBinding.inflate(getLayoutInflater());
         view = binding.getRoot();
 
-//        topProductArrayList = new ArrayList<>();
-//        topProductArrayList.add(new TopProduct(R.drawable.img_product_redpolo, "Áo top polo 1", 250000));
-//        topProductArrayList.add(new TopProduct(R.drawable.img_product_redpolo, "Áo top polo 1", 280000));
-//        topProductArrayList.add(new TopProduct(R.drawable.img_product_redpolo, "Áo top polo 1", 150000));
-//        adapter = new TopProductAdapter(this, R.layout.item_list_product, topProductArrayList);
-//        binding.gvTopProduct.setAdapter(adapter);
 
         createDB();
         loadData();
@@ -75,14 +63,6 @@ public class HomeFragment extends Fragment {
         db.createData();
     }
 }
-
-
-//    @Override
-//    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-//        super.onActivityCreated(savedInstanceState);
-//        mViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
-//        // TODO: Use the ViewModel
-//    }
 
 
 
