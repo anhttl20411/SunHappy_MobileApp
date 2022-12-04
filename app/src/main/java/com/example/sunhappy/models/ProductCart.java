@@ -6,6 +6,15 @@ public class ProductCart { public
     String productDescription;
     double productPrice;
     int productAmount;
+    boolean isSelected;
+
+    public boolean isSelected() {
+        return isSelected;
+    }
+
+    public void setSelected(boolean selected) {
+        isSelected = selected;
+    }
 
     public ProductCart(int productThumb, String productName, String productDescription, double productPrice, int productAmount) {
         this.productThumb = productThumb;
