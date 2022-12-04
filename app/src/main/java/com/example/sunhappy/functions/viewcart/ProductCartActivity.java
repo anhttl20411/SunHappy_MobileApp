@@ -1,10 +1,13 @@
 package com.example.sunhappy.functions.viewcart;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -33,8 +36,30 @@ public class ProductCartActivity extends AppCompatActivity {
         //  setContentView(R.layout.activity_product_cart);
         binding = ActivityProductCartBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        // setting actionbar
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(Html.fromHtml("<font color='#ffd24c'>Giỏ hàng</font>"));
+        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.setDisplayUseLogoEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         loadData();
-// nhấn nút buy để chuyển sang trang trạng thái mua hàng
+        addEvents();
+    }
+    // set events back action for actionbar
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId())
+        {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+            default:break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void addEvents() {
         binding.btnBuy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,6 +74,8 @@ public class ProductCartActivity extends AppCompatActivity {
             }
         });
     }
+
+// nhấn nút buy để chuyển sang trang trạng thái mua hàng
 
     public void openDialogUpdateColor(ProductCart p) {
         Dialog dialog = new Dialog(ProductCartActivity.this);

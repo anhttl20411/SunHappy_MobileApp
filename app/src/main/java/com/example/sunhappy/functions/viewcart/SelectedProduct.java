@@ -30,7 +30,7 @@ public class SelectedProduct extends AppCompatActivity {
         String selectedPrice = String.valueOf(Double.valueOf(intent.getStringExtra("selected_price")));
 
 
-        binding.imvProductImage.setImageResource(selectedProduct);
+        binding.imvProductImageDialog.setImageResource(selectedProduct);
         binding.txtProductName.setText(selectedName);
         binding.txtProductPrice.setText(selectedPrice);
 
