@@ -13,7 +13,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:hint="Type your new username ..."
+        android:hint="Nhập tên đăng nhập mới của bạn..."
         />
 
     <Button

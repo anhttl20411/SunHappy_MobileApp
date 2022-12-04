@@ -16,16 +16,15 @@ import java.util.ArrayList;
 
 public class ViewOderPreparingActivity extends AppCompatActivity {
     ActivityViewOderPreparingBinding binding;
-
     ArrayList<OrderPreparing> arrayOrderPreparing;
     ManageorderAdapter orderPreparingAdapter;
 //kb mảng dữ liệu
      String ProductNamePreparing[] ={"Áo polo nam","Áo polo kiểu mới"};
-   String ProductClassifyPreparing[] ={"Đen","Xám"};
-   String ProductSizePreparing[] ={"M","XL"};
-    Integer ProductAmountPreparing[]={1,2};
-    Integer ProductPricePreparing[]={189000,159000};
-    int ProductImage[]={R.drawable.img_product_polo1,R.drawable.imv_product_polo2};
+     String ProductClassifyPreparing[] ={"Đen","Xám"};
+     String ProductSizePreparing[] ={"M","XL"};
+     Integer ProductAmountPreparing[]={1,2};
+     Integer ProductPricePreparing[]={189000,159000};
+     int ProductImage[]={R.drawable.img_product_polo1,R.drawable.imv_product_polo2};
 
 
 
@@ -34,7 +33,7 @@ public class ViewOderPreparingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-binding = ActivityViewOderPreparingBinding.inflate(getLayoutInflater());
+        binding = ActivityViewOderPreparingBinding.inflate(getLayoutInflater());
 
         setContentView(binding.getRoot());
         arrayOrderPreparing = new ArrayList<>(); //tạo mới mảng rỗng

@@ -13,13 +13,17 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.sunhappy.R;
+import com.example.sunhappy.data.DatabaseHelper;
 import com.example.sunhappy.databinding.ActivityViewDetailProductBinding;
 import com.example.sunhappy.functions.payments.PaymentActivity;
+import com.example.sunhappy.models.ProductDetail;
 
 public class ViewDetailProductActivity extends AppCompatActivity {
 
     ActivityViewDetailProductBinding binding;
     ImageButton btnAddFavorite;
+    DatabaseHelper db;
+    ProductDetail p;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +58,7 @@ public class ViewDetailProductActivity extends AppCompatActivity {
         binding.txtProductPriceDetail.setText(String.valueOf(intent.getDoubleExtra("price", 20000)));
     }
 
+
     private void addEvents() {
         binding.btnAddFavorite.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +72,15 @@ public class ViewDetailProductActivity extends AppCompatActivity {
                     //((ImageButton) view).setImageResource(R.drawable.ic_favorite);
                     Toast.makeText(ViewDetailProductActivity.this, "Đã thêm vào danh sách yêu thích", Toast.LENGTH_SHORT).show();
                     binding.btnAddFavorite.setTag("favorite"); // settag dùng để đánh dấu
+
+                    //update fravorite column
+//                    db.execSql("UPDATE " + DatabaseHelper.TBL_NAME_PRODUCT + " SET " +
+//                            DatabaseHelper.COL_FAVORITE_PRODUCT + " = false" +
+//                            " WHERE " + DatabaseHelper.COL_NAME_PRODUCT + "=" +
+//                            p.getProductDetailName());
+//                    // UPDATE Product SET ProductName='Tiger', ProductPrice=18000 WHERE ProductId=2
+//                    //loadData();
+
                 }
                 else
                 {
@@ -105,9 +119,9 @@ public class ViewDetailProductActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(ViewDetailProductActivity.this, PaymentActivity.class);
 
-//                intent.putExtra("image", binding.imvProductImageDetail.get());
-//                intent.putExtra("name", selectedTshirt.getTshirtName());
-//                intent.putExtra("price", selectedTshirt.getTshirtPrice());
+//                intent.putExtra("image", binding.imvProductImageDetail.getResources());
+//                intent.putExtra("name", binding.txtProductNameDetail.getText().toString());
+//                intent.putExtra("price", binding.txtProductNameDetail.getText().toString());
                 startActivity(intent);
 
             }

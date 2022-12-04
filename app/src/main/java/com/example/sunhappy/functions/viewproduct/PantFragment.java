@@ -13,11 +13,9 @@ import android.widget.AdapterView;
 
 import com.example.sunhappy.R;
 import com.example.sunhappy.adapters.PantAdapter;
-import com.example.sunhappy.adapters.PoloAdapter;
 import com.example.sunhappy.data.DatabaseHelper;
 import com.example.sunhappy.databinding.FragmentPantBinding;
 import com.example.sunhappy.models.Pant;
-import com.example.sunhappy.models.Polo;
 
 import java.util.ArrayList;
 

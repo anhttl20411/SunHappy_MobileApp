@@ -23,13 +23,14 @@
         android:weightSum="10"
         android:layout_gravity="center">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Về chúng tôi"
             style="@style/header"
             android:layout_weight="9"
             android:layout_gravity="center"/>
         <ImageButton
+
             android:id="@+id/btn_ShowMoreAboutUs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -51,7 +52,7 @@
         android:weightSum="10"
         android:layout_gravity="center">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Chính sách bảo mật"
             style="@style/header"
@@ -79,7 +80,7 @@
         android:weightSum="10"
         android:layout_gravity="center">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Chính sách mua hàng và đổi trả"
             style="@style/header"
@@ -91,6 +92,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_expand"
             android:layout_weight="1"
+
             android:background="@android:color/transparent"/>
     </LinearLayout>
     <TextView
