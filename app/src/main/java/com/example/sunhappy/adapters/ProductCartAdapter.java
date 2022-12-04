@@ -76,7 +76,7 @@ public class ProductCartAdapter extends BaseAdapter {
         holder.txtName.setText(p.getProductName());
         holder.txtDescription.setText(p.getProductDescription());
         holder.txtPrice.setText(String.valueOf(p.getProductPrice()));
-// điều kiện ẩn hiện button
+// điều kiện ẩn hiện button khi nó vượt quá hoặc thấp
 //        int sl;
 //        ViewHolder viewHolder = new ViewHolder();
 //        sl = Integer.parseInt(viewHolder.txtValues.getText().toString());
@@ -102,6 +102,12 @@ public class ProductCartAdapter extends BaseAdapter {
                 activity.openDialogUpdateColor(p);
             }
         });
+//        holder.imvDelete.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                activity.openDialogDelete(p);
+//            }
+//        });
 
         return view;
     }
