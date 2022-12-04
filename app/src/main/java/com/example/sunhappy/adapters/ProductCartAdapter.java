@@ -56,11 +56,13 @@ public class ProductCartAdapter extends BaseAdapter {
             LayoutInflater inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(layout, null);
 
-            holder.imvThumb = view.findViewById(R.id.imv_ThumbProduct);
+            holder.imvThumbProduct = view.findViewById(R.id.imv_ThumbProduct);
             holder.txtName = view.findViewById(R.id.txt_NameProduct);
             holder.txtDescription = view.findViewById(R.id.txt_DescriptionProduct);
             holder.txtPrice = view.findViewById(R.id.txt_Price);
-            holder.imvExpand = view.findViewById(R.id.imv_Expand);
+            holder.btnExpand = view.findViewById(R.id.btn_Expand);
+            holder.btnMinus = view.findViewById(R.id.btn_Minus);
+            holder.btnPlus = view.findViewById(R.id.btn_Plus);
 //            holder.chkSelect = view.findViewById(R.id.chk_Select);
 //            holder.imvMinus = view.findViewById(R.id.imv_Minus);
 //            holder.imvPlus = view.findViewById(R.id.imv_Plus);
@@ -72,10 +74,11 @@ public class ProductCartAdapter extends BaseAdapter {
         }
         ProductCart p = productCarts.get(i);
 
-        holder.imvThumb.setImageResource(p.getProductThumb());
+        holder.imvThumbProduct.setImageResource(p.getProductThumb());
         holder.txtName.setText(p.getProductName());
         holder.txtDescription.setText(p.getProductDescription());
         holder.txtPrice.setText(String.valueOf(p.getProductPrice()));
+        //holder.txtValues.setText(String.valueOf(p.getProductAmount()));
 // điều kiện ẩn hiện button khi nó vượt quá hoặc thấp
 //        int sl;
 //        ViewHolder viewHolder = new ViewHolder();
@@ -96,19 +99,36 @@ public class ProductCartAdapter extends BaseAdapter {
 //            }
 //        });
 
-        holder.imvExpand.setOnClickListener(new View.OnClickListener() {
+        holder.btnExpand.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 activity.openDialogUpdateColor(p);
             }
         });
-//        holder.imvDelete.setOnClickListener(new View.OnClickListener() {
+
+//        holder.btnMinus.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
-//                activity.openDialogDelete(p);
+//
 //            }
 //        });
 
+//        holder.btnPlus.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                activity.increaseNumb(p);
+//                holder.txtValues
+//            }
+//        });
+
+
+//        holder.imvDelete.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                //activity.openDialogDelete(p);
+//                Toast.makeText(view.getContext(), "Đã xóa sản phẩm", Toast.LENGTH_SHORT).show();
+//            }
+//        });
         return view;
     }
     public static class ViewHolder{
@@ -116,10 +136,8 @@ public class ProductCartAdapter extends BaseAdapter {
         public View imvDelete;
         public AdapterView<Adapter> txtDescriptionProduct;
 
-        ImageView imvThumb;
-        ImageView imvExpand;
-        static ImageView imvMinus;
-        ImageView imvPlus ;
-        TextView txtName,txtDescription,txtValues,  txtPrice;
+        ImageButton btnMinus, btnPlus, btnExpand;
+        ImageView imvThumbProduct;
+        TextView txtName,txtDescription,txtValues, txtPrice;
     }
 }

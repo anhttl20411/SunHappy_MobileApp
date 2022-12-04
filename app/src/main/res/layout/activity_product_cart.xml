@@ -5,9 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".functions.viewcart.ProductCartActivity">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+
     <ListView
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -28,6 +26,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:orientation="horizontal">
             <CheckBox
                 android:id="@+id/chk_SelectAll"
@@ -42,20 +41,12 @@
             <Button
                 android:id="@+id/btn_Buy"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                style="@style/normal_button_style"
+                android:layout_height="wrap_content"
                 android:text="MUA HÀNG"
-<<<<<<< HEAD
                 android:textAlignment="center"
-                android:layout_marginLeft="50dp"
-                style="@style/product_name_style"/>
-
-=======
-                android:layout_marginLeft="80dp"
-                android:layout_gravity="end"/>
->>>>>>> 67d26a6ed8871a4131994ec8b143ee578bf886a4
+                android:layout_marginLeft="100dp"
+                style="@style/normal_button_style"/>
         </LinearLayout>
-
     </LinearLayout>
 
 

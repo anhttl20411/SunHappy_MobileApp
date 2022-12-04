@@ -1,5 +1,6 @@
 package com.example.sunhappy.functions.viewproduct;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +8,7 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -16,6 +18,7 @@ import com.example.sunhappy.R;
 import com.example.sunhappy.data.DatabaseHelper;
 import com.example.sunhappy.databinding.ActivityViewDetailProductBinding;
 import com.example.sunhappy.functions.payments.PaymentActivity;
+import com.example.sunhappy.functions.viewcart.ProductCartActivity;
 import com.example.sunhappy.models.ProductDetail;
 
 public class ViewDetailProductActivity extends AppCompatActivity {
@@ -44,6 +47,31 @@ public class ViewDetailProductActivity extends AppCompatActivity {
         showProduct();
         addEvents();
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.cart_option_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId())
+        {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+            default:break;
+
+        }
+        if (item.getItemId() == R.id.mn_Cart) {
+            Intent intent = new Intent(ViewDetailProductActivity.this, ProductCartActivity.class);
+            startActivity(intent);
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
 
     private void showProduct() {
         Intent intent = getIntent();
@@ -127,15 +155,4 @@ public class ViewDetailProductActivity extends AppCompatActivity {
             }
         });
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.cart_option_menu, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-
-
-
-
 }

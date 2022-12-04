@@ -83,7 +83,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".functions.payments.PaymentActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -233,10 +233,8 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".functions.payments.PaymentActivity"
             android:exported="false">
-
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
