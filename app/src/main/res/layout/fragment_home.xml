@@ -14,9 +14,8 @@
         android:queryHint="Tìm kiếm sản phẩm"/>
     <ScrollView
         android:scrollbars="vertical"
-        android:fillViewport="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -24,7 +23,7 @@
             <ImageView
                 android:id="@+id/imv_banner"
                 android:layout_width="match_parent"
-                android:layout_height="180dp"
+                android:layout_height="150dp"
                 android:layout_marginTop="16dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/img_sunhappy_banner_1"></ImageView>
@@ -38,7 +37,7 @@
             <ImageView
                 android:id="@+id/imv_voucher"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="130dp"
                 android:src="@drawable/img_voucher1"></ImageView>
             <TextView
                 android:id="@+id/txt_highlight"
@@ -50,7 +49,7 @@
             <GridView
                 android:id="@+id/gv_TopProduct"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="3000dp"
                 android:numColumns="2"/>
         </LinearLayout>
     </ScrollView>
