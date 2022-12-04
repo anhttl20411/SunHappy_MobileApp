@@ -39,7 +39,6 @@ ActivityChangeEmailBinding binding;
             case android.R.id.home:
                 onBackPressed();
                 return true;
-
             default:break;
         }
 
@@ -50,7 +49,7 @@ ActivityChangeEmailBinding binding;
         binding.btnLuu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //trả lại username mới
+
                 Intent intent = new Intent(ChangeEmailActivity.this, SettingAccountActivity.class);
                 String newemail = binding.edtNewemail.getText().toString();
                 intent.putExtra("newemail",newemail);

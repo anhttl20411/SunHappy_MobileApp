@@ -19,14 +19,15 @@ import com.example.sunhappy.functions.payments.UpdateAddress;
 public class SettingActivity extends AppCompatActivity {
 
     ActivitySettingBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivitySettingBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        // setting actionbar
         ActionBar actionBar = getSupportActionBar();
-        //actionBar.setTitle("Thiết lập tài khoản");
         actionBar.setTitle(Html.fromHtml("<font color='#ffd24c'>Thiết lập tài khoản</font>"));
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setDisplayUseLogoEnabled(true);
@@ -37,21 +38,20 @@ public class SettingActivity extends AppCompatActivity {
 
     }
 
-    // set events for actionbar
+    // set events back action for actionbar
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId())
-        {
+        switch (item.getItemId()) {
             case android.R.id.home:
                 onBackPressed();
                 return true;
-
-            default:break;
+            default:
+                break;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
+    // navigation to SettingAccountActivity
     private void addEvents() {
         binding.hosocuatui.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,7 +60,7 @@ public class SettingActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        // event when click on logout button
         binding.btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,14 +68,15 @@ public class SettingActivity extends AppCompatActivity {
 //                startActivity(intent);
             }
         });
-
+        // event for change password
         binding.txtThaydoimatkhau.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent1 = new Intent(SettingActivity.this,ChangePasswordActivity.class);
+                Intent intent1 = new Intent(SettingActivity.this, ChangePasswordActivity.class);
                 startActivity(intent1);
             }
         });
+        //enavigation to updateAdressActivity
         binding.ln3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,19 +85,6 @@ public class SettingActivity extends AppCompatActivity {
             }
         });
 
-    }
 
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        switch (item.getItemId())
-//        {
-//            case android.R.id.home:
-//                onBackPressed();
-//                return true;
-//
-//            default:break;
-//        }
-//
-//        return super.onOptionsItemSelected(item);
-//    }
+    }
 }

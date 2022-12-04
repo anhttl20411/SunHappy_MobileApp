@@ -59,7 +59,7 @@ public class UserFragment extends Fragment {
         favoritelist.add(new ProductFavorite(R.drawable.imv_white_polo, "Polo White Span", 190000.0));
 
         adapter =  new FavoriteAdapter(this,R.layout.item_list_favorite,favoritelist);
-        binding.gvDanhsachyeuthich.setAdapter(adapter);
+       // binding.gvDanhsachyeuthich.setAdapter(adapter);
 
     }
 

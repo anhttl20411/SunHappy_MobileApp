@@ -36,21 +36,23 @@ public class ChangeUsernameActivity extends AppCompatActivity {
 //        getData();
         addEvent();
     }
-    // set events for actionbar
+
+    // set events back action for actionbar
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId())
-        {
+        switch (item.getItemId()) {
             case android.R.id.home:
                 onBackPressed();
                 return true;
 
-            default:break;
+            default:
+                break;
         }
 
         return super.onOptionsItemSelected(item);
     }
 
+    //set event for btnLuu
     private void addEvent() {
         binding.btnLuu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,17 +60,9 @@ public class ChangeUsernameActivity extends AppCompatActivity {
                 //trả lại username mới
                 Intent intent = new Intent(ChangeUsernameActivity.this, SettingAccountActivity.class);
                 String newusername = binding.edtNewusername.getText().toString();
-                intent.putExtra("newusername",newusername);
+                intent.putExtra("newusername", newusername);
                 startActivity(intent);
-
             }
         });
-
     }
-
-//    private void getData() {
-//        // nhận username cũ
-//        intent = getIntent();
-//        binding.edtNewusername.setText(intent.getStringExtra("oldusername"));
-//    }
 }

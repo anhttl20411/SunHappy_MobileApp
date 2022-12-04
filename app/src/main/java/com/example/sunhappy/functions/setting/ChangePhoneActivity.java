@@ -32,7 +32,7 @@ ActivityChangePhoneBinding binding;
 //        getData();
         addEvent();
     }
-    // set events for actionbar
+    // set events  back action for actionbar
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId())
@@ -46,6 +46,7 @@ ActivityChangePhoneBinding binding;
 
         return super.onOptionsItemSelected(item);
     }
+    //set event for Luu button
     private void addEvent() {
         binding.btnLuu.setOnClickListener(new View.OnClickListener() {
             @Override
