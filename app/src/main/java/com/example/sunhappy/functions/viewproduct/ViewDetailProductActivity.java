@@ -6,20 +6,26 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.sunhappy.R;
+import com.example.sunhappy.adapters.ProductAllAdapter;
 import com.example.sunhappy.data.DatabaseHelper;
 import com.example.sunhappy.databinding.ActivityViewDetailProductBinding;
 import com.example.sunhappy.functions.payments.PaymentActivity;
 import com.example.sunhappy.functions.viewcart.ProductCartActivity;
+import com.example.sunhappy.models.ProductAll;
 import com.example.sunhappy.models.ProductDetail;
+
+import java.util.ArrayList;
 
 public class ViewDetailProductActivity extends AppCompatActivity {
 
@@ -27,7 +33,9 @@ public class ViewDetailProductActivity extends AppCompatActivity {
     ImageButton btnAddFavorite;
     DatabaseHelper db;
     ProductDetail p;
-
+    ArrayList<ProductAll> productAllArrayList;
+    ProductAllAdapter adapter;
+    ProductAll selectedPAll = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,14 +52,52 @@ public class ViewDetailProductActivity extends AppCompatActivity {
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        showProduct();
+        createDB();
+        getIntentInfo();
+        adapterSuggest();
+        openAnotherProduct();
         addEvents();
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.cart_option_menu, menu);
-        return super.onCreateOptionsMenu(menu);
+    private void createDB() {
+        db = new DatabaseHelper(ViewDetailProductActivity.this);
+        db.createData();
+    }
+
+    private void getIntentInfo() {
+        Intent intent = getIntent();
+        //Receive data
+        binding.imvProductImageDetail.setImageResource(intent.getIntExtra("image", R.drawable.img_product_polo1));
+        binding.txtProductNameDetail.setText(intent.getStringExtra("name"));
+        binding.txtProductPriceDetail.setText(String.valueOf(intent.getDoubleExtra("price", 20000)));
+    }
+
+    private void adapterSuggest() {
+        //đổ dữ liệu
+        productAllArrayList = new ArrayList<>();
+        Cursor b = db.getData("SELECT * FROM " + DatabaseHelper.TBL_NAME_PRODUCT);
+        while (b.moveToNext()) {
+            productAllArrayList.add(new ProductAll(b.getInt(2), b.getString(1), b.getDouble(3)));
+        }
+        b.close();
+        adapter = new ProductAllAdapter(ViewDetailProductActivity.this, R.layout.item_list_product, productAllArrayList);
+        binding.gvSuggestProduct.setAdapter(adapter);
+    }
+
+    private void openAnotherProduct() {
+        //chon tung cai
+        binding.gvSuggestProduct.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(ViewDetailProductActivity.this, ViewDetailProductActivity.class);
+                selectedPAll = productAllArrayList.get(i);
+                //Attach data
+                intent.putExtra("image", selectedPAll.getProductImage());
+                intent.putExtra("name", selectedPAll.getProductName());
+                intent.putExtra("price", selectedPAll.getProductPrice());
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -73,18 +119,6 @@ public class ViewDetailProductActivity extends AppCompatActivity {
     }
 
 
-    private void showProduct() {
-        Intent intent = getIntent();
-        //Receive data
-
-//        int numb = intent.getIntExtra("numb", 8);
-//        float grades = intent.getFloatExtra("grades", 8.9f);
-//       boolean checked = intent.getBooleanExtra("checked", false);
-//        String say = intent.getStringExtra("say");
-        binding.imvProductImageDetail.setImageResource(intent.getIntExtra("image", R.drawable.img_product_polo1));
-        binding.txtProductNameDetail.setText(intent.getStringExtra("name"));
-        binding.txtProductPriceDetail.setText(String.valueOf(intent.getDoubleExtra("price", 20000)));
-    }
 
 
     private void addEvents() {

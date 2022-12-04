@@ -3,39 +3,26 @@ package com.example.sunhappy.models;
 import java.sql.Blob;
 
 public class ProductAll {
-    int productId;
-    Blob productImage;
+    int productImage;
     String productName;
     double productPrice;
-    String productDescription;
 
     //constructor
 
-
-    public ProductAll(int productId, Blob productImage, String productName, double productPrice, String productDescription) {
-        this.productId = productId;
+    public ProductAll(int productImage, String productName, double productPrice) {
         this.productImage = productImage;
         this.productName = productName;
         this.productPrice = productPrice;
-        this.productDescription = productDescription;
     }
 
 
     //getter and setter
 
-    public int getProductId() {
-        return productId;
-    }
-
-    public void setProductId(int productId) {
-        this.productId = productId;
-    }
-
-    public Blob getProductImage() {
+    public int getProductImage() {
         return productImage;
     }
 
-    public void setProductImage(Blob productImage) {
+    public void setProductImage(int productImage) {
         this.productImage = productImage;
     }
 
@@ -53,13 +40,5 @@ public class ProductAll {
 
     public void setProductPrice(double productPrice) {
         this.productPrice = productPrice;
-    }
-
-    public String getProductDescription() {
-        return productDescription;
-    }
-
-    public void setProductDescription(String productDescription) {
-        this.productDescription = productDescription;
     }
 }
