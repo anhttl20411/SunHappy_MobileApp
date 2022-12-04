@@ -105,9 +105,14 @@ public class ViewDetailProductActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(ViewDetailProductActivity.this, PaymentActivity.class);
 
-//                intent.putExtra("image", binding.imvProductImageDetail.get());
-//                intent.putExtra("name", selectedTshirt.getTshirtName());
-//                intent.putExtra("price", selectedTshirt.getTshirtPrice());
+
+//              Bundle bundle = new Bundle();
+//              bundle.putString("name",binding.txtProductNameDetail.getText().toString());
+//              bundle.putString("gia",binding.txtProductPriceDetail.getText().toString());
+//
+//                intent.putExtra("pack",bundle);
+
+
                 startActivity(intent);
 
             }

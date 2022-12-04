@@ -26,12 +26,12 @@ ActivityUpdateAddressBinding binding;
 
     AddressAdapter addressAdapter;
 
-    String Ten[] = {"Thịnh","Vương"};
-    Integer SDT[] = {032234442,23848232};
-    String Tinh[] = {"Tỉnh 1", " Tỉnh 2"};
-    String Huyen[] = {"Huyện 1", " Huyện 2"};
-    String Xa[] = {"Xã 1", " Xã 2"};
-    String Duong[] = {"Đường 1", " Đường 2"};
+    String Ten[] = {"Thịnh"};
+    Integer SDT[] = {12344405};
+    String Tinh[] = {"Bình Dương"};
+    String Huyen[] = {"Dĩ An"};
+    String Xa[] = {"Tân Lập"};
+    String Duong[] = {"Số 10,Đường Tân lập"};
 
 
     @Override
@@ -41,7 +41,7 @@ ActivityUpdateAddressBinding binding;
         binding = ActivityUpdateAddressBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle(Html.fromHtml("<font color='#ffd24c'>Thay đổi email</font>"));
+        actionBar.setTitle(Html.fromHtml("<font color='#ffd24c'>Cập nhật địa chỉ</font>"));
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setDisplayUseLogoEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_yellow);

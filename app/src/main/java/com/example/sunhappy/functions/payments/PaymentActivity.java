@@ -34,12 +34,14 @@ public class PaymentActivity extends AppCompatActivity {
 
 
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle(Html.fromHtml("<font color='#ffd24c'>Thay đổi email</font>"));
+        actionBar.setTitle(Html.fromHtml("<font color='#ffd24c'>Thanh toán</font>"));
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setDisplayUseLogoEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_yellow);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+         Tinhtoan();
+//         NhanThongTin();
 
         binding.linerAddress.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,6 +73,22 @@ public class PaymentActivity extends AppCompatActivity {
             }
         });
     }
+
+    private void NhanThongTin() {
+
+        Intent intent = getIntent();
+        Bundle bundle = intent.getBundleExtra("pack");
+
+        String ten = bundle.getString("name");
+        String gia = bundle.getString("gia");
+
+        binding.txtPaymentProductFlex.setText(gia +"");
+        binding.txtPaymentProductName.setText(ten);
+
+
+
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId())
@@ -164,11 +182,29 @@ public class PaymentActivity extends AppCompatActivity {
             public void onClick(View view) {
                String s = editText.getText().toString();
                binding.paymentLuuy.setText(s);
+               dialog.dismiss();
             }
         });
 
 
         dialog.show();
+
+    }
+
+
+
+    private  void Tinhtoan(){
+
+
+        Integer ship = Integer.parseInt(binding.txtShipfee.getText().toString());
+        Integer priceflex = Integer.parseInt(binding.txtPaymentProductFlex.getText().toString());
+
+        binding.txtPaymentProduct.setText(priceflex+"");
+
+        Integer total = priceflex + ship ;
+
+        binding.txtPaymentTotal.setText(total+"");
+
 
     }
 }

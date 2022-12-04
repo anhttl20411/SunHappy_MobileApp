@@ -44,7 +44,7 @@
                </TextView>
                <TextView
 
-                   android:text="Nhân Nguyễn Thành | 0339804405"
+                   android:text="Thịnh | 12344405"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    style="@style/small_text">
@@ -98,6 +98,7 @@
                    android:layout_height="wrap_content"
                    android:orientation="vertical">
                   <TextView
+                      android:id="@+id/txt_Payment_product_name"
                       style="@style/product_name_style"
                       android:text="Áo polo nam cổ bẻ TSIMPLE"
                       android:layout_width="match_parent"
@@ -113,8 +114,9 @@
                   </TextView>
 
                   <TextView
+                      android:id="@+id/txt_payment_product_flex"
                       style="@style/product_price_style"
-                      android:text="150.000Đ"
+                      android:text="300000"
                       android:layout_width="match_parent"
                       android:layout_height="wrap_content">
 
@@ -310,10 +312,11 @@ android:padding="10dp"
                          style="@style/small_text">
                      </TextView>
                      <TextView
+                         android:id="@+id/txt_payment_product"
                          style="@style/product_price_style"
                          android:layout_weight="1"
                          android:gravity="end"
-                         android:text="180.000Đ"
+
                          android:layout_width="wrap_content"
                          android:layout_height="80px">
                      </TextView>
@@ -331,9 +334,10 @@ android:padding="10dp"
                          style="@style/small_text">
                      </TextView>
                      <TextView
+                         android:id="@+id/txt_shipfee"
                          android:layout_weight="1"                style="@style/product_price_style"
                          android:gravity="end"
-                         android:text="20.000Đ"
+                         android:text="20000"
                          android:layout_width="wrap_content"
                          android:layout_height="80px">
                      </TextView>
@@ -350,10 +354,11 @@ android:padding="10dp"
                          android:layout_height="80px">
                      </TextView>
                      <TextView
+                         android:id="@+id/txt_payment_total"
                          style="@style/product_price_style"
                          android:layout_weight="1"
                          android:gravity="end"
-                         android:text="200.000Đ"
+
                          android:layout_width="wrap_content"
                          android:layout_height="80px">
                      </TextView>

@@ -24,7 +24,7 @@ public class MethodPayment extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle(Html.fromHtml("<font color='#ffd24c'>Thay đổi email</font>"));
+        actionBar.setTitle(Html.fromHtml("<font color='#ffd24c'>Thay đổi phương thức</font>"));
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setDisplayUseLogoEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_yellow);
