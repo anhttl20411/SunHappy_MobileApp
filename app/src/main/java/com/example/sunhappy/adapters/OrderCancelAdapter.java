@@ -75,7 +75,7 @@ public class OrderCancelAdapter extends BaseAdapter {
             @Override
             public void onClick(View view) {
                 //cancelAct.buyAgain(cancelOr);
-                Toast.makeText(activity, "Mua lại", Toast.LENGTH_SHORT).show();
+                Toast.makeText(activity, "Mua lại sản phẩm", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(activity, ProductCartActivity.class);
                 activity.startActivity(intent);
             }

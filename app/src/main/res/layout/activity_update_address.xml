@@ -22,13 +22,12 @@
         style="@style/header">
 
     </TextView>
+            <ListView
+                android:id="@+id/lv_Address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <ListView
-        android:id="@+id/lv_Address"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </ListView>
+            </ListView>
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
@@ -48,8 +47,7 @@
                     style="@style/normal_button_style"
                     android:layout_weight="1"
                     android:layout_gravity="center"
-                    android:background="@drawable/ic_baseline_autorenew_24"
-                   android:text="Cập nhật"
+                    android:text="Cập nhật"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/btn_AddressReup">
