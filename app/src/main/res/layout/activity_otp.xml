@@ -68,17 +68,21 @@
             >
                 <EditText
                     android:layout_width="50dp"
-                    android:layout_height="50dp"/>
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/black"/>
                 <EditText
                     android:layout_width="50dp"
-                    android:layout_height="50dp"/>
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/black"/>
                 <EditText
                     android:layout_width="50dp"
-                    android:layout_height="50dp"/>
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/black"/>
 
                 <EditText
                     android:layout_width="50dp"
-                    android:layout_height="50dp"/>
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/black"/>
         </LinearLayout>
 
     <LinearLayout

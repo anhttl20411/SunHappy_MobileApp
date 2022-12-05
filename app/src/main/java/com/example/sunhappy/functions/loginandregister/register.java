@@ -2,6 +2,7 @@ package com.example.sunhappy.functions.loginandregister;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.slice.SliceItem;
 import android.content.Intent;
 import android.os.Bundle;
@@ -28,6 +29,7 @@ public class register extends AppCompatActivity {
     EditText email, password;
     boolean passwordShow;
     private SliceItem event;
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,9 +37,9 @@ public class register extends AppCompatActivity {
         binding = ActivityRegisterBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         addEvents();
+        email = findViewById(R.id.edt_Emaill);
         //ẩn hiện mk
-        email = findViewById(R.id.edt_Email);
-        password = findViewById(R.id.edt_Password);
+        password = findViewById(R.id.edt_Passwordd);
         password.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -61,8 +63,6 @@ public class register extends AppCompatActivity {
                         }
                         password.setSelection(selection);
                         return true;
-
-
                     }
                 }
                 return false;

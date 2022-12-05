@@ -75,23 +75,24 @@
             android:textColor="#000000"
             android:textSize="20dp" />
 
-        <EditText
-            android:id="@+id/edt_Email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/edt_Username"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="35dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="#D6E0FB"
-            android:hint="Email"
-            android:textSize="18dp"
-            android:fontFamily="@font/montserrat_light"
-            android:inputType="textPassword"
-            android:padding="20dp"
-            android:textColor="#000000"
-            android:textColorHint="#000000" />
+    <EditText
+        android:id="@+id/edt_Emaill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_Username"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#D6E0FB"
+        android:fontFamily="@font/montserrat_light"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:padding="20dp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="18dp"
+        />
 
         <TextView
             android:layout_width="wrap_content"
@@ -105,25 +106,25 @@
             android:textSize="20dp"
             android:fontFamily="@font/montserrat_medium" />
 
-        <EditText
-            android:id="@+id/edt_Password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/edt_Email"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="35dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="#D6E0FB"
-            android:drawableRight="@drawable/hidepass"
-            android:fontFamily="@font/montserrat_light"
-            android:hint="Mật khẩu"
-            android:inputType="textPassword"
-            android:longClickable="false"
-            android:padding="20dp"
-            android:textColor="#000000"
-            android:textColorHint="#000000"
-            android:textSize="18dp" />
+    <EditText
+        android:id="@+id/edt_Passwordd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_Emaill"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#D6E0FB"
+        android:drawableRight="@drawable/hidepass"
+        android:fontFamily="@font/montserrat_light"
+        android:hint="Mật khẩu"
+        android:inputType="textPassword"
+        android:longClickable="false"
+        android:padding="20dp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="18dp" />
 
     <LinearLayout
         android:layout_width="700dp"

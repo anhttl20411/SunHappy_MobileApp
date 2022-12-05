@@ -6,6 +6,7 @@ import android.annotation.SuppressLint;
 import android.app.slice.SliceItem;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.util.Patterns;
@@ -36,6 +37,7 @@ public class login extends AppCompatActivity {
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         addEvents();
+
         //ẩn hiện mk
         email=findViewById(R.id.edt_Email);
         password=findViewById(R.id.edt_Password);
@@ -96,16 +98,16 @@ public class login extends AppCompatActivity {
             }
         });
     }
-    private  boolean validateEmailAddress (EditText email){
-        String emailInput = email.getText().toString();
-        if (!emailInput.isEmpty()&& !Patterns.EMAIL_ADDRESS.matcher(emailInput).matches()) {
-            return  true;
-
-        }else {
-            Toast.makeText(this, "Email không đúng định dạng", Toast.LENGTH_SHORT).show();
-            return  false;
-        }
-    }
+//    private  boolean validateEmailAddress (EditText email){
+//        String emailInput = email.getText().toString();
+//        if (!emailInput.isEmpty()&& !Patterns.EMAIL_ADDRESS.matcher(emailInput).matches()) {
+//            return  true;
+//
+//        }else {
+//            Toast.makeText(this, "Email không đúng định dạng", Toast.LENGTH_SHORT).show();
+//            return  false;
+//        }
+//    }
     ///chưa code điều kiện cho email và mật khẩu
     //chưa code toast thông báo đăng nhập thành công?? cái này có cần không?
     //ấn đăng nhập chưa dẫn tới màn hình trang chủ
