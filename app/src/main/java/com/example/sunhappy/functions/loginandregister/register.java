@@ -2,6 +2,7 @@ package com.example.sunhappy.functions.loginandregister;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.slice.SliceItem;
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,8 +27,10 @@ import com.google.android.material.button.MaterialButton;
 public class register extends AppCompatActivity {
     ActivityRegisterBinding binding;
     EditText email, password;
+    Button signup;
     boolean passwordShow;
     private SliceItem event;
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,9 +38,29 @@ public class register extends AppCompatActivity {
         binding = ActivityRegisterBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         addEvents();
+        //định dạng email
+        email = findViewById(R.id.edt_Emaill);
+        signup = findViewById(R.id.btn_Signup);
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String getEmailID = email.getText().toString();
+                if (!isEmailValid(getEmailID)){
+                    email.setError("Bạn cần nhập đúng định dạng email!");
+                } else{
+                    binding.btnSignup.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent intent = new Intent(register.this, MainActivity.class);
+                            startActivity(intent);
+                        }
+                    });
+
+                }
+            }
+        });
         //ẩn hiện mk
-        email = findViewById(R.id.edt_Email);
-        password = findViewById(R.id.edt_Password);
+        password = findViewById(R.id.edt_Passwordd);
         password.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -61,14 +84,15 @@ public class register extends AppCompatActivity {
                         }
                         password.setSelection(selection);
                         return true;
-
-
                     }
                 }
                 return false;
             }
         });
 
+    }
+    boolean isEmailValid(CharSequence email){
+        return Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
 //ấn vào đăng nhập ngay thì hiện màn hình đn
     private void addEvents() {
@@ -82,23 +106,8 @@ public class register extends AppCompatActivity {
         ///chưa code điều kiện cho email và mật khẩu
         //chưa code toast thông báo
         //ấn đăng ký chưa dẫn tới màn hình trang chủ - done
-        binding.btnSignup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(register.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
-    }
-    private  boolean validateEmailAddress (EditText email){
-        String emailInput = email.getText().toString();
-        if (!emailInput.isEmpty()&& !Patterns.EMAIL_ADDRESS.matcher(emailInput).matches()) {
-            return  true;
 
-        }else {
-            Toast.makeText(this, "Email không đúng định dạng", Toast.LENGTH_SHORT).show();
-            return  false;
-        }
     }
+
 
 }

@@ -63,6 +63,7 @@
             android:background="#D6E0FB"
             android:fontFamily="@font/montserrat_light"
             android:hint="Email"
+            android:inputType="textEmailAddress"
             android:padding="20dp"
             android:textColor="#000000"
             android:textColorHint="#000000"

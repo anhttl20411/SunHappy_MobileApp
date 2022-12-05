@@ -6,11 +6,13 @@ import android.annotation.SuppressLint;
 import android.app.slice.SliceItem;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.util.Patterns;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -25,6 +27,7 @@ public class login extends AppCompatActivity {
     ActivityLoginBinding binding;
    //ẩn hiện mk
     EditText email, password;
+    Button login;
     boolean passwordShow;
     private SliceItem event;
 
@@ -36,9 +39,32 @@ public class login extends AppCompatActivity {
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         addEvents();
-        //ẩn hiện mk
+
+
+        //định dạng email
         email=findViewById(R.id.edt_Email);
+        login = findViewById(R.id.btn_Login);
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String getEmailID = email.getText().toString();
+                if (!isEmailValid(getEmailID)){
+                    email.setError("Bạn cần nhập đúng định dạng email!");
+                } else {
+                    binding.btnLogin.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent intent = new Intent(login.this, MainActivity.class);
+                            startActivity(intent);
+                        }
+                    });
+                }
+            }
+        });
+
+        //ẩn hiện mk
         password=findViewById(R.id.edt_Password);
+
         password.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -70,6 +96,9 @@ public class login extends AppCompatActivity {
             }
         });
     }
+    boolean isEmailValid(CharSequence email){
+        return Patterns.EMAIL_ADDRESS.matcher(email).matches();
+    }
     //ấn vào đk ngay hiện ra màn hình đăng ký
     private void addEvents() {
         binding.txtSignUpNow.setOnClickListener(new View.OnClickListener() {
@@ -88,24 +117,18 @@ public class login extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        binding.btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(login.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
-    }
-    private  boolean validateEmailAddress (EditText email){
-        String emailInput = email.getText().toString();
-        if (!emailInput.isEmpty()&& !Patterns.EMAIL_ADDRESS.matcher(emailInput).matches()) {
-            return  true;
 
-        }else {
-            Toast.makeText(this, "Email không đúng định dạng", Toast.LENGTH_SHORT).show();
-            return  false;
-        }
     }
+//    private  boolean validateEmailAddress (EditText email){
+//        String emailInput = email.getText().toString();
+//        if (!emailInput.isEmpty()&& !Patterns.EMAIL_ADDRESS.matcher(emailInput).matches()) {
+//            return  true;
+//
+//        }else {
+//            Toast.makeText(this, "Email không đúng định dạng", Toast.LENGTH_SHORT).show();
+//            return  false;
+//        }
+//    }
     ///chưa code điều kiện cho email và mật khẩu
     //chưa code toast thông báo đăng nhập thành công?? cái này có cần không?
     //ấn đăng nhập chưa dẫn tới màn hình trang chủ

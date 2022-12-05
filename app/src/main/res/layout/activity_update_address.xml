@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".functions.payments.UpdateAddress"
     android:orientation="vertical"
+    android:background="@color/white"
     android:padding="@dimen/sunhappy_padding">
     <ScrollView
         android:fillViewport="true"

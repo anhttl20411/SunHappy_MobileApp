@@ -3,15 +3,69 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_add_new_address.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_change_email.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_change_password.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_change_phone.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_change_username.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_chat.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_flashscreen.xml" value="0.21557971014492755" />
         <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_forgotpass.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_help.xml" value="0.264" />
         <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_method_payment.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_name_change.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_newpassword.xml" value="0.4" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_notification.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_otp.xml" value="0.264" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_payment.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_product_cart.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_product_cart_list.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_register.xml" value="0.2" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_setting.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_setting_account.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_splash_login_motion_layout.xml" value="0.176" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_update_address.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_update_address_click.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_view_detail_cancelled.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_view_detail_delivered.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_view_detail_delivering.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_view_detail_preparing.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_view_detail_product.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_view_oder_cancelled.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_view_oder_delivered.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_view_oder_delivering.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/activity_view_oder_preparing.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/dialog_choose_reason_cancel.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/dialog_choose_size_color.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/dialog_confirm_delete_from_cart.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/dialog_luuy.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/dialog_sort_product.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/dialog_thongbao_dathang.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/dialog_update_address.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/dialog_update_size_color.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/fragment_about_sunhappy.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/fragment_category.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/fragment_pant.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/fragment_polo.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/fragment_shirt.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/fragment_short.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/fragment_tshirt.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/fragment_user.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/item_list_cancelled_oder.xml" value="0.264" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/item_list_delivered_oder.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/item_list_delivering_oder.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/item_list_favorite.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/item_list_preparing_order.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/item_list_product.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/item_notification_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/list_address_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/menu_notification_cart.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/layout/slider_image_banner.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lethi/OneDrive/Desktop/SunHappy_MobileApp/app/src/main/res/menu/cart_option_menu.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>
