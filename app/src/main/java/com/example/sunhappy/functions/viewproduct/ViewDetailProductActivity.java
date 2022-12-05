@@ -14,6 +14,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.sunhappy.R;
@@ -101,6 +104,12 @@ public class ViewDetailProductActivity extends AppCompatActivity {
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.cart_option_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId())
         {
@@ -160,6 +169,24 @@ public class ViewDetailProductActivity extends AppCompatActivity {
                 Dialog dialog = new Dialog(ViewDetailProductActivity.this);
                 dialog.setContentView(R.layout.dialog_choose_size_color);
 
+                ImageView imvImageDialog = dialog.findViewById(R.id.imv_ProductImageDialog);
+                TextView txtNameDialog = dialog.findViewById(R.id.txt_ProductNameDialog);
+                TextView txtPriceDialog = dialog.findViewById(R.id.txt_ProductPriceDialog);
+
+                RadioButton radWhite = dialog.findViewById(R.id.rad_White);
+                RadioButton radBlack = dialog.findViewById(R.id.rad_Black);
+                RadioButton radBlue = dialog.findViewById(R.id.rad_Blue);
+                RadioButton radRed = dialog.findViewById(R.id.rad_Red);
+
+                RadioButton radM = dialog.findViewById(R.id.rad_M);
+                RadioButton radL = dialog.findViewById(R.id.rad_L);
+                RadioButton radXL = dialog.findViewById(R.id.rad_XL);
+                RadioButton radXXL = dialog.findViewById(R.id.rad_XXL);
+
+                imvImageDialog.setImageDrawable(binding.imvProductImageDetail.getDrawable());
+                txtNameDialog.setText(binding.txtProductNameDetail.getText().toString());
+                txtPriceDialog.setText(binding.txtProductPriceDetail.getText().toString());
+
                 //tạo sự kiện cho dialog hiện ra
                 Button btnAddToCartConfirm;
 
@@ -167,9 +194,15 @@ public class ViewDetailProductActivity extends AppCompatActivity {
                 btnAddToCartConfirm.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        if ((radWhite.isChecked() == false) && (radBlack.isChecked() == false) && (radBlue.isChecked() == false) && (radRed.isChecked() == false)){
+                            Toast.makeText(ViewDetailProductActivity.this, "Vui lòng chọn màu", Toast.LENGTH_SHORT).show();
+                        } else{
+                        if ((radM.isChecked() == false) && (radL.isChecked() == false) && (radXL.isChecked() == false) && (radXXL.isChecked() == false)){
+                            Toast.makeText(ViewDetailProductActivity.this, "Vui lòng chọn size", Toast.LENGTH_SHORT).show();
+                        }else{
                         Toast.makeText(ViewDetailProductActivity.this, "Đã thêm vào giỏ hàng", Toast.LENGTH_SHORT).show();
                         dialog.dismiss();
-                    }
+                    }} }
                 });
 
                 dialog.show();

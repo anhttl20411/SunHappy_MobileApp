@@ -175,7 +175,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="450px">
                <ImageView
-                   android:src="@drawable/ic_category_gray"
+                   android:src="@drawable/ic_filter"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content">
 
@@ -256,15 +256,17 @@ android:padding="10dp"
                    android:layout_height="wrap_content">
 
                </ImageView>
+
                <TextView
                    style="@style/product_name_style"
-                   android:gravity="left"
-                   android:layout_weight="6"
-                   android:text="Chọn phương thức thanh toán"
                    android:layout_width="wrap_content"
-                   android:layout_height="wrap_content">
+                   android:layout_height="wrap_content"
+                   android:layout_weight="6"
+                   android:gravity="left"
+                   android:text="Chọn phương thức thanh toán">
 
                </TextView>
+
                <ImageView
                    android:layout_weight="1"
 
@@ -283,7 +285,7 @@ android:padding="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="450px">
                <ImageView
-                   android:src="@drawable/ic_category_gray"
+                   android:src="@drawable/ic_baseline_payment_24"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content">
 

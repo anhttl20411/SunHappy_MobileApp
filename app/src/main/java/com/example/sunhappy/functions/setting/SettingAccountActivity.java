@@ -49,7 +49,8 @@ public class SettingAccountActivity extends AppCompatActivity {
         switch (item.getItemId())
         {
             case android.R.id.home:
-                onBackPressed();
+                Intent intent = new Intent(SettingAccountActivity.this, SettingActivity.class);
+                startActivity(intent);
                 return true;
             default:break;
         }

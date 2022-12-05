@@ -13,7 +13,7 @@
         android:orientation="horizontal"
         android:layout_marginTop="20dp">
         <ImageView
-            android:id="@+id/imv_ProductImageDetail"
+            android:id="@+id/imv_ProductImageDialog"
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:src="@drawable/img_product_polo1"/>
@@ -50,6 +50,7 @@
         android:orientation="horizontal"
         android:paddingTop="10dp">
         <RadioButton
+            android:id="@+id/rad_White"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Trắng"
@@ -61,6 +62,7 @@
             android:layout_weight="1"
             android:layout_margin="4dp"/>
         <RadioButton
+            android:id="@+id/rad_Black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Đen"
@@ -72,6 +74,7 @@
             android:layout_weight="1"
             android:layout_margin="4dp"/>
         <RadioButton
+            android:id="@+id/rad_Blue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Xanh"
@@ -83,6 +86,7 @@
             android:layout_weight="1"
             android:layout_margin="4dp"/>
         <RadioButton
+            android:id="@+id/rad_Red"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Đỏ"
@@ -107,6 +111,7 @@
         android:orientation="horizontal"
         android:paddingTop="10dp">
         <RadioButton
+            android:id="@+id/rad_M"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="M"
@@ -118,6 +123,7 @@
             android:layout_weight="1"
             android:layout_margin="4dp"/>
         <RadioButton
+            android:id="@+id/rad_L"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="L"
@@ -129,6 +135,7 @@
             android:layout_weight="1"
             android:layout_margin="4dp"/>
         <RadioButton
+            android:id="@+id/rad_XL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="XL"
@@ -140,6 +147,7 @@
             android:layout_weight="1"
             android:layout_margin="4dp"/>
         <RadioButton
+            android:id="@+id/rad_XXL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="XXL"

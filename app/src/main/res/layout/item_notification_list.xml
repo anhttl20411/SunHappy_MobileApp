@@ -4,19 +4,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/sunhappy_padding"
-    android:background="#F8F4DD">
+    android:background="#ECE7E7">
 
     <TextView
+        android:textColor="#FF7A00"
         android:id="@+id/txt_notificationTitle"
+        style="@style/header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Chào anh em!"
-        style="@style/header"/>
+        android:text="Chào anh em!" />
     <TextView
         android:id="@+id/txt_notificationContent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cảm ơn bạn đac tin tưởng lựa chọn SunHappy! Chúc anh em sẽ hốt được nhiều đồ siêu rẻ, siêu chất, siêu chất lượng nhé!"
+        android:text="Cảm ơn bạn đã tin tưởng lựa chọn SunHappy! Chúc anh em sẽ hốt được nhiều đồ siêu rẻ, siêu chất, siêu chất lượng nhé!"
         style="@style/normal_text"/>
     <TextView
         android:id="@+id/txt_notificationTime"

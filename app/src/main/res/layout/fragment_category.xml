@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         app:tabSelectedTextColor="#E89211"
         style="@style/small_text"
-        android:background="#F3F1EB">
+        app:tabIndicatorColor="#FFE89211">
     </com.google.android.material.tabs.TabLayout>
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/vpg_Category"

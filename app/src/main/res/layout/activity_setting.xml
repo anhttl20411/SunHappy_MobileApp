@@ -18,7 +18,7 @@
     android:textStyle="bold"
     android:textSize="16sp"
     android:padding="10dp"
-    android:textColor="#BF7E1F"
+    android:textColor="#CA701D"
     />
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,6 +39,7 @@
                 android:layout_weight="8.5"
                 android:layout_marginLeft="20dp"
                 android:paddingVertical="10dp"
+                style="@style/normal_text"
                 />
             <ImageView
                 android:layout_width="0dp"
@@ -56,6 +57,7 @@
             android:layout_marginTop="10dp"
             >
             <TextView
+                style="@style/normal_text"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:text="Thay đổi mật khẩu"
@@ -79,6 +81,7 @@
             android:layout_marginTop="10dp"
             >
             <TextView
+                style="@style/normal_text"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:text="Địa chỉ"
@@ -106,7 +109,7 @@
         android:textStyle="bold"
         android:textSize="16sp"
         android:padding="10dp"
-        android:textColor="#BF7E1F"
+        android:textColor="#CA701D"
         />
 
     <LinearLayout
@@ -121,6 +124,7 @@
             android:layout_marginTop="10dp"
             >
             <TextView
+                style="@style/normal_text"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:text="Cài đặt riêng tư"
@@ -143,6 +147,7 @@
             android:layout_marginTop="10dp"
             >
             <TextView
+                style="@style/normal_text"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:text="Ngôn ngữ"
@@ -165,6 +170,7 @@
             android:layout_marginTop="10dp"
             >
             <TextView
+                style="@style/normal_text"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:text="Chat"
