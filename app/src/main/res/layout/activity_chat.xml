@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".functions.chat.ChatActivity"
+    android:orientation="vertical"
+    android:padding="20dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00 : 10 AM"
+        android:layout_gravity="center"
+        style="@style/product_description_style">
+    </TextView>
+    <TextView
+        android:layout_marginTop="20dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sốp ơi"
+        android:layout_gravity="end"
+        style="@style/text_chat_style"
+        />
+    <TextView
+        android:layout_marginTop="20dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cảm ơn bạn đã ghé SunHappy"
+        style="@style/text_chat_sunhappy_style"
+        />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hiện tại đã hết thời gian làm việc nên bạn chờ chút nhé."
+        style="@style/text_chat_sunhappy_style"
+        />
+    <LinearLayout
+        android:layout_gravity="end"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#EAE7E7"
+        android:gravity="center_vertical">
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/img_product_polo1">
+        </ImageView>
+        <LinearLayout
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Áo polo nam cổ bẻ TSIMLPE"
+                android:textSize="12dp"
+                style="@style/product_name_style">
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                style="@style/product_description_style"
+                android:text="Phân loại NAVI, Size XL(65 - 75kg)"
+                >
+            </TextView>
+            <TextView
+                style="@style/product_price_style"
+                android:id="@+id/txt_ProductPricePreparing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="150000"
+                android:layout_marginRight="10dp">
+            </TextView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loại này còn mẫu XXL không shop?"
+        android:layout_gravity="end"
+        style="@style/text_chat_style"
+        android:layout_marginBottom="25sp"
+        />
+    <LinearLayout
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#9C9B9B">
+
+    </LinearLayout>
+    <TextView
+        android:paddingTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="09 : 10 AM"
+        android:layout_gravity="center"
+        style="@style/product_description_style">
+    </TextView>
+    <TextView
+        android:layout_marginTop="20dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shop hết size này rồi bạn nhé"
+        style="@style/text_chat_sunhappy_style"
+        />
+
+
+
+
+</LinearLayout>

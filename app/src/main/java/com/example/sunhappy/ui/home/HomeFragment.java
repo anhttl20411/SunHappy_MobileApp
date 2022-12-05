@@ -33,8 +33,10 @@ public class HomeFragment extends Fragment {
 
     private SliderView sliderView;
     int [] images = {
+            R.drawable.img_sunhappy_banner_2,
             R.drawable.img_sunhappy_banner_1,
-            R.drawable.img_sunhappy_banner_2
+            R.drawable.img_sunhappy_banner_3,
+            R.drawable.img_sunhappy_banner_4
     };
 
     FragmentHomeBinding binding;
