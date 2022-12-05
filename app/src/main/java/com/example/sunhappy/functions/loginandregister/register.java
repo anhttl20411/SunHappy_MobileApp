@@ -103,9 +103,6 @@ public class register extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        ///chưa code điều kiện cho email và mật khẩu
-        //chưa code toast thông báo
-        //ấn đăng ký chưa dẫn tới màn hình trang chủ - done
 
     }
 
