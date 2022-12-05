@@ -111,10 +111,11 @@ public class ViewDetailPreparingActivity extends AppCompatActivity {
 
     }
     //tạo sự kiện cho nút back
-    public boolean onOptio3nsItemSelected(MenuItem item) {
+    public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                onBackPressed();
+                Intent intent = new Intent(ViewDetailPreparingActivity.this, ViewOderPreparingActivity.class);
+                startActivity(intent);
                 return true;
             default:
                 break;

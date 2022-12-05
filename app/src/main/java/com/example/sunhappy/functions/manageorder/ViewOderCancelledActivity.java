@@ -1,9 +1,12 @@
 package com.example.sunhappy.functions.manageorder;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 
@@ -16,6 +19,7 @@ import com.example.sunhappy.functions.viewcart.ProductCartActivity;
 import com.example.sunhappy.models.CancelOrder;
 import com.example.sunhappy.models.DeliveredOrder;
 import com.example.sunhappy.models.PreparingOrder;
+import com.example.sunhappy.ui.user.UserFragment;
 
 import java.util.ArrayList;
 
@@ -30,6 +34,12 @@ public class ViewOderCancelledActivity extends AppCompatActivity {
         //setContentView(R.layout.activity_view_oder_cancelled);
         binding= ActivityViewOderCancelledBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(Html.fromHtml("<font color='#ffd24c'>Đơn hàng đã hủy</font>"));
+        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.setDisplayUseLogoEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         loadData();
         addEvents();
@@ -58,5 +68,16 @@ public class ViewOderCancelledActivity extends AppCompatActivity {
 
         adapter = new OrderCancelAdapter(ViewOderCancelledActivity.this, R.layout.item_list_cancelled_oder, cancelOrderArrayList);
         binding.lvOderCancel.setAdapter(adapter);
+    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+            default:
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

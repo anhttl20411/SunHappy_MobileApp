@@ -1,9 +1,12 @@
 package com.example.sunhappy.functions.manageorder;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 
@@ -30,6 +33,12 @@ public class ViewOderDeliveredActivity extends AppCompatActivity {
         //setContentView(R.layout.activity_view_oder_preparing);
         binding = ActivityViewOderDeliveredBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(Html.fromHtml("<font color='#ffd24c'>Đơn hàng đã giao</font>"));
+        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.setDisplayUseLogoEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         loadData();
         addEvents();
@@ -57,5 +66,16 @@ public class ViewOderDeliveredActivity extends AppCompatActivity {
         deliveredOrderArrayList.add(new DeliveredOrder(R.drawable.img_short_3, "Quần đùi 3", 43000));
         adapter = new OrderDeliveredAdapter(ViewOderDeliveredActivity.this, R.layout.item_list_delivered_oder, deliveredOrderArrayList);
         binding.lvOderDelivered.setAdapter(adapter);
+    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+            default:
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
