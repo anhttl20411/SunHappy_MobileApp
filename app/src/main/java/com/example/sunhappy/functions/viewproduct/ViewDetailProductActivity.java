@@ -166,60 +166,105 @@ public class ViewDetailProductActivity extends AppCompatActivity {
         binding.btnAddToCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Dialog dialog = new Dialog(ViewDetailProductActivity.this);
-                dialog.setContentView(R.layout.dialog_choose_size_color);
-
-                ImageView imvImageDialog = dialog.findViewById(R.id.imv_ProductImageDialog);
-                TextView txtNameDialog = dialog.findViewById(R.id.txt_ProductNameDialog);
-                TextView txtPriceDialog = dialog.findViewById(R.id.txt_ProductPriceDialog);
-
-                RadioButton radWhite = dialog.findViewById(R.id.rad_White);
-                RadioButton radBlack = dialog.findViewById(R.id.rad_Black);
-                RadioButton radBlue = dialog.findViewById(R.id.rad_Blue);
-                RadioButton radRed = dialog.findViewById(R.id.rad_Red);
-
-                RadioButton radM = dialog.findViewById(R.id.rad_M);
-                RadioButton radL = dialog.findViewById(R.id.rad_L);
-                RadioButton radXL = dialog.findViewById(R.id.rad_XL);
-                RadioButton radXXL = dialog.findViewById(R.id.rad_XXL);
-
-                imvImageDialog.setImageDrawable(binding.imvProductImageDetail.getDrawable());
-                txtNameDialog.setText(binding.txtProductNameDetail.getText().toString());
-                txtPriceDialog.setText(binding.txtProductPriceDetail.getText().toString());
-
-                //tạo sự kiện cho dialog hiện ra
-                Button btnAddToCartConfirm;
-
-                btnAddToCartConfirm = dialog.findViewById(R.id.btn_AddToCartConfirm);
-                btnAddToCartConfirm.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        if ((radWhite.isChecked() == false) && (radBlack.isChecked() == false) && (radBlue.isChecked() == false) && (radRed.isChecked() == false)){
-                            Toast.makeText(ViewDetailProductActivity.this, "Vui lòng chọn màu", Toast.LENGTH_SHORT).show();
-                        } else{
-                        if ((radM.isChecked() == false) && (radL.isChecked() == false) && (radXL.isChecked() == false) && (radXXL.isChecked() == false)){
-                            Toast.makeText(ViewDetailProductActivity.this, "Vui lòng chọn size", Toast.LENGTH_SHORT).show();
-                        }else{
-                        Toast.makeText(ViewDetailProductActivity.this, "Đã thêm vào giỏ hàng", Toast.LENGTH_SHORT).show();
-                        dialog.dismiss();
-                    }} }
-                });
-
-                dialog.show();
+                openChooseSizeColorDialogAddCart();
             }
         });
 
         binding.btnBuyNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ViewDetailProductActivity.this, PaymentActivity.class);
-
-//                intent.putExtra("image", binding.imvProductImageDetail.getResources());
-//                intent.putExtra("name", binding.txtProductNameDetail.getText().toString());
-//                intent.putExtra("price", binding.txtProductNameDetail.getText().toString());
-                startActivity(intent);
+                openChooseSizeColorDialogBuyNow();
 
             }
         });
+    }
+    private void openChooseSizeColorDialogAddCart(){
+        Dialog dialog = new Dialog(ViewDetailProductActivity.this);
+        dialog.setContentView(R.layout.dialog_choose_size_color);
+
+        ImageView imvImageDialog = dialog.findViewById(R.id.imv_ProductImageDialog);
+        TextView txtNameDialog = dialog.findViewById(R.id.txt_ProductNameDialog);
+        TextView txtPriceDialog = dialog.findViewById(R.id.txt_ProductPriceDialog);
+
+        RadioButton radWhite = dialog.findViewById(R.id.rad_White);
+        RadioButton radBlack = dialog.findViewById(R.id.rad_Black);
+        RadioButton radBlue = dialog.findViewById(R.id.rad_Blue);
+        RadioButton radRed = dialog.findViewById(R.id.rad_Red);
+
+        RadioButton radM = dialog.findViewById(R.id.rad_M);
+        RadioButton radL = dialog.findViewById(R.id.rad_L);
+        RadioButton radXL = dialog.findViewById(R.id.rad_XL);
+        RadioButton radXXL = dialog.findViewById(R.id.rad_XXL);
+
+        imvImageDialog.setImageDrawable(binding.imvProductImageDetail.getDrawable());
+        txtNameDialog.setText(binding.txtProductNameDetail.getText().toString());
+        txtPriceDialog.setText(binding.txtProductPriceDetail.getText().toString());
+
+        //tạo sự kiện cho dialog hiện ra
+        Button btnAddToCartConfirm;
+
+        btnAddToCartConfirm = dialog.findViewById(R.id.btn_AddToCartConfirm);
+        btnAddToCartConfirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if ((radWhite.isChecked() == false) && (radBlack.isChecked() == false) && (radBlue.isChecked() == false) && (radRed.isChecked() == false)){
+                    Toast.makeText(ViewDetailProductActivity.this, "Vui lòng chọn màu", Toast.LENGTH_SHORT).show();
+                } else{
+                    if ((radM.isChecked() == false) && (radL.isChecked() == false) && (radXL.isChecked() == false) && (radXXL.isChecked() == false)){
+                        Toast.makeText(ViewDetailProductActivity.this, "Vui lòng chọn size", Toast.LENGTH_SHORT).show();
+                    }else{
+                        Toast.makeText(ViewDetailProductActivity.this, "Đã thêm vào giỏ hàng", Toast.LENGTH_SHORT).show();
+                        dialog.dismiss();
+                    }} }
+        });
+
+        dialog.show();
+    }
+    private void openChooseSizeColorDialogBuyNow(){
+        Dialog dialog = new Dialog(ViewDetailProductActivity.this);
+        dialog.setContentView(R.layout.dialog_choose_size_color);
+
+        ImageView imvImageDialog = dialog.findViewById(R.id.imv_ProductImageDialog);
+        TextView txtNameDialog = dialog.findViewById(R.id.txt_ProductNameDialog);
+        TextView txtPriceDialog = dialog.findViewById(R.id.txt_ProductPriceDialog);
+
+        RadioButton radWhite = dialog.findViewById(R.id.rad_White);
+        RadioButton radBlack = dialog.findViewById(R.id.rad_Black);
+        RadioButton radBlue = dialog.findViewById(R.id.rad_Blue);
+        RadioButton radRed = dialog.findViewById(R.id.rad_Red);
+
+        RadioButton radM = dialog.findViewById(R.id.rad_M);
+        RadioButton radL = dialog.findViewById(R.id.rad_L);
+        RadioButton radXL = dialog.findViewById(R.id.rad_XL);
+        RadioButton radXXL = dialog.findViewById(R.id.rad_XXL);
+
+        Button btnAddToCartConfirm = dialog.findViewById(R.id.btn_AddToCartConfirm);
+        btnAddToCartConfirm.setText("MUA NGAY");
+
+        imvImageDialog.setImageDrawable(binding.imvProductImageDetail.getDrawable());
+        txtNameDialog.setText(binding.txtProductNameDetail.getText().toString());
+        txtPriceDialog.setText(binding.txtProductPriceDetail.getText().toString());
+
+        //tạo sự kiện cho dialog hiện ra
+        btnAddToCartConfirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if ((radWhite.isChecked() == false) && (radBlack.isChecked() == false) && (radBlue.isChecked() == false) && (radRed.isChecked() == false)){
+                    Toast.makeText(ViewDetailProductActivity.this, "Vui lòng chọn màu", Toast.LENGTH_SHORT).show();
+                } else{
+                    if ((radM.isChecked() == false) && (radL.isChecked() == false) && (radXL.isChecked() == false) && (radXXL.isChecked() == false)){
+                        Toast.makeText(ViewDetailProductActivity.this, "Vui lòng chọn size", Toast.LENGTH_SHORT).show();
+                    }else{
+                        Intent intent = new Intent(ViewDetailProductActivity.this, PaymentActivity.class);
+
+        //                intent.putExtra("image", binding.imvProductImageDetail.getResources());
+        //                intent.putExtra("name", binding.txtProductNameDetail.getText().toString());
+        //                intent.putExtra("price", binding.txtProductNameDetail.getText().toString());
+                        startActivity(intent);
+                        dialog.dismiss();
+                    }} }
+        });
+
+        dialog.show();
     }
 }
