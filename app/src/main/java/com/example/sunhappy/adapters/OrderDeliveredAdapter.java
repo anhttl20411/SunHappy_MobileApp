@@ -80,7 +80,6 @@ public class OrderDeliveredAdapter extends BaseAdapter {
         holder.btnFeedback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(activity, "Đã thêm sản phẩm vào giỏ hàng", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(activity, ChatActivity.class);
                 activity.startActivity(intent);
             }

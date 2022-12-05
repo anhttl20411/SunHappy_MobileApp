@@ -42,7 +42,8 @@ public class ViewDetailDeliveredActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                onBackPressed();
+                Intent intent = new Intent(ViewDetailDeliveredActivity.this, ViewOderDeliveredActivity.class);
+                startActivity(intent);
                 return true;
             default:
                 break;
