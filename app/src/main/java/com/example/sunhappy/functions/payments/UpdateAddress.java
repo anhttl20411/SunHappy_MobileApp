@@ -27,7 +27,7 @@ ActivityUpdateAddressBinding binding;
     AddressAdapter addressAdapter;
 
     String Ten[] = {"Thịnh"};
-    Integer SDT[] = {12344405};
+    String SDT[] = {"032 848 7777"};
     String Tinh[] = {"Bình Dương"};
     String Huyen[] = {"Dĩ An"};
     String Xa[] = {"Tân Lập"};
@@ -83,11 +83,13 @@ ActivityUpdateAddressBinding binding;
                    Intent intent = getIntent();
                    Bundle bundle = intent.getBundleExtra("pack");
                    String ten = bundle.getString("ten");
-                   Integer sdt = bundle.getInt("sdt");
+                   String sdt = bundle.getString("sdt");
                    String tinh = bundle.getString("tinh");
                    String huyen = bundle.getString("huyen");
                    String xa = bundle.getString("xa");
                    String duong = bundle.getString("duong");
+
+
 
                    list.add(new Address(ten,sdt,tinh,huyen,xa,duong));
 
@@ -117,4 +119,7 @@ ActivityUpdateAddressBinding binding;
 
         return super.onOptionsItemSelected(item);
     }
+
+
+
 }

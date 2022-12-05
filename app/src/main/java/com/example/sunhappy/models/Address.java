@@ -1,11 +1,10 @@
 package com.example.sunhappy.models;
 
 public class Address {
-    String Ten;
-    int SDT;
-    String Tinh,Huyen,Xa,Duong;
+    String Ten,SDT,Tinh,Huyen,Xa,Duong;
 
-    public Address(String ten, int SDT, String tinh, String huyen, String xa, String duong) {
+
+    public Address(String ten, String SDT, String tinh, String huyen, String xa, String duong) {
         Ten = ten;
         this.SDT = SDT;
         Tinh = tinh;
@@ -22,11 +21,11 @@ public class Address {
         Ten = ten;
     }
 
-    public int getSDT() {
+    public String getSDT() {
         return SDT;
     }
 
-    public void setSDT(int SDT) {
+    public void setSDT(String SDT) {
         this.SDT = SDT;
     }
 
