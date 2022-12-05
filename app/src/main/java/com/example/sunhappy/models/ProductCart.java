@@ -5,12 +5,23 @@ public class ProductCart { public
     String productName;
     String productDescription;
     double productPrice;
+    int productAmount;
+    boolean isSelected;
 
-    public ProductCart(int productThumb, String productName, String productDescription, double productPrice) {
+    public boolean isSelected() {
+        return isSelected;
+    }
+
+    public void setSelected(boolean selected) {
+        isSelected = selected;
+    }
+
+    public ProductCart(int productThumb, String productName, String productDescription, double productPrice, int productAmount) {
         this.productThumb = productThumb;
         this.productName = productName;
         this.productDescription = productDescription;
         this.productPrice = productPrice;
+        this.productAmount = productAmount;
     }
 
     public int getProductThumb() {
@@ -43,5 +54,13 @@ public class ProductCart { public
 
     public void setProductPrice(double productPrice) {
         this.productPrice = productPrice;
+    }
+
+    public int getProductAmount() {
+        return productAmount;
+    }
+
+    public void setProductAmount(int productAmount) {
+        this.productAmount = productAmount;
     }
 }

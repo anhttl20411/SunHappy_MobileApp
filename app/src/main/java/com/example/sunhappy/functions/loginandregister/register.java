@@ -81,7 +81,24 @@ public class register extends AppCompatActivity {
         });
         ///chưa code điều kiện cho email và mật khẩu
         //chưa code toast thông báo
-        //ấn đăng ký chưa dẫn tới màn hình trang chủ
+        //ấn đăng ký chưa dẫn tới màn hình trang chủ - done
+        binding.btnSignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(register.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+    private  boolean validateEmailAddress (EditText email){
+        String emailInput = email.getText().toString();
+        if (!emailInput.isEmpty()&& !Patterns.EMAIL_ADDRESS.matcher(emailInput).matches()) {
+            return  true;
+
+        }else {
+            Toast.makeText(this, "Email không đúng định dạng", Toast.LENGTH_SHORT).show();
+            return  false;
+        }
     }
 
 }

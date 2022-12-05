@@ -14,6 +14,7 @@ import com.example.sunhappy.databinding.ActivityLoginBinding;
 import com.example.sunhappy.databinding.ActivitySettingAccountBinding;
 import com.example.sunhappy.databinding.ActivitySettingBinding;
 import com.example.sunhappy.functions.loginandregister.FlashscreenActivity;
+import com.example.sunhappy.functions.loginandregister.login;
 import com.example.sunhappy.functions.payments.UpdateAddress;
 
 public class SettingActivity extends AppCompatActivity {
@@ -31,7 +32,7 @@ public class SettingActivity extends AppCompatActivity {
         actionBar.setTitle(Html.fromHtml("<font color='#ffd24c'>Thiết lập tài khoản</font>"));
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setDisplayUseLogoEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_yellow);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         addEvents();
@@ -64,8 +65,8 @@ public class SettingActivity extends AppCompatActivity {
         binding.btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(SettingActivity.this,.class);
-//                startActivity(intent);
+                Intent intent = new Intent(SettingActivity.this, login.class);
+                startActivity(intent);
             }
         });
         // event for change password

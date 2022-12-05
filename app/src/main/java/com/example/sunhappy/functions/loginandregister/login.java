@@ -8,10 +8,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
+import android.util.Patterns;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import com.example.sunhappy.MainActivity;
 import com.example.sunhappy.R;
 import com.example.sunhappy.databinding.ActivityLoginBinding;
 
@@ -85,6 +88,23 @@ public class login extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        binding.btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(login.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+    private  boolean validateEmailAddress (EditText email){
+        String emailInput = email.getText().toString();
+        if (!emailInput.isEmpty()&& !Patterns.EMAIL_ADDRESS.matcher(emailInput).matches()) {
+            return  true;
+
+        }else {
+            Toast.makeText(this, "Email không đúng định dạng", Toast.LENGTH_SHORT).show();
+            return  false;
+        }
     }
     ///chưa code điều kiện cho email và mật khẩu
     //chưa code toast thông báo đăng nhập thành công?? cái này có cần không?

@@ -7,101 +7,122 @@
     android:orientation="vertical"
     android:padding="@dimen/sunhappy_padding">
 
-    <ImageView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:src="@drawable/img_product_polo1"
-        android:scaleType="fitCenter"/>
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:src="@drawable/logo_horizontal_color"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="10"
-        android:layout_gravity="center">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Về chúng tôi"
-            style="@style/header"
-            android:layout_weight="9"
-            android:layout_gravity="center"/>
-        <ImageButton
-            android:id="@+id/btn_ShowMoreAboutUs"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_expand"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"/>
-    </LinearLayout>
-    <TextView
-        android:id="@+id/txt_AboutUs"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="SunHappy sinh ra với mong muốn trở thành điển hình về mô hình DOANH NGHIỆP TRÁCH NHIỆM bằng cách vừa làm kinh doanh bài bản, có lợi nhuận và đồng thời mang lại những giá trị thiết thực và lâu dài cho khách hàng, cho nhân viên, cho đối tác, cho cộng đồng, xã hội và cho cổ đông."
-        style="@style/normal_text"
-        android:visibility="gone"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="10"
-        android:layout_gravity="center">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Chính sách bảo mật"
-            style="@style/header"
-            android:layout_weight="9"
-            android:layout_gravity="center"/>
-        <ImageButton
-            android:id="@+id/btn_ShowMoreSecurity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_expand"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"/>
-    </LinearLayout>
-    <TextView
-        android:id="@+id/txt_Security"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Chúng tôi thực hiện các biện pháp bảo mật khác nhau và luôn nỗ lực để đảm bảo sự an toàn của dữ liệu cá nhân của bạn trên các hệ thống của chúng tôi. Dữ liệu cá nhân của người dùng được lưu trữ đằng sau các mạng bảo mật và chỉ có thể được truy cập bởi một số nhân viên có quyền truy cập đặc biệt đến các hệ thống của chúng tôi. Tuy nhiên, chắc chắn không thể có sự đảm bảo an ninh tuyệt đối."
-        style="@style/normal_text"
-        android:visibility="gone"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="10"
-        android:layout_gravity="center">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Chính sách mua hàng và đổi trả"
-            style="@style/header"
-            android:layout_weight="9"
-            android:layout_gravity="center"/>
-        <ImageButton
-            android:id="@+id/btn_ShowMoreService"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_expand"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"/>
-    </LinearLayout>
-    <TextView
-        android:id="@+id/txt_Service"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Các sản phẩm được mua trên app sẽ được bảo hàng nếu có sai sot xảy ra. Với những sản phẩm bạn đã mua tại SunHappy, 60 ngày kể từ khi bạn nhận sản phẩm thì bạn sẽ được đổi hàng và trả hàng với bất kỳ lý do gì, bao gồm cả các sản phẩm đã qua giặt và sử dụng."
-        style="@style/normal_text"
-        android:visibility="gone"/>
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:src="@drawable/img_product_polo1"
+                android:scaleType="fitCenter"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/logo_horizontal_color"/>
+            <LinearLayout
+                android:id="@+id/ln_AboutUs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                android:layout_gravity="center">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Về chúng tôi"
+                    style="@style/header"
+                    android:layout_weight="9"
+                    android:padding="10dp"
+                    android:layout_gravity="center"/>
+                <ImageButton
+                    android:layout_gravity="center"
+                    android:id="@+id/btn_ShowMoreAboutUs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_expand"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/txt_AboutUs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SunHappy sinh ra với mong muốn trở thành điển hình về mô hình DOANH NGHIỆP TRÁCH NHIỆM bằng cách vừa làm kinh doanh bài bản, có lợi nhuận và đồng thời mang lại những giá trị thiết thực và lâu dài cho khách hàng, cho nhân viên, cho đối tác, cho cộng đồng, xã hội và cho cổ đông."
+                style="@style/normal_text"
+                android:visibility="gone"
+                android:paddingHorizontal="10dp"/>
+            <LinearLayout
+                android:id="@+id/ln_Security"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                android:layout_gravity="center">
+                <TextView
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Chính sách bảo mật"
+                    style="@style/header"
+                    android:layout_weight="9"
+                    android:layout_gravity="center"/>
+                <ImageButton
+                    android:layout_gravity="center"
+                    android:id="@+id/btn_ShowMoreSecurity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_expand"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/txt_Security"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chúng tôi thực hiện các biện pháp bảo mật khác nhau và luôn nỗ lực để đảm bảo sự an toàn của dữ liệu cá nhân của bạn trên các hệ thống của chúng tôi. Dữ liệu cá nhân của người dùng được lưu trữ đằng sau các mạng bảo mật và chỉ có thể được truy cập bởi một số nhân viên có quyền truy cập đặc biệt đến các hệ thống của chúng tôi. Tuy nhiên, chắc chắn không thể có sự đảm bảo an ninh tuyệt đối."
+                style="@style/normal_text"
+                android:paddingHorizontal="10dp"
+                android:visibility="gone"/>
+            <LinearLayout
+                android:id="@+id/ln_Service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                android:layout_gravity="center">
+                <TextView
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Chính sách mua hàng và đổi trả"
+                    style="@style/header"
+                    android:layout_weight="9"
+                    android:layout_gravity="center"/>
+                <ImageButton
+                    android:layout_gravity="center"
+                    android:id="@+id/btn_ShowMoreService"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_expand"
+                    android:layout_weight="1"
 
-
-
+                    android:background="@android:color/transparent"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/txt_Service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:text="Các sản phẩm được mua trên app sẽ được bảo hàng nếu có sai sot xảy ra. Với những sản phẩm bạn đã mua tại SunHappy, 60 ngày kể từ khi bạn nhận sản phẩm thì bạn sẽ được đổi hàng và trả hàng với bất kỳ lý do gì, bao gồm cả các sản phẩm đã qua giặt và sử dụng."
+                style="@style/normal_text"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

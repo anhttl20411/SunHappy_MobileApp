@@ -28,7 +28,7 @@ public class AddNewAddressActivity extends AppCompatActivity {
         actionBar.setTitle(Html.fromHtml("<font color='#ffd24c'>Thêm địa chỉ mới</font>"));
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setDisplayUseLogoEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_yellow);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         binding.btnAddressSave.setOnClickListener(new View.OnClickListener() {

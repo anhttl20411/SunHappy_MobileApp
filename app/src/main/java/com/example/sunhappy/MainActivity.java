@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
     FragmentAboutSunhappyBinding bindinguser;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

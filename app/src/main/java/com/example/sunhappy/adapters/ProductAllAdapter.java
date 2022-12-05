@@ -1,5 +1,6 @@
 package com.example.sunhappy.adapters;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -12,22 +13,26 @@ import android.widget.TextView;
 
 import com.example.sunhappy.MainActivity;
 import com.example.sunhappy.R;
+import com.example.sunhappy.functions.viewproduct.ViewDetailProductActivity;
 import com.example.sunhappy.models.ProductAll;
+import com.example.sunhappy.models.Short;
+import com.example.sunhappy.models.TopProduct;
 
 import java.util.List;
 
 public class ProductAllAdapter extends BaseAdapter {
-    MainActivity activity;
+    Activity activity;
     int item_layout;
     List<ProductAll> productAlls;
 
     //constructor
 
-    public ProductAllAdapter(MainActivity activity, int item_layout, List<ProductAll> productAlls) {
+    public ProductAllAdapter(ViewDetailProductActivity activity, int item_layout, List<ProductAll> productAlls) {
         this.activity = activity;
         this.item_layout = item_layout;
         this.productAlls = productAlls;
     }
+
 
     //implement methods
 
@@ -51,12 +56,11 @@ public class ProductAllAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         //return null;
-        ViewHolder holder = null;
+         ViewHolder holder = null;
         if (view == null){ // nếu khi mới tạo chưa hiển thị gì
-            holder = new ViewHolder();
             LayoutInflater inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(item_layout, null);
-
+            holder = new ProductAllAdapter.ViewHolder();
             holder.imvProductImage = view.findViewById(R.id.imv_ProductImage);
             holder.txtProductName = view.findViewById(R.id.txt_ProductName);
             holder.txtProductPrice = view.findViewById(R.id.txt_ProductPrice);
@@ -65,13 +69,11 @@ public class ProductAllAdapter extends BaseAdapter {
         }else{
             holder = (ProductAllAdapter.ViewHolder) view.getTag();
         }
-        ProductAll p = productAlls.get(i);
-        //holder.imvProductImage.setImageResource(p.getProductImage());
-        holder.txtProductPrice.setText(p.getProductName());
-        //holder.txtProductPrice.setText(toString(productAll.getProductPrice()));
-
+        ProductAll pa = productAlls.get(i);
+        holder.imvProductImage.setImageResource((pa.getProductImage()));
+        holder.txtProductName.setText(pa.getProductName());
+        holder.txtProductPrice.setText(String.valueOf(pa.getProductPrice()));
         return view;
-
 
     }
     public static class ViewHolder{

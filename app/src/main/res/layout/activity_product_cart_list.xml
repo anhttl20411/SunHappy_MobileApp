@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="5dp"
+  android:padding="5dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout
         android:layout_width="match_parent"
@@ -54,8 +54,8 @@
             android:padding="3dp"
             android:text="Phân loại: áo polo nam có viền, Size: XL(60-75kg)" />
 
-        <ImageView
-            android:id="@+id/imv_Expand"
+        <ImageButton
+            android:id="@+id/btn_Expand"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_gravity="center"
@@ -71,7 +71,7 @@
         android:layout_marginTop="10dp"/>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:paddingTop="5dp"
             android:orientation="horizontal">
 
@@ -89,11 +89,12 @@
                 android:gravity="center"
                 android:background="@drawable/vien_doitra"
                 android:orientation="horizontal">
-                <ImageView
-                    android:id="@+id/imv_Minus"
+                <ImageButton
+                    android:id="@+id/btn_Minus"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:background="@drawable/ic_remove"
+                    android:src="@drawable/ic_remove"
+                    android:background="@android:color/transparent"
                     android:gravity="center"/>
                 <TextView
                     android:id="@+id/txt_Values"
@@ -104,21 +105,23 @@
                     android:text="1"
                     android:textSize="15dp"
                     android:textColor="#151515"/>
-                <ImageView
-                    android:id="@+id/imv_Plus"
+                <ImageButton
+                    android:id="@+id/btn_Plus"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:background="@drawable/ic_add"
+                    android:src="@drawable/ic_add"
+                    android:background="@android:color/transparent"
                     android:gravity="center"/>
             </LinearLayout>
-            <ImageView
-                android:id="@+id/imv_Delete"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginLeft="10dp"
-                android:gravity="center"
-                android:src="@drawable/ic_delete" />
+
+
         </LinearLayout>
+        <ImageView
+            android:id="@+id/imv_Delete"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:src="@drawable/ic_delete"/>
 
     </LinearLayout>
 

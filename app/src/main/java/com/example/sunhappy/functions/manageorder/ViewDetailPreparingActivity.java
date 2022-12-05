@@ -17,14 +17,16 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.sunhappy.R;
 import com.example.sunhappy.databinding.ActivityViewDetailPreparingBinding;
+import com.example.sunhappy.models.PreparingOrder;
+
+import java.util.ArrayList;
 
 public class ViewDetailPreparingActivity extends AppCompatActivity {
     ActivityViewDetailPreparingBinding binding;
-    ImageView image;
-    TextView name, total, classify, amount, size;
 
 
     @Override
@@ -41,61 +43,28 @@ public class ViewDetailPreparingActivity extends AppCompatActivity {
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //--------------
-       // addEvents();
 
+        loadData();
+        addEvents();
+    }
+
+    private void loadData() {
+        Intent intent = getIntent();
+        //Receive data
+        binding.imgSubProductImagePreparing.setImageResource(intent.getIntExtra("image", R.drawable.img_product_polo1));
+        binding.txtSubProductNamePreparing.setText(intent.getStringExtra("name"));
+        binding.txtProductPricePreparingDetail.setText(String.valueOf(intent.getDoubleExtra("price", 20000)));
+    }
+
+    private void addEvents() {
         Button btnCancel = findViewById(R.id.btn_CancelOder);
-
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openCancelDialog(Gravity.CENTER);
-
-            }
-        });
-
-        name = findViewById(R.id.txt_SubProductNamePreparing);
-        total =findViewById(R.id.txt_SubTotalPreparing);
-        amount =findViewById(R.id.txt_SubProductAmountPreparing);
-        image =findViewById(R.id.img_SubProductImagePreparing);
-        classify=findViewById(R.id.txt_SubProductClassifyPreparing);
-        size = findViewById(R.id.txt_SubProductSizePreparing);
-        Intent intent = getIntent();
-        String nameProduct= intent.getStringExtra("name");
-        name.setText(nameProduct);
-        String classifyProduct=intent.getStringExtra("classify");
-        classify.setText(classifyProduct);
-        String sizeProduct=intent.getStringExtra("size");
-        size.setText(sizeProduct);
-        int totalProduct=intent.getIntExtra("total", 0);
-        total.setText(""+ totalProduct);
-        int amountProduct=intent.getIntExtra("amount", 0);
-        amount.setText(""+ amountProduct);
-        int imgProduct=intent.getIntExtra("image", 0);
-        image.setImageResource(imgProduct);
-
-
-
-        Button btnConfirm = findViewById(R.id.btn_ConfirmCancel);
-        btnConfirm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ViewDetailPreparingActivity.this, ViewOderCancelledActivity.class);
-                intent.putExtra("name", nameProduct );
-                intent.putExtra("", nameProduct );
-                intent.putExtra("name", nameProduct );
-                intent.putExtra("name", nameProduct );
-                intent.putExtra("name", nameProduct );
             }
         });
     }
-
-
-
-
-//    private void addEvents() {
-//        binding.
-//    }
 
     private void openCancelDialog(int gravity){
         //final
@@ -116,12 +85,25 @@ public class ViewDetailPreparingActivity extends AppCompatActivity {
         dialog.setCancelable(false);
 
         Button btnExit = dialog.findViewById(R.id.btn_ExitReason);
-        Button btnConfirm = dialog.findViewById(R.id.btn_ConfirmCancel);
         btnExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 dialog.dismiss();
+            }
+        });
+
+        Button btnConfirm = dialog.findViewById(R.id.btn_ConfirmCancel);
+        btnConfirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+                Toast.makeText(ViewDetailPreparingActivity.this, "Đã hủy thành công!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(ViewDetailPreparingActivity.this, ViewOderCancelledActivity.class);
+
+                intent.putExtra("image", R.drawable.img_polo_1);
+                intent.putExtra("name", binding.txtSubProductNamePreparing.getText().toString());
+                intent.putExtra("price", binding.txtProductPricePreparingDetail.getText());
+                startActivity(intent);
             }
         });
         dialog.show();
@@ -134,7 +116,6 @@ public class ViewDetailPreparingActivity extends AppCompatActivity {
             case android.R.id.home:
                 onBackPressed();
                 return true;
-
             default:
                 break;
         }

@@ -27,7 +27,7 @@ public class MethodPayment extends AppCompatActivity {
         actionBar.setTitle(Html.fromHtml("<font color='#ffd24c'>Thay đổi phương thức</font>"));
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setDisplayUseLogoEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_yellow);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         binding.btnPaymentAccept.setOnClickListener(new View.OnClickListener() {

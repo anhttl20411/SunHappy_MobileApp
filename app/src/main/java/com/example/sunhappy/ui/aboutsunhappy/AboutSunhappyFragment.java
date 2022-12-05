@@ -12,11 +12,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.sunhappy.MainActivity;
 import com.example.sunhappy.R;
+import com.example.sunhappy.functions.viewproduct.ViewDetailProductActivity;
 
 public class AboutSunhappyFragment extends Fragment {
 
@@ -32,33 +34,71 @@ public class AboutSunhappyFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_about_sunhappy, container, false);
 
         TextView txtAboutUs = (TextView) view.findViewById(R.id.txt_AboutUs);
-        ImageButton btnShowMoreAboutUs = (ImageButton) view.findViewById(R.id.btn_ShowMoreAboutUs);
+        LinearLayout lnAboutUs = (LinearLayout) view.findViewById(R.id.ln_AboutUs);
 
         TextView txtSecurity = (TextView) view.findViewById(R.id.txt_Security);
-        ImageButton btnShowMoreSecurity = (ImageButton) view.findViewById(R.id.btn_ShowMoreSecurity);
+        LinearLayout lnSecurity = (LinearLayout) view.findViewById(R.id.ln_Security);
 
         TextView txtService = (TextView) view.findViewById(R.id.txt_Service);
-        ImageButton btnShowMoreService = (ImageButton) view.findViewById(R.id.btn_ShowMoreService);
+        LinearLayout lnService = (LinearLayout) view.findViewById(R.id.ln_Service);
 
-        //chỉ mới code để mở ra, chưa code để đóng lại
-        btnShowMoreAboutUs.setOnClickListener(new View.OnClickListener() {
+        lnAboutUs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                txtAboutUs.setVisibility(View.VISIBLE);
+                if ((lnAboutUs.getTag() == null) || (lnAboutUs.getTag() == "collapse")) // để mặc định là collapse
+                {
+                    txtAboutUs.setVisibility(View.VISIBLE);
+                    txtAboutUs.setHeight(300);
+                    lnAboutUs.setTag("expand");
+                    // settag dùng để đánh dấu
+
+                }
+                else
+                {
+                    txtAboutUs.setVisibility(View.INVISIBLE);
+                    txtAboutUs.setHeight(0);
+                    lnAboutUs.setTag("collapse");
+                }
             }
         });
 
-        btnShowMoreSecurity.setOnClickListener(new View.OnClickListener() {
+        lnSecurity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                txtSecurity.setVisibility(View.VISIBLE);
+                if ((lnSecurity.getTag() == null) || (lnSecurity.getTag() == "collapse")) // để mặc định là collapse
+                {
+                    txtSecurity.setVisibility(View.VISIBLE);
+                    txtSecurity.setHeight(300);
+                    lnSecurity.setTag("expand");
+                    // settag dùng để đánh dấu
+
+                }
+                else
+                {
+                    txtSecurity.setVisibility(View.INVISIBLE);
+                    txtSecurity.setHeight(0);
+                    lnSecurity.setTag("collapse");
+                }
             }
         });
 
-        btnShowMoreService.setOnClickListener(new View.OnClickListener() {
+        lnService.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                txtService.setVisibility(View.VISIBLE);
+                if ((lnService.getTag() == null) || (lnService.getTag() == "collapse")) // để mặc định là collapse
+                {
+                    txtService.setVisibility(View.VISIBLE);
+                    txtService.setHeight(300);
+                    lnService.setTag("expand");
+                    // settag dùng để đánh dấu
+
+                }
+                else
+                {
+                    txtService.setVisibility(View.INVISIBLE);
+                    txtService.setHeight(0);
+                    lnService.setTag("collapse");
+                }
             }
         });
 
