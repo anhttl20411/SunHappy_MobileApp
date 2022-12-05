@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 
 import com.example.sunhappy.R;
 import com.example.sunhappy.adapters.OrderCancelAdapter;
@@ -22,6 +23,7 @@ public class ViewOderCancelledActivity extends AppCompatActivity {
     ActivityViewOderCancelledBinding binding;
     OrderCancelAdapter adapter;
     ArrayList<CancelOrder> cancelOrderArrayList;
+    CancelOrder selectedCancelOr = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,25 +32,31 @@ public class ViewOderCancelledActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         loadData();
+        addEvents();
     }
 
-
+    private void addEvents() {
+        binding.lvOderCancel.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(ViewOderCancelledActivity.this, ViewDetailCancelledActivity.class);
+                selectedCancelOr = cancelOrderArrayList.get(i);
+                intent.putExtra("image", selectedCancelOr.getCancelImage());
+                intent.putExtra("name", selectedCancelOr.getCancelName());
+                intent.putExtra("price", selectedCancelOr.getCancelPrice());
+                startActivity(intent);
+            }
+        });
+    }
 
     private void loadData() {
         Intent intent = getIntent();
         cancelOrderArrayList = new ArrayList<>();
         cancelOrderArrayList.add(new CancelOrder(R.drawable.img_polo_4, "Áo polo 4", 14000));
         cancelOrderArrayList.add(new CancelOrder(R.drawable.img_dai_4, "Quần dài 4", 23000));
-        cancelOrderArrayList.add(new CancelOrder(R.drawable.img_thun_4, "Áo thun 4", 33000));
-        cancelOrderArrayList.add(new CancelOrder(R.drawable.img_short_4, "Quần đùi 4", 43000));
         cancelOrderArrayList.add(new CancelOrder(intent.getIntExtra("image", R.drawable.img_polo_4), intent.getStringExtra("name"), intent.getDoubleExtra("price", 200000)));
 
         adapter = new OrderCancelAdapter(ViewOderCancelledActivity.this, R.layout.item_list_cancelled_oder, cancelOrderArrayList);
         binding.lvOderCancel.setAdapter(adapter);
     }
-//    public void buyAgain(CancelOrder cancelOr){
-//        Intent intent = new Intent(ViewOderCancelledActivity.this, ProductCartActivity.class);
-//        startActivity(intent);
-//    }
-
 }

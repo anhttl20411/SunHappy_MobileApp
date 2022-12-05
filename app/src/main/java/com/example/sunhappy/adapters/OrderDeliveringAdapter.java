@@ -49,33 +49,33 @@ public class OrderDeliveringAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         //return null;
-    ViewHolder holder = null;
-        if (view == null){ //
-            holder = new ViewHolder();
-            LayoutInflater inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = inflater.inflate(item_layout, null);
-            holder.imvDeliveringImage = view.findViewById(R.id.img_ProductImageDelivering);
-            holder.txtDeliveringName = view.findViewById(R.id.txt_ProductNameDelivering);
-            holder.txtDeliveringPrice = view.findViewById(R.id.txt_ProductPriceDelivering);
-            holder.btnReceived = view.findViewById(R.id.btn_Received);
+        ViewHolder holder = null;
+            if (view == null){ //
+                holder = new ViewHolder();
+                LayoutInflater inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                view = inflater.inflate(item_layout, null);
+                holder.imvDeliveringImage = view.findViewById(R.id.img_ProductImageDelivering);
+                holder.txtDeliveringName = view.findViewById(R.id.txt_ProductNameDelivering);
+                holder.txtDeliveringPrice = view.findViewById(R.id.txt_ProductPriceDelivering);
+                holder.btnReceived = view.findViewById(R.id.btn_Received);
 
-            view.setTag(holder);
-        }else{
-            holder = (OrderDeliveringAdapter.ViewHolder) view.getTag();
-        }
-        DeliveringOrder preOr = deliveringOrders.get(i);
-        holder.imvDeliveringImage.setImageResource(preOr.getDeliveringImage());
-        holder.txtDeliveringName.setText(preOr.getDeliveringName());
-        holder.txtDeliveringPrice.setText(String.valueOf(preOr.getDeliveringPrice()));
-
-        holder.btnReceived.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(activity, "Đã nhận hàng thành công", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(activity, ViewOderDeliveredActivity.class);
-                activity.startActivity(intent);
+                view.setTag(holder);
+            }else{
+                holder = (OrderDeliveringAdapter.ViewHolder) view.getTag();
             }
-        });
+            DeliveringOrder dlvringOr = deliveringOrders.get(i);
+            holder.imvDeliveringImage.setImageResource(dlvringOr.getDeliveringImage());
+            holder.txtDeliveringName.setText(dlvringOr.getDeliveringName());
+            holder.txtDeliveringPrice.setText(String.valueOf(dlvringOr.getDeliveringPrice()));
+
+            holder.btnReceived.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(activity, "Đã nhận hàng thành công", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(activity, ViewOderDeliveredActivity.class);
+                    activity.startActivity(intent);
+                }
+            });
 
         return view;
 

@@ -293,7 +293,7 @@
                         </TextView>
                         <TextView
                             android:gravity="end"
-                            android:id="@+id/txt_ProductPricePreparingDetail"
+                            android:id="@+id/txt_ProductPriceDeliveringDetail"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="150000"

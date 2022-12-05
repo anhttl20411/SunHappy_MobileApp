@@ -58,9 +58,9 @@ public class OrderCancelAdapter extends BaseAdapter {
             view = inflater.inflate(item_layout, null);
 
             //ánh xạ
-            holder.imvPreparingImage = view.findViewById(R.id.img_ProductImageCancelled);
-            holder.txtPreparingName = view.findViewById(R.id.txt_ProductNameCancelled);
-            holder.txtPreparingPrice = view.findViewById(R.id.txt_ProductPriceCancelled);
+            holder.imvCancelImage = view.findViewById(R.id.img_ProductImageCancelled);
+            holder.txtCancelName = view.findViewById(R.id.txt_ProductNameCancelled);
+            holder.txtCancelPrice = view.findViewById(R.id.txt_ProductPriceCancelled);
             holder.btnBuyAgain = view.findViewById(R.id.btn_BuyAgain);
 
             view.setTag(holder);
@@ -68,9 +68,9 @@ public class OrderCancelAdapter extends BaseAdapter {
             holder = (ViewHolder) view.getTag();
         }
         CancelOrder cancelOr = cancelOrders.get(i);
-        holder.imvPreparingImage.setImageResource(cancelOr.getCancelImage());
-        holder.txtPreparingName.setText(cancelOr.getCancelName());
-        holder.txtPreparingPrice.setText(String.valueOf(cancelOr.getCancelPrice()));
+        holder.imvCancelImage.setImageResource(cancelOr.getCancelImage());
+        holder.txtCancelName.setText(cancelOr.getCancelName());
+        holder.txtCancelPrice.setText(String.valueOf(cancelOr.getCancelPrice()));
         holder.btnBuyAgain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -83,8 +83,8 @@ public class OrderCancelAdapter extends BaseAdapter {
         return view;
     }
     public static class ViewHolder{
-        ImageView imvPreparingImage;
-        TextView txtPreparingName, txtPreparingPrice;
+        ImageView imvCancelImage;
+        TextView txtCancelName, txtCancelPrice;
         Button btnBuyAgain;
     }
 }

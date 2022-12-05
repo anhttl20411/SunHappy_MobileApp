@@ -6,14 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Toast;
 
 import com.example.sunhappy.R;
 import com.example.sunhappy.adapters.OrderDeliveringAdapter;
-import com.example.sunhappy.adapters.OrderPreparingAdapter;
 import com.example.sunhappy.databinding.ActivityViewOderDeliveringBinding;
-import com.example.sunhappy.databinding.ActivityViewOderPreparingBinding;
 import com.example.sunhappy.models.DeliveringOrder;
-import com.example.sunhappy.models.PreparingOrder;
 
 import java.util.ArrayList;
 
@@ -22,7 +20,7 @@ public class ViewOderDeliveringActivity extends AppCompatActivity {
     ActivityViewOderDeliveringBinding binding;
     OrderDeliveringAdapter adapter;
     ArrayList<DeliveringOrder> deliveringOrderArrayList;
-    DeliveringOrder selectedPreOrDelivering = null;
+    DeliveringOrder selectedDlvedOr = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,10 +38,10 @@ public class ViewOderDeliveringActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(ViewOderDeliveringActivity.this, ViewDetailDeliveringActivity.class);
-                selectedPreOrDelivering = deliveringOrderArrayList.get(i);
-                intent.putExtra("image", selectedPreOrDelivering.getDeliveringImage());
-                intent.putExtra("name", selectedPreOrDelivering.getDeliveringName());
-                intent.putExtra("price", selectedPreOrDelivering.getDeliveringPrice());
+                selectedDlvedOr = deliveringOrderArrayList.get(i);
+                intent.putExtra("image", selectedDlvedOr.getDeliveringImage());
+                intent.putExtra("name", selectedDlvedOr.getDeliveringName());
+                intent.putExtra("price", selectedDlvedOr.getDeliveringPrice());
                 startActivity(intent);
             }
         });

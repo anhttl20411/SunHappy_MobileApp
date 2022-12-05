@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.sunhappy.R;
+import com.example.sunhappy.functions.chat.ChatActivity;
 import com.example.sunhappy.functions.viewcart.ProductCartActivity;
 import com.example.sunhappy.models.DeliveredOrder;
 import com.example.sunhappy.models.PreparingOrder;
@@ -48,9 +49,9 @@ public class OrderDeliveredAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         //return null;
-    OrderDeliveredAdapter.ViewHolder holder = null;
+        ViewHolder holder = null;
         if (view == null){ //
-            holder = new OrderDeliveredAdapter.ViewHolder();
+            holder = new ViewHolder();
             LayoutInflater inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(item_layout, null);
             holder.imvDeliveredImage = view.findViewById(R.id.img_ProductImageDelivered);
@@ -61,12 +62,12 @@ public class OrderDeliveredAdapter extends BaseAdapter {
 
             view.setTag(holder);
         }else{
-            holder = (OrderDeliveredAdapter.ViewHolder) view.getTag();
+            holder = (ViewHolder) view.getTag();
         }
-        DeliveredOrder preOr = deliveredOrders.get(i);
-        holder.imvDeliveredImage.setImageResource(preOr.getDeliveredImage());
-        holder.txtDeliveredName.setText(preOr.getDeliveredName());
-        holder.txtDeliveredPrice.setText(String.valueOf(preOr.getDeliveredPrice()));
+        DeliveredOrder dlvredOr = deliveredOrders.get(i);
+        holder.imvDeliveredImage.setImageResource(dlvredOr.getDeliveredImage());
+        holder.txtDeliveredName.setText(dlvredOr.getDeliveredName());
+        holder.txtDeliveredPrice.setText(String.valueOf(dlvredOr.getDeliveredPrice()));
         holder.btnRepurchase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -79,9 +80,9 @@ public class OrderDeliveredAdapter extends BaseAdapter {
         holder.btnFeedback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Toast.makeText(activity, "Đã thêm sản phẩm vào giỏ hàng", Toast.LENGTH_SHORT).show();
-//                Intent intent = new Intent(activity, .class);
-//                activity.startActivity(intent);
+                Toast.makeText(activity, "Đã thêm sản phẩm vào giỏ hàng", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(activity, ChatActivity.class);
+                activity.startActivity(intent);
             }
         });
 

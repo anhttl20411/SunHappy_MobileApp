@@ -22,7 +22,7 @@ public class ViewOderDeliveredActivity extends AppCompatActivity {
     ActivityViewOderDeliveredBinding binding;
     OrderDeliveredAdapter adapter;
     ArrayList<DeliveredOrder> deliveredOrderArrayList;
-    DeliveredOrder selectedPreOrDelivered = null;
+    DeliveredOrder selectedDlvedOr = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,10 +40,10 @@ public class ViewOderDeliveredActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(ViewOderDeliveredActivity.this, ViewDetailDeliveredActivity.class);
-                selectedPreOrDelivered = deliveredOrderArrayList.get(i);
-                intent.putExtra("image", selectedPreOrDelivered.getDeliveredImage());
-                intent.putExtra("name", selectedPreOrDelivered.getDeliveredName());
-                intent.putExtra("price", selectedPreOrDelivered.getDeliveredPrice());
+                selectedDlvedOr = deliveredOrderArrayList.get(i);
+                intent.putExtra("image", selectedDlvedOr.getDeliveredImage());
+                intent.putExtra("name", selectedDlvedOr.getDeliveredName());
+                intent.putExtra("price", selectedDlvedOr.getDeliveredPrice());
                 startActivity(intent);
             }
         });

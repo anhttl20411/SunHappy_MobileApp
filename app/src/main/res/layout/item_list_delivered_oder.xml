@@ -14,6 +14,7 @@
         android:gravity="center_vertical"
         android:layout_marginTop="10dp">
         <ImageView
+            android:focusable="false"
             android:id="@+id/img_ProductImageDelivered"
             android:layout_margin="10dp"
             android:layout_width="100dp"
@@ -23,6 +24,7 @@
             tools:ignore="MissingConstraints">
         </ImageView>
         <LinearLayout
+            android:focusable="false"
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -123,11 +125,13 @@
                 </TextView>
             </LinearLayout>
             <LinearLayout
+                android:focusable="false"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_gravity="end">
                 <Button
+                    android:focusable="false"
                     android:id="@+id/btn_Feedback"
                     android:layout_width="wrap_content"
                     android:text="Feedback"
@@ -135,14 +139,15 @@
                     android:layout_gravity="end"
                     android:layout_marginRight="10dp">
 
-                </Button><Button
-                android:id="@+id/btn_Repurchase"
-                android:layout_width="wrap_content"
-                android:text="Mua lại"
-                style="@style/small_button_style"
-                android:layout_gravity="end"
-                android:layout_marginRight="10dp">
-
+                </Button>
+                <Button
+                    android:focusable="false"
+                    android:id="@+id/btn_Repurchase"
+                    android:layout_width="wrap_content"
+                    android:text="Mua lại"
+                    style="@style/small_button_style"
+                    android:layout_gravity="end"
+                    android:layout_marginRight="10dp">
             </Button>
 
             </LinearLayout>

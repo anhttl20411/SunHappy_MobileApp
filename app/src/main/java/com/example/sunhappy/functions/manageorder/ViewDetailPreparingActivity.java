@@ -51,9 +51,9 @@ public class ViewDetailPreparingActivity extends AppCompatActivity {
     private void loadData() {
         Intent intent = getIntent();
         //Receive data
-        binding.imgSubProductImagePreparing.setImageResource(intent.getIntExtra("image", R.drawable.img_product_polo1));
+        binding.imgSubProductImagePreparing.setImageResource(intent.getIntExtra("image", R.drawable.img_polo_1));
         binding.txtSubProductNamePreparing.setText(intent.getStringExtra("name"));
-        binding.txtProductPricePreparingDetail.setText(String.valueOf(intent.getDoubleExtra("price", 20000)));
+        binding.txtSubTotalPreparing.setText(String.valueOf(intent.getDoubleExtra("price", 20000)));
     }
 
     private void addEvents() {
@@ -111,7 +111,7 @@ public class ViewDetailPreparingActivity extends AppCompatActivity {
 
     }
     //tạo sự kiện cho nút back
-    public boolean onOptionsItemSelected(MenuItem item) {
+    public boolean onOptio3nsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
                 onBackPressed();
