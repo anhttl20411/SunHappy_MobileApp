@@ -1,67 +1,59 @@
 package com.example.sunhappy.functions.manageorder;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.sunhappy.R;
-import com.example.sunhappy.adapters.ManageorderAdapter;
+import com.example.sunhappy.adapters.OrderPreparingAdapter;
 import com.example.sunhappy.databinding.ActivityViewOderPreparingBinding;
-import com.example.sunhappy.models.OrderPreparing;
+import com.example.sunhappy.functions.viewproduct.ViewDetailProductActivity;
+import com.example.sunhappy.models.PreparingOrder;
 
 import java.util.ArrayList;
 
 public class ViewOderPreparingActivity extends AppCompatActivity {
+
     ActivityViewOderPreparingBinding binding;
-    ArrayList<OrderPreparing> arrayOrderPreparing;
-    ManageorderAdapter orderPreparingAdapter;
-//kb mảng dữ liệu
-     String ProductNamePreparing[] ={"Áo polo nam","Áo polo kiểu mới"};
-     String ProductClassifyPreparing[] ={"Đen","Xám"};
-     String ProductSizePreparing[] ={"M","XL"};
-     Integer ProductAmountPreparing[]={1,2};
-     Integer ProductPricePreparing[]={189000,159000};
-     int ProductImage[]={R.drawable.img_product_polo1,R.drawable.imv_product_polo2};
-
-
-
+    OrderPreparingAdapter adapter;
+    ArrayList<PreparingOrder> preparingOrderArrayList;
+    PreparingOrder selectedPreOr = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        //setContentView(R.layout.activity_view_oder_preparing);
         binding = ActivityViewOderPreparingBinding.inflate(getLayoutInflater());
-
         setContentView(binding.getRoot());
-        arrayOrderPreparing = new ArrayList<>(); //tạo mới mảng rỗng
-//add mảng con vào mảng chính
-        for( int i = 0;i <ProductNamePreparing.length;i++)
-        {
-            arrayOrderPreparing.add(new OrderPreparing(ProductNamePreparing[i], ProductClassifyPreparing[i],ProductSizePreparing[i],ProductAmountPreparing[i],ProductPricePreparing[i], ProductImage[i]));
-//kb tạo mới adapter
-        }
-        orderPreparingAdapter = new ManageorderAdapter(ViewOderPreparingActivity.this, R.layout.item_list_preparing_order,arrayOrderPreparing);
 
-        binding.lvOderPreparing.setAdapter(orderPreparingAdapter);
-//xử lý click
+        loadData();
+        addEvents();
+    }
+
+    private void addEvents() {
         binding.lvOderPreparing.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(ViewOderPreparingActivity.this,ViewDetailPreparingActivity.class);
-                intent.putExtra("name",ProductNamePreparing[i]);
-                intent.putExtra("total",ProductPricePreparing[i]);
-                intent.putExtra("classify",ProductClassifyPreparing[i]);
-                intent.putExtra("image",ProductImage[i]);
-                intent.putExtra("amount",ProductAmountPreparing[i]);
-                intent.putExtra("size",ProductSizePreparing[i]);
+                Intent intent = new Intent(ViewOderPreparingActivity.this, ViewDetailPreparingActivity.class);
+                selectedPreOr = preparingOrderArrayList.get(i);
+                intent.putExtra("image", selectedPreOr.getPreparingImage());
+                intent.putExtra("name", selectedPreOr.getPreparingName());
+                intent.putExtra("price", selectedPreOr.getPreparingPrice());
                 startActivity(intent);
             }
         });
+    }
 
-
-
+    private void loadData() {
+        preparingOrderArrayList = new ArrayList<>();
+        preparingOrderArrayList.add(new PreparingOrder(R.drawable.img_polo_1, "Áo polo 1", 11000));
+        preparingOrderArrayList.add(new PreparingOrder(R.drawable.img_dai_1, "Quần dài 1", 21000));
+        preparingOrderArrayList.add(new PreparingOrder(R.drawable.img_thun_1, "Áo thun 1", 31000));
+        preparingOrderArrayList.add(new PreparingOrder(R.drawable.img_short_1, "Quần đùi 1", 41000));
+        adapter = new OrderPreparingAdapter(ViewOderPreparingActivity.this, R.layout.item_list_preparing_order, preparingOrderArrayList);
+        binding.lvOderPreparing.setAdapter(adapter);
     }
 }
