@@ -62,9 +62,9 @@ public class ViewOderCancelledActivity extends AppCompatActivity {
     private void loadData() {
         Intent intent = getIntent();
         cancelOrderArrayList = new ArrayList<>();
-        cancelOrderArrayList.add(new CancelOrder(R.drawable.img_polo_4, "Áo polo 4", 14000));
-        cancelOrderArrayList.add(new CancelOrder(R.drawable.img_dai_4, "Quần dài 4", 23000));
-        cancelOrderArrayList.add(new CancelOrder(intent.getIntExtra("image", R.drawable.img_polo_4), intent.getStringExtra("name"), intent.getDoubleExtra("price", 200000)));
+        cancelOrderArrayList.add(new CancelOrder(R.drawable.img_polo_4, "Áo polo phối sọc", 14000));
+        cancelOrderArrayList.add(new CancelOrder(R.drawable.img_dai_4, "Quần jean ống đứng", 23000));
+        cancelOrderArrayList.add(new CancelOrder(intent.getIntExtra("image", R.drawable.img_polo_5), intent.getStringExtra("name"), intent.getDoubleExtra("price", 200000)));
 
         adapter = new OrderCancelAdapter(ViewOderCancelledActivity.this, R.layout.item_list_cancelled_oder, cancelOrderArrayList);
         binding.lvOderCancel.setAdapter(adapter);

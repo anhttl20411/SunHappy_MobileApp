@@ -61,10 +61,10 @@ public class ViewOderPreparingActivity extends AppCompatActivity {
 
     private void loadData() {
         preparingOrderArrayList = new ArrayList<>();
-        preparingOrderArrayList.add(new PreparingOrder(R.drawable.img_polo_1, "Áo polo 1", 11000));
-        preparingOrderArrayList.add(new PreparingOrder(R.drawable.img_dai_1, "Quần dài 1", 21000));
-        preparingOrderArrayList.add(new PreparingOrder(R.drawable.img_thun_1, "Áo thun 1", 31000));
-        preparingOrderArrayList.add(new PreparingOrder(R.drawable.img_short_1, "Quần đùi 1", 41000));
+        preparingOrderArrayList.add(new PreparingOrder(R.drawable.img_polo_1, "Áo polo phối sọc", 11000));
+        preparingOrderArrayList.add(new PreparingOrder(R.drawable.img_dai_1, "Quần dài kaki", 21000));
+        preparingOrderArrayList.add(new PreparingOrder(R.drawable.img_thun_1, "Áo thun gấu", 31000));
+        preparingOrderArrayList.add(new PreparingOrder(R.drawable.img_short_1, "Quần đùi phối túi", 41000));
         adapter = new OrderPreparingAdapter(ViewOderPreparingActivity.this, R.layout.item_list_preparing_order, preparingOrderArrayList);
         binding.lvOderPreparing.setAdapter(adapter);
     }

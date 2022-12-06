@@ -13,6 +13,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.sunhappy.R;
+import com.example.sunhappy.functions.manageorder.ViewDetailPreparingActivity;
+import com.example.sunhappy.functions.manageorder.ViewOderCancelledActivity;
 import com.example.sunhappy.functions.manageorder.ViewOderDeliveredActivity;
 import com.example.sunhappy.models.DeliveringOrder;
 import com.example.sunhappy.models.PreparingOrder;
@@ -73,7 +75,9 @@ public class OrderDeliveringAdapter extends BaseAdapter {
                 public void onClick(View view) {
                     Toast.makeText(activity, "Đã nhận hàng thành công", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(activity, ViewOderDeliveredActivity.class);
+                    intent.putExtra("image", R.drawable.img_polo_1);
                     activity.startActivity(intent);
+
                 }
             });
 
@@ -84,5 +88,6 @@ public class OrderDeliveringAdapter extends BaseAdapter {
         ImageView imvDeliveringImage;
         TextView txtDeliveringName, txtDeliveringPrice;
         Button btnReceived;
+        TextView txtSubProductNameDelivering,txtProductPriceDeliveringDetail ;
     }
 }

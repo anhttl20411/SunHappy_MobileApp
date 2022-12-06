@@ -60,10 +60,10 @@ public class ViewOderDeliveredActivity extends AppCompatActivity {
 
     private void loadData() {
         deliveredOrderArrayList = new ArrayList<>();
-        deliveredOrderArrayList.add(new DeliveredOrder(R.drawable.img_polo_3, "Áo polo 3", 13000));
-        deliveredOrderArrayList.add(new DeliveredOrder(R.drawable.img_dai_3, "Quần dài 3", 23000));
-        deliveredOrderArrayList.add(new DeliveredOrder(R.drawable.img_thun_3, "Áo thun 3", 33000));
-        deliveredOrderArrayList.add(new DeliveredOrder(R.drawable.img_short_3, "Quần đùi 3", 43000));
+        deliveredOrderArrayList.add(new DeliveredOrder(R.drawable.img_polo_3, "Áo polo phối màu", 13000));
+        deliveredOrderArrayList.add(new DeliveredOrder(R.drawable.img_dai_3, "Quần dài túi hộp", 23000));
+        deliveredOrderArrayList.add(new DeliveredOrder(R.drawable.img_thun_3, "Áo thun đơn giản", 33000));
+        deliveredOrderArrayList.add(new DeliveredOrder(R.drawable.img_short_3, "Quần đùi jean", 43000));
         adapter = new OrderDeliveredAdapter(ViewOderDeliveredActivity.this, R.layout.item_list_delivered_oder, deliveredOrderArrayList);
         binding.lvOderDelivered.setAdapter(adapter);
     }
